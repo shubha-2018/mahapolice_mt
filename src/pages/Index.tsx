@@ -7,6 +7,10 @@ import IGPMessage from '@/components/IGPMessage';
 import AboutSection from '@/components/AboutSection';
 import QuickAccess from '@/components/QuickAccess';
 import LatestUpdates from '@/components/LatestUpdates';
+import DirectorsDesk from  '@/components/IPSMessage';
+import { Link } from "react-router-dom";
+
+
 import Footer from '@/components/Footer';
 
 const Index = () => {
@@ -24,6 +28,9 @@ const Index = () => {
 
       {/* Leadership Section */}
       <Leadership />
+
+
+      <DirectorsDesk />
 
       {/* Special IGP's Message */}
       <IGPMessage />
