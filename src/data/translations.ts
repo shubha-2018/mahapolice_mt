@@ -1,0 +1,110 @@
+import { Translation } from '@/types/language';
+
+export const translations: Translation = {
+  nav: {
+    home: {
+      marathi: 'मुख्यपृष्ठ',
+      english: 'Home'
+    },
+    about: {
+      marathi: 'आमच्याबद्दल',
+      english: 'About Us'
+    },
+    leadership: {
+      marathi: 'नेतृत्व',
+      english: 'Leadership'
+    },
+    services: {
+      marathi: 'सेवा',
+      english: 'Services'
+    },
+    organization: {
+      marathi: 'संघटना',
+      english: 'Organization'
+    },
+    employee: {
+      marathi: 'कर्मचारी विभाग',
+      english: 'Employee Corner'
+    },
+    citizen: {
+      marathi: 'नागरिक विभाग',
+      english: 'Citizen Corner'
+    },
+    contact: {
+      marathi: 'संपर्क',
+      english: 'Contact'
+    }
+  },
+  common: {
+    readMore: {
+      marathi: 'अधिक वाचा',
+      english: 'Read More'
+    },
+    viewAll: {
+      marathi: 'सर्व पहा',
+      english: 'View All'
+    },
+    contact: {
+      marathi: 'संपर्क',
+      english: 'Contact'
+    },
+    address: {
+      marathi: 'पत्ता',
+      english: 'Address'
+    },
+    phone: {
+      marathi: 'फोन',
+      english: 'Phone'
+    },
+    email: {
+      marathi: 'ईमेल',
+      english: 'Email'
+    },
+    copyright: {
+      marathi: '© २०२५ महाराष्ट्र पोलीस मोटर ट्रान्सपोर्ट विभाग. सर्व हक्क राखीव.',
+      english: '© 2025 Maharashtra Police Motor Transport Department. All rights reserved.'
+    }
+  },
+  home: {
+    title: {
+      marathi: 'मोटर ट्रान्सपोर्ट विभाग, महाराष्ट्र पोलीस',
+      english: 'Motor Transport Department, Maharashtra Police'
+    },
+    subtitle: {
+      marathi: 'सेवा, सुरक्षा आणि विश्वसनीयता',
+      english: 'Service, Security and Reliability'
+    },
+    heroMessage: {
+      marathi: 'महाराष्ट्र पोलीसांच्या मोटर ट्रान्सपोर्ट विभागामध्ये आपले स्वागत आहे',
+      english: 'Welcome to Maharashtra Police Motor Transport Department'
+    },
+    impactTitle: {
+      marathi: 'आमचा प्रभाव',
+      english: 'Our Impact'
+    },
+    leadershipTitle: {
+      marathi: 'आमचे नेतृत्व',
+      english: 'Our Leadership'
+    },
+    igpMessageTitle: {
+      marathi: 'विशेष IGP चा संदेश',
+      english: "Special IGP's Message"
+    },
+    aboutTitle: {
+      marathi: 'मोटर ट्रान्सपोर्ट बद्दल',
+      english: 'About Motor Transport'
+    },
+    whatsNewTitle: {
+      marathi: 'नवीन घडामोडी',
+      english: "What's New"
+    },
+    quickAccessTitle: {
+      marathi: 'द्रुत प्रवेश',
+      english: 'Quick Access'
+    },
+    latestUpdatesTitle: {
+      marathi: 'ताज्या अपडेट्स',
+      english: 'Latest Updates'
+    }
+  }
+};
