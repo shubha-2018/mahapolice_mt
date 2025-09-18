@@ -7,12 +7,16 @@ import IGPMessage from '@/components/IGPMessage';
 import AboutSection from '@/components/AboutSection';
 import QuickAccess from '@/components/QuickAccess';
 import LatestUpdates from '@/components/LatestUpdates';
+import DirectorsDesk from  '@/components/IPSMessage';
+import { Link } from "react-router-dom";
+
+
 import Footer from '@/components/Footer';
 
 const Index = () => {
   return (
     <div className="min-h-screen">
-      <Header />
+      {/* <Header /> */}
       
       {/* Hero Section with Slider and Event Boxes */}
       <div className="relative">
@@ -24,6 +28,9 @@ const Index = () => {
 
       {/* Leadership Section */}
       <Leadership />
+
+
+      <DirectorsDesk />
 
       {/* Special IGP's Message */}
       <IGPMessage />
@@ -38,7 +45,7 @@ const Index = () => {
       <LatestUpdates />
 
       {/* Footer */}
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

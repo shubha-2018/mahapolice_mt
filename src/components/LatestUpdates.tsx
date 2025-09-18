@@ -174,7 +174,7 @@ const LatestUpdates = () => {
 
         {/* View All Button */}
         <div className="text-center mt-12">
-          <Button variant="outline" size="lg" className="police-button-primary group button-visible button-hover-effect">
+          <Button variant="outline" size="lg" className="police-button-black group button-visible button-hover-effect">
             {translations.common.viewAll[language]}
             <Clock className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform duration-300" />
           </Button>

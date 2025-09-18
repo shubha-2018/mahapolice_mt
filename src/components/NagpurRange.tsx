@@ -1,0 +1,89 @@
+import React from "react";
+import { useLanguageContext } from "@/context/LanguageContext";
+
+const NagpurRange: React.FC = () => {
+  const { language } = useLanguageContext();
+
+  const data = [
+    { sr: 1, commissionerate: { marathi: "नागपूर शहर", english: "Nagpur City" }, officerName: { marathi: "अजीत देशपांडे", english: "Ajeet Deshpande" }, contact: "9923047786" },
+    { sr: 2, commissionerate: { marathi: "अमरावती शहर", english: "Amravati City" }, officerName: { marathi: "संजय बोरेकर", english: "Sanjay Borekar" }, contact: "9423913995" },
+    { sr: 3, commissionerate: { marathi: "नागपूर ग्रामीण", english: "Nagpur Rural" }, officerName: { marathi: "महेश मुंढे", english: "Mahesh Mundhe" }, contact: "9923405464" },
+    { sr: 4, commissionerate: { marathi: "अमरावती शहर", english: "Amravati City" }, officerName: { marathi: "संजय बोरेकर", english: "Sanjay Borekar" }, contact: "9423913995" },
+    { sr: 5, commissionerate: { marathi: "वर्धा", english: "Wardha" }, officerName: { marathi: "दिवानंद पाटील", english: "Dewanand Patil" }, contact: "9511898519" },
+    { sr: 6, commissionerate: { marathi: "चंद्रपूर", english: "Chandrapur" }, officerName: { marathi: "", english: "" }, contact: "" },
+    { sr: 7, commissionerate: { marathi: "गोंदिया", english: "Gondia" }, officerName: { marathi: "", english: "" }, contact: "" },
+    { sr: 8, commissionerate: { marathi: "भंडारा", english: "Bhandara" }, officerName: { marathi: "राजेश लाबडे", english: "Rajesh Labde" }, contact: "7020698188" },
+    { sr: 9, commissionerate: { marathi: "वाशिम", english: "Washim" }, officerName: { marathi: "", english: "" }, contact: "" },
+    { sr: 10, commissionerate: { marathi: "गडचिरोली", english: "Gadchiroli" }, officerName: { marathi: "", english: "" }, contact: "" },
+    { sr: 11, commissionerate: { marathi: "यवतमाळ", english: "Yavatmal" }, officerName: { marathi: "संजय पवार", english: "Sanjay Pawar" }, contact: "9923460062" },
+    { sr: 12, commissionerate: { marathi: "अकोला", english: "Akola" }, officerName: { marathi: "", english: "" }, contact: "" },
+    { sr: 13, commissionerate: { marathi: "रेल्वे नागपूर", english: "Railway Nagpur" }, officerName: { marathi: "", english: "" }, contact: "" },
+    { sr: 14, commissionerate: { marathi: "स्पेशल अ‍ॅक्शन फोर्स, नागपूर", english: "Special Action Force, Nagpur" }, officerName: { marathi: "", english: "" }, contact: "" },
+    { sr: 15, commissionerate: { marathi: "SRPF ग्रुप 4. नागपूर", english: "SRPF Group 4. Nagpur" }, officerName: { marathi: "", english: "" }, contact: "" },
+    { sr: 16, commissionerate: { marathi: "SRPF ग्रुप 9. अमरावती", english: "SRPF Group 9. Amravati" }, officerName: { marathi: "", english: "" }, contact: "" },
+    { sr: 17, commissionerate: { marathi: "SRPF ग्रुप 13. गडचिरोली", english: "SRPF Group 13. Gadchiroli" }, officerName: { marathi: "", english: "" }, contact: "" },
+    { sr: 18, commissionerate: { marathi: "SRPF ग्रुप 15. गोंदिया", english: "SRPF Group 15. Gondia" }, officerName: { marathi: "", english: "" }, contact: "" },
+    { sr: 19, commissionerate: { marathi: "SRPF ग्रुप 17. चंद्रपूर", english: "SRPF Group 17. Chandrapur" }, officerName: { marathi: "", english: "" }, contact: "" },
+    { sr: 20, commissionerate: { marathi: "SRPF ग्रुप 18. काटोल", english: "SRPF Group 18. Katol" }, officerName: { marathi: "", english: "" }, contact: "" },
+    { sr: 21, commissionerate: { marathi: "SDRF महाराष्ट्र राज्य कार्यालय, नागपूर", english: "SDRF Maharashtra State office, Nagpur" }, officerName: { marathi: "", english: "" }, contact: "" },
+    { sr: 22, commissionerate: { marathi: "पोलीस प्रशिक्षण केंद्र, अकोला", english: "Police training Centre, Akola" }, officerName: { marathi: "", english: "" }, contact: "" },
+    { sr: 23, commissionerate: { marathi: "पोलीस प्रशिक्षण केंद्र, नागपूर", english: "Police training Centre, Nagpur" }, officerName: { marathi: "", english: "" }, contact: "" },
+    { sr: 24, commissionerate: { marathi: "पोलीस प्रशिक्षण केंद्र सुराबर्डी, नागपूर", english: "Police training Centre Surabardi, Nagpur" }, officerName: { marathi: "", english: "" }, contact: "" },
+  ];
+
+  return (
+    <div className="py-12 px-6 md:px-12 lg:px-24 bg-white">
+      <div className="max-w-6xl mx-auto">
+        <h1 className="text-3xl md:text-4xl font-bold text-center text-black mb-8">
+          {language === "marathi" ? "नागपूर रेंज" : "NAGPUR RANGE"}
+        </h1>
+
+        <div className="overflow-x-auto shadow-md rounded-lg border border-gray-300">
+          <table className="w-full border-collapse">
+            <thead>
+              <tr className="bg-blue-600">
+                <th className="px-4 py-3 text-white font-semibold text-left border-r border-blue-500">
+                  {language === "marathi" ? "क्र.सं." : "Sr.No."}
+                </th>
+                <th className="px-4 py-3 text-white font-semibold text-left border-r border-blue-500">
+                  {language === "marathi" ? "कमिशनरेट" : "Commissionerate"}
+                </th>
+                <th className="px-4 py-3 text-white font-semibold text-left border-r border-blue-500">
+                  {language === "marathi" ? "अधिकाऱ्याचे नाव" : "Officer Name"}
+                </th>
+                <th className="px-4 py-3 text-white font-semibold text-left">
+                  {language === "marathi" ? "संपर्क क्रमांक" : "Contact Number"}
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {data.map((row, index) => (
+                <tr
+                  key={row.sr}
+                  className={`${index % 2 === 0 ? "bg-blue-100" : "bg-white"} border-b border-gray-300`}
+                >
+                  <td className="px-4 py-3 text-gray-900 border-r border-gray-300 font-medium">
+                    {row.sr}
+                  </td>
+                  <td className="px-4 py-3 text-gray-900 border-r border-gray-300">
+                    {language === "marathi" ? row.commissionerate.marathi : row.commissionerate.english}
+                  </td>
+                  <td className="px-4 py-3 text-gray-900 border-r border-gray-300">
+                    {row.officerName.marathi || row.officerName.english || (
+                      <span className="text-red-600 font-medium bg-red-100 px-2 py-1 rounded">
+                        {language === "marathi" ? "रिक्त" : "Vacant"}
+                      </span>
+                    )}
+                  </td>
+                  <td className="px-4 py-3 text-gray-900">{row.contact || "-"}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default NagpurRange;

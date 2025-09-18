@@ -114,7 +114,7 @@ const AboutSection = () => {
                   {aboutContent[language].description}
                 </p>
 
-                <Button variant="outline" className="police-button-primary group button-visible button-hover-effect">
+                <Button variant="outline" className="police-button-black group button-visible button-hover-effect">
                   {aboutContent[language].readMore}
                   <ChevronRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                 </Button>
