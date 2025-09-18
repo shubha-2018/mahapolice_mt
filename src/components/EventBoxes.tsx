@@ -115,7 +115,7 @@ const EventBoxes = () => {
       <div className="hidden lg:block relative">
         <div className="flex">
           {/* Left Event Cards */}
-          <div className="w-80 bg-background/95 backdrop-blur-sm border-r border-border p-6 space-y-4 h-[70vh] overflow-y-auto">
+          {/* <div className="w-80 bg-background/95 backdrop-blur-sm border-r border-border p-6 space-y-4 h-[70vh] overflow-y-auto">
             <h3 className={`police-heading text-lg mb-4 text-center ${language === 'marathi' ? 'marathi-text' : 'english-text'}`}>
               {language === 'marathi' ? 'अलीकडील बातम्या' : 'Recent Updates'}
             </h3>
@@ -142,7 +142,7 @@ const EventBoxes = () => {
                 </CardContent>
               </Card>
             ))}
-          </div>
+          </div> */}
 
           {/* Hero Slider */}
           <div className="flex-1">
@@ -150,7 +150,7 @@ const EventBoxes = () => {
           </div>
 
           {/* Right Event Cards */}
-          <div className="w-80 bg-background/95 backdrop-blur-sm border-l border-border p-6 space-y-4 h-[70vh] overflow-y-auto">
+          {/* <div className="w-80 bg-background/95 backdrop-blur-sm border-l border-border p-6 space-y-4 h-[70vh] overflow-y-auto">
             <h3 className={`police-heading text-lg mb-4 text-center ${language === 'marathi' ? 'marathi-text' : 'english-text'}`}>
               {language === 'marathi' ? 'नवीन घडामोडी' : 'Latest News'}
             </h3>
@@ -177,7 +177,7 @@ const EventBoxes = () => {
                 </CardContent>
               </Card>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
 

@@ -10,14 +10,14 @@ export const LanguageToggle = () => {
       variant="ghost"
       size="sm"
       onClick={toggleLanguage}
-      className="police-nav-link flex items-center gap-2 hover:bg-accent/10 language-toggle button-visible button-hover-effect"
+      className="police-nav-link flex items-center gap-2  language-toggle button-visible button-hover-effect"
       aria-label={language === 'marathi' ? 'Switch language to English' : 'भाषा मराठीत बदला'}
       aria-pressed={language === 'english'}
     >
       <Globe size={16} className="transition-transform duration-300 hover:rotate-180" />
       <span className="font-medium transition-all duration-300">
-        {language === 'marathi' ? 'EN' : 'मर'}
+        {language === 'marathi' ? 'English' : 'मराठी'}
       </span>
     </Button>
   );
-};
+}; 

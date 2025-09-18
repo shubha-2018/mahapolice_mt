@@ -6,6 +6,10 @@ import { ThemeToggle } from './ThemeToggle';
 import { useLanguage } from '@/hooks/useLanguage';
 import { translations } from '@/data/translations';
 import { Menu, Accessibility } from 'lucide-react';
+import policelogo from "../assets/images/mahapolice-logo-removebg-preview.png";
+import Emblem from "../assets/images/Emblem12.png";
+import motorlogo from "../assets/images/motorlogo.jpg";
+import { Link } from "react-router-dom"; 
 
 // Extend global
 declare global {
@@ -24,7 +28,6 @@ const Header = () => {
   const [widgetReady, setWidgetReady] = useState(false);
 
   useEffect(() => {
-    // Ensure container exists
     if (!document.getElementById('accessibility-widget')) {
       const container = document.createElement('div');
       container.id = 'accessibility-widget';
@@ -36,14 +39,11 @@ const Header = () => {
     script.async = true;
 
     script.onload = () => {
-      console.log('Accessibility Widget script loaded');
       if (window.AccessibilityWidget?.init) {
-        // Call init with config
         window.AccessibilityWidget.init({
           target: '#accessibility-widget',
           autoOpen: false,
         });
-        console.log('Accessibility Widget initialized');
         setWidgetReady(true);
       }
     };
@@ -60,12 +60,10 @@ const Header = () => {
   }, []);
 
   const navItems = [
-    { key: 'home', href: '#home' },
-    { key: 'about', href: '#about' },
-    { key: 'leadership', href: '#leadership' },
-    { key: 'services', href: '#services' },
-    { key: 'organization', href: '#organization' },
-    { key: 'employee', href: '#employee' },
+    { key: 'home', href: '/' },
+    { key: 'about', href: '/aboutpage' },
+    { key: 'organization', href: '/organizationpage' },
+    { key: 'employee', href: '/employeecorner' },
     { key: 'citizen', href: '#citizen' },
     { key: 'contact', href: '#contact' },
   ];
@@ -78,23 +76,21 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between py-4">
           {/* Logo + Title */}
-          <div className="flex items-center gap-4">
-            <div className="w-16 h-16 border-2 border-dashed border-primary/60 rounded-full flex items-center justify-center bg-primary/10">
-              <div className="text-center">
-                <div className="text-primary text-[10px] font-medium mb-1">MP SYMBOL</div>
-                <div className="text-primary/70 text-[8px]">REPLACE WITH IMAGE</div>
-              </div>
+          <div className="flex items-center gap-2">
+            <div className="w-15 h-18 rounded-full flex items-center justify-center overflow-hidden">
+              {/* Emblem Logo */}
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/c/c6/Ashok_Emblem_svg.svg"
-                alt="Maharashtra Police Symbol"
-                className="hidden w-full h-full object-contain rounded-full"
-                onLoad={(e) => {
-                  e.currentTarget.style.display = 'block';
-                  e.currentTarget.parentElement?.querySelector('.text-center')?.remove();
-                }}
-                onError={(e) => {
-                  e.currentTarget.style.display = 'none';
-                }}
+                src={Emblem}
+                alt="Maharashtra Police Logo"
+                className="w-16 h-16 object-contain"
+              />
+            </div>
+            <div className="w-20 h-20 rounded-full flex items-center justify-center overflow-hidden">
+              {/* Police Logo */}
+              <img
+                src={policelogo}
+                alt="Maharashtra Police Logo"
+                className="w-20 h-20 object-contain"
               />
             </div>
 
@@ -105,8 +101,8 @@ const Header = () => {
                 }`}
               >
                 {lang === 'marathi'
-                  ? 'मोटर ट्रान्सपोर्ट विभाग, महाराष्ट्र पोलीस'
-                  : 'Motor Transport Department, Maharashtra Police'}
+                  ? 'मोटर परिवहन विभाग, महाराष्ट्र राज्य पुणे'
+                  : 'Motor Transport Department, Maharashtra State, Pune'}
               </h1>
               <p
                 className={`text-sm text-muted-foreground ${
@@ -122,18 +118,16 @@ const Header = () => {
 
           {/* Desktop nav */}
           <nav className="hidden lg:flex items-center space-x-6">
-            {navItems.map((item) => (
-              <a
-                key={item.key}
-                href={item.href}
-                className={`police-nav-link ${
-                  lang === 'marathi' ? 'marathi-text' : 'english-text'
-                }`}
-              >
-                {getNavLabel(item.key)}
-              </a>
-            ))}
-          </nav>
+  {navItems.map((item) => (
+    <Link
+      key={item.key}
+      to={item.href}
+      className={`police-nav-link ${lang === 'marathi' ? 'marathi-text' : 'english-text'}`}
+    >
+      {getNavLabel(item.key)}
+    </Link>
+  ))}
+</nav>
 
           {/* Right side */}
           <div className="flex items-center gap-3">
@@ -172,20 +166,28 @@ const Header = () => {
               <SheetContent side="right" className="w-[300px] sm:w-[400px]">
                 <nav className="flex flex-col gap-4 mt-8">
                   {navItems.map((item) => (
-                    <a
-                      key={item.key}
-                      href={item.href}
-                      onClick={() => setIsOpen(false)}
-                      className={`police-nav-link text-lg py-2 ${
-                        lang === 'marathi' ? 'marathi-text' : 'english-text'
-                      }`}
-                    >
-                      {getNavLabel(item.key)}
-                    </a>
+                   <Link
+                 key={item.key}
+                 to={item.href}
+                 onClick={() => setIsOpen(false)}
+                 className="police-nav-link text-lg py-2"
+                   >
+               {getNavLabel(item.key)}
+                 </Link>
+
                   ))}
                 </nav>
               </SheetContent>
             </Sheet>
+
+            {/* Police Logo (End of Navbar) */}
+            <div className="w-20 h-20 rounded-full flex items-center justify-center overflow-hidden ml-2">
+              <img
+                src={motorlogo}
+                alt="Maharashtra Police Logo"
+                className="w-20 h-20 object-contain"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -194,4 +196,3 @@ const Header = () => {
 };
 
 export default Header;
-

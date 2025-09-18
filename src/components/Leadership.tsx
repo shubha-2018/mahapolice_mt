@@ -221,13 +221,37 @@ const leaders: Leader[] = [
       ),
       english: (
         <>
-          Additional Director General of Police and Director, Police Communication, Information Technology and Transportation Department  <br />
+          Additional Director General of Police and Director, Police Communication, Information Technology and Transport <br />
           Maharashtra State, Pune.
         </>
       ),
     },
     imageUrl: 'https://www.witnessinthecorridors.com/ImgNewsPolitical/240708185120309.png',
     imagePlaceholder: 'Official portrait of Shri. Deepak Shivanand Pandey, ADG Motor Transport'
+  },
+   {
+    id: 9,
+    name: {
+      marathi: 'श्री.अशोक मोराले',
+      english: 'Shri.Ashok Morale'
+    },
+    designation: {
+      marathi: (
+        <>
+         
+          विशेष पोलिस महानिरीक्षक, मोटर परिवहन<br /> महाराष्ट्र राज्य, पुणे
+        </>
+      ),
+      english: (
+        <>
+         Special Inspector Genral of Police Motor Transport  Maharashtra State, Pune.
+        </>
+      ),
+    },
+    
+  
+  imageUrl:'https://www.vanjariworld.com/wp-content/uploads/2018/04/Ashok-Morale.jpeg',
+    imagePlaceholder: 'Official portrait of Shri.Ashok Morale , special inspector genral of police motor transport'
   }
 ]
 
@@ -236,7 +260,7 @@ const Leadership = () => {
   const { language } = useLanguage();
 
   return (
-    <section className="py-16 police-section-bg">
+    <section className="py-6 police-section-bg">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2
@@ -256,40 +280,141 @@ const Leadership = () => {
               : 'Leadership and guidance of Maharashtra Police Motor Transport Department'}
           </p>
         </div>
-<div className="grid grid-cols-1 md:grid-cols-3 gap-4 auto-rows-auto">
-  {leaders.map((leader, index) => {
-    const gridArea = index === 0 ? 'col-span-1 md:col-span-3' : 'col-span-1';
-    const languageClass = language === 'marathi' ? 'marathi-text' : 'english-text';
+<div className="space-y-8 px-4 md:px-8">
+  {/* First Row - 1 Image (Featured/Main Leader) */}
+  <div className="flex justify-center">
+    {leaders.slice(0, 1).map((leader, index) => {
+      const languageClass = language === 'marathi' ? 'marathi-text' : 'english-text';
+      
+      return (
+        <Card
+          key={leader.id}
+          className="group transition-all duration-700 w-64 shadow-xl hover:shadow-2xl border-0 bg-gradient-to-br from-white via-blue-50 to-indigo-100 hover:from-blue-50 hover:via-indigo-100 hover:to-purple-100 hover:-translate-y-2 rounded-xl"
+          style={{ animationDelay: `${index * 150}ms` }}
+        >
+          <CardContent className="p-6 text-center relative overflow-hidden">
+            {/* Background Pattern */}
+            <div className="absolute inset-0 opacity-10">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-blue-400 to-transparent rounded-full transform translate-x-6 -translate-y-6"></div>
+              <div className="absolute bottom-0 left-0 w-20 h-20 bg-gradient-to-tr from-purple-400 to-transparent rounded-full transform -translate-x-4 translate-y-4"></div>
+            </div>
+            
+            <div className="relative mb-4 mx-auto w-28 h-28 rounded-full overflow-hidden border-4 border-blue-400 p-1 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 group-hover:shadow-xl group-hover:scale-105 transition-all duration-500">
+              <div className="w-full h-full rounded-full overflow-hidden bg-white p-1">
+                <img
+                  src={leader.imageUrl}
+                  alt={leader.name[language]}
+                  className="w-full h-full object-cover rounded-full"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            
+            <div className="space-y-2 relative z-10">
+              <h3 className={`text-lg font-bold group-hover:text-blue-600 transition-colors duration-300 ${languageClass}`}>
+                {leader.name[language]}
+              </h3>
+              <p className={`text-sm text-gray-600 font-medium ${languageClass}`}>
+                {leader.designation[language]}
+              </p>
+              <div className="w-16 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full group-hover:w-24 transition-all duration-500"></div>
+            </div>
+          </CardContent>
+        </Card>
+      );
+    })}
+  </div>
 
-    return (
-      <Card
-        key={leader.id}
-        className={`police-card hover-lift group transition-all duration-500 fade-in-up animate ${gridArea} w-full`}
-        style={{ animationDelay: `${index * 150}ms` }}
-      >
-        <CardContent className="p-4 text-center">
-          <div className="relative mb-4 mx-auto w-28 h-28 rounded-full overflow-hidden border-2 border-dashed border-primary/60 bg-primary/10 flex items-center justify-center group-hover:shadow-glow transition-all duration-300">
-            <img
-              src={leader.imageUrl}
-              alt={leader.name[language]}
-              className="w-full h-full object-cover rounded-full"
-              loading="lazy"
-            />
-          </div>
-          <div className="space-y-1">
-            <h3 className={`police-heading text-lg group-hover:text-accent transition-colors ${languageClass}`}>
-              {leader.name[language]}
-            </h3>
-            <p className={`police-body text-sm ${languageClass}`}>
-              {leader.designation[language]}
-            </p>
-            <div className="w-12 h-1 bg-primary mx-auto rounded-full group-hover:bg-accent group-hover:w-16 transition-all duration-300"></div>
-          </div>
-        </CardContent>
-      </Card>
-    );
-  })}
+  {/* Second Row - 3 Images */}
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center px-4 md:px-16">
+    {leaders.slice(1, 4).map((leader, index) => {
+      const languageClass = language === 'marathi' ? 'marathi-text' : 'english-text';
+      
+      return (
+        <Card
+          key={leader.id}
+          className="group transition-all duration-600 w-64 shadow-lg hover:shadow-xl border-0 bg-gradient-to-br from-white via-slate-50 to-gray-100 hover:from-slate-50 hover:via-blue-50 hover:to-indigo-100 hover:-translate-y-2 rounded-xl"
+          style={{ animationDelay: `${(index + 1) * 150}ms` }}
+        >
+          <CardContent className="p-6 text-center relative overflow-hidden">
+            {/* Subtle Background Effects */}
+            <div className="absolute inset-0 opacity-5">
+              <div className="absolute top-2 right-2 w-16 h-16 bg-gradient-to-bl from-blue-300 to-transparent rounded-full"></div>
+              <div className="absolute bottom-2 left-2 w-14 h-14 bg-gradient-to-tr from-indigo-300 to-transparent rounded-full"></div>
+            </div>
+            
+            <div className="relative mb-4 mx-auto w-28 h-28 rounded-full overflow-hidden border-4 border-blue-300 p-1 bg-gradient-to-r from-blue-300 to-indigo-400 group-hover:shadow-xl group-hover:scale-105 transition-all duration-400">
+              <div className="w-full h-full rounded-full overflow-hidden bg-white p-1">
+                <img
+                  src={leader.imageUrl}
+                  alt={leader.name[language]}
+                  className="w-full h-full object-cover rounded-full"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            
+            <div className="space-y-2 relative z-10">
+              <h3 className={`text-lg font-semibold group-hover:text-blue-600 transition-colors duration-300 ${languageClass}`}>
+                {leader.name[language]}
+              </h3>
+              <p className={`text-sm text-gray-600 ${languageClass}`}>
+                {leader.designation[language]}
+              </p>
+              <div className="w-16 h-1 bg-gradient-to-r from-blue-400 to-indigo-500 mx-auto rounded-full group-hover:w-24 transition-all duration-400"></div>
+            </div>
+          </CardContent>
+        </Card>
+      );
+    })}
+  </div>
+
+  {/* Third Row - Remaining Images (3 per row) */}
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center px-4 md:px-16">
+    {leaders.slice(4).map((leader, index) => {
+      const languageClass = language === 'marathi' ? 'marathi-text' : 'english-text';
+      
+      return (
+        <Card
+          key={leader.id}
+          className="group transition-all duration-600 w-64 shadow-lg hover:shadow-xl border-0 bg-gradient-to-br from-white via-slate-50 to-gray-100 hover:from-slate-50 hover:via-blue-50 hover:to-indigo-100 hover:-translate-y-2 rounded-xl"
+          style={{ animationDelay: `${(index + 4) * 150}ms` }}
+        >
+          <CardContent className="p-6 text-center relative overflow-hidden">
+            {/* Subtle Background Effects */}
+            <div className="absolute inset-0 opacity-5">
+              <div className="absolute top-2 right-2 w-16 h-16 bg-gradient-to-bl from-blue-300 to-transparent rounded-full"></div>
+              <div className="absolute bottom-2 left-2 w-14 h-14 bg-gradient-to-tr from-indigo-300 to-transparent rounded-full"></div>
+            </div>
+            
+            <div className="relative mb-4 mx-auto w-28 h-28 rounded-full overflow-hidden border-4 border-blue-300 p-1 bg-gradient-to-r from-blue-300 to-indigo-400 group-hover:shadow-xl group-hover:scale-105 transition-all duration-400">
+              <div className="w-full h-full rounded-full overflow-hidden bg-white p-1">
+                <img
+                  src={leader.imageUrl}
+                  alt={leader.name[language]}
+                  className="w-full h-full object-cover rounded-full"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            
+            <div className="space-y-2 relative z-10">
+              <h3 className={`text-lg font-semibold group-hover:text-blue-600 transition-colors duration-300 ${languageClass}`}>
+                {leader.name[language]}
+              </h3>
+              <p className={`text-sm text-gray-600 ${languageClass}`}>
+                {leader.designation[language]}
+              </p>
+              <div className="w-16 h-1 bg-gradient-to-r from-blue-400 to-indigo-500 mx-auto rounded-full group-hover:w-24 transition-all duration-400"></div>
+            </div>
+          </CardContent>
+        </Card>
+      );
+    })}
+  </div>
 </div>
+
+
 
 
 

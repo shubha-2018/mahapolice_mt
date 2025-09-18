@@ -16,7 +16,7 @@ import Footer from '@/components/Footer';
 const Index = () => {
   return (
     <div className="min-h-screen">
-      <Header />
+      {/* <Header /> */}
       
       {/* Hero Section with Slider and Event Boxes */}
       <div className="relative">
@@ -45,7 +45,7 @@ const Index = () => {
       <LatestUpdates />
 
       {/* Footer */}
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

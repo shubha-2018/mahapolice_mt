@@ -57,11 +57,11 @@ const IGPMessage = () => {
                 </div>
 
                 {/* Message Content */}
-                <div className="flex-1 text-center lg:text-left">
+                <div className="flex-1 text-center lg:text-left ">
                   <div className="mb-6">
                     <Quote className="w-10 h-10 text-accent mx-auto lg:mx-0 mb-4" />
                     <h2
-                      className={`police-heading text-2xl md:text-3xl mb-6 ${
+                      className={`police-heading text-2xl md:text-3xl mb-2 ${
                         language === 'marathi' ? 'marathi-text' : 'english-text'
                       }`}
                     >
@@ -70,7 +70,7 @@ const IGPMessage = () => {
                   </div>
 
                   <blockquote
-                    className={`police-body text-lg leading-relaxed mb-8 italic ${
+                    className={`police-body text-lg leading-relaxed mb-8  ${
                       language === 'marathi' ? 'marathi-text' : 'english-text'
                     }`}
                   >
