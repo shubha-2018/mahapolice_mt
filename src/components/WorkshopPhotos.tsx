@@ -1,17 +1,17 @@
 import React from "react";
 import { useLanguageContext } from "@/context/LanguageContext";
 
-import pune1 from "../assets/images/police0.jpg";
-import pune2 from "../assets/images/police1.jpg";
-import pune3 from "../assets/images/police2.jpg";
+// import pune1 from "../assets/images/police0.jpg";
+// import pune2 from "../assets/images/police1.jpg";
+// import pune3 from "../assets/images/police2.jpg";
 
-import sambhaji1 from "../assets/images/police3.jpg";
-import sambhaji2 from "../assets/images/police4.jpg";
-import sambhaji3 from "../assets/images/police5.jpg";
+// import sambhaji1 from "../assets/images/police3.jpg";
+// import sambhaji2 from "../assets/images/police4.jpg";
+// import sambhaji3 from "../assets/images/police5.jpg";
 
-import nagpur1 from "../assets/images/police6.jpg";
-import nagpur2 from "../assets/images/police7.jpg";
-import nagpur3 from "../assets/images/police6.jpg";
+// import nagpur1 from "../assets/images/police6.jpg";
+// import nagpur2 from "../assets/images/police7.jpg";
+// import nagpur3 from "../assets/images/police6.jpg";
 
 const WorkshopPhotos = () => {
   const { language } = useLanguageContext();
@@ -19,18 +19,18 @@ const WorkshopPhotos = () => {
   const workshops = [
     {
       key: "pune",
-      title: { marathi: "पुणे वर्कशॉप", english: "Pune Workshop" },
-      images: [pune1, pune2, pune3],
+      title: { marathi: "कर्मशाळा पुणे", english: "Pune Workshop" },
+      // images: [pune1, pune2, pune3],
     },
     {
       key: "sambhaji",
-      title: { marathi: "छत्रपती संभाजीनगर वर्कशॉप", english: "Chhatrapati Sambhajinagar Workshop" },
-      images: [sambhaji1, sambhaji2, sambhaji3],
+      title: { marathi: "कर्मशाळा छत्रपती संभाजीनगर ", english: "Chhatrapati Sambhajinagar Workshop" },
+      // images: [sambhaji1, sambhaji2, sambhaji3],
     },
     {
       key: "nagpur",
-      title: { marathi: "नागपूर वर्कशॉप", english: "Nagpur Workshop" },
-      images: [nagpur1, nagpur2, nagpur3],
+      title: { marathi: "कर्मशाळा नागपूर ", english: "Nagpur Workshop" },
+      // images: [nagpur1, nagpur2, nagpur3],
     },
   ];
 
@@ -39,9 +39,11 @@ const WorkshopPhotos = () => {
       <div className="container mx-auto px-4">
         {/* Main Title */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-800 via-indigo-700 to-purple-700 bg-clip-text text-transparent mb-4">
-            {language === "marathi" ? "वर्कशॉप फोटो" : "WORKSHOP PHOTOS"}
+          <h1 className="text-4xl md:text-5xl font-bold bg-black bg-clip-text text-transparent mb-4">
+            {language === "marathi" ? " पोलीस मध्यवर्ती मोटर परिवहन कर्मशाळा " : "Central Workshop"}
           </h1>
+          <h3>  मोटर परिवहन विभाग अंतर्गत मोठ्या प्रमाणातील दुरुस्ती करिता पुणे ,छत्रपती संभाजी नगर,नागपूर अशा  ३ मध्यवर्ती  कर्मशाळा आहेत . कर्मशाळा येथे पोलीस उपाधीक्षक व  त्यांच्या अखत्यारीत पोलीस निरीक्षक  कार्यदेशक व पोलीस उपनिरीक्षक असे अधिकारी कार्यरत आहेत .परिक्षेत्रातील प्रामुख्याने 3rd line रिपेअर
+कर्मशाळेमध्ये करण्यात येतात त्या करीत आवश्यक असलेले सुट्टे भाग कर्मशाळेमार्फत पुरविण्यात येतात  .  </h3>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-indigo-500 mx-auto rounded-full"></div>
         </div>
 
@@ -55,7 +57,7 @@ const WorkshopPhotos = () => {
                 <div className="w-16 h-1 bg-gradient-to-r from-blue-400 to-indigo-400 rounded-full mx-auto mt-2"></div>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+              {/* <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                 {workshop.images.map((img, i) => (
                   <div key={i} className="group">
                     <div className="relative overflow-hidden rounded-xl shadow-md hover:shadow-xl border border-gray-200 bg-white">
@@ -77,7 +79,7 @@ const WorkshopPhotos = () => {
                     </div>
                   </div>
                 ))}
-              </div>
+              </div> */}
             </div>
           ))}
         </div>

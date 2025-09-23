@@ -172,12 +172,12 @@ const AboutSection = () => {
               ))}
             </div>
 
-            <div className="text-center pt-4">
+            {/* <div className="text-center pt-4">
               <Button variant="ghost" className="police-accent-text hover:bg-accent/10 button-visible button-hover-effect">
                 {translations.common.viewAll[language]}
                 <ChevronRight className="w-4 h-4 ml-1 transition-all duration-300" />
               </Button>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

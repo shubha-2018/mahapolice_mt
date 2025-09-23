@@ -92,7 +92,6 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { ThemeProvider } from "next-themes";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import { LanguageProvider } from "@/context/LanguageContext";
@@ -101,13 +100,24 @@ import AboutUs from "@/components/AboutUs";
 import OrganisationPage from "@/pages/OrganizationPage";
 import Header from "./components/Header"; // ✅ Navbar
 import Footer from "./components/Footer";
-// import EmployeeCorner from "./pages/EmployeeCorner";
+import Contact from "./pages/Contact";
+import FlashPage from "./components/FlashPage";
+import TransferOrder from "../src/components/TransferOrder"
+import IGOfficeOrders from "../src/components/IGOfficeOrders"
+import Circular from "../src/components/Circulers"
+
+// import Phone from "../components/Phone";
+import { ThemeProvider } from "next-themes";
+// import PageAccessibilityChanger from "./components/accessibility/PageAccessibilityChanger";
+
+
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+    <ThemeProvider attribute="class" defaultTheme="light" 	enableSystem={false}>
+      		{/* <PageAccessibilityChanger /> */}
       <LanguageProvider>
         <TooltipProvider>
           <Toaster />
@@ -122,8 +132,17 @@ const App = () => (
               <Route path="/directors-desk" element={<DirectorsDesk />} />
               <Route path="/aboutpage" element={<AboutUs />} />
               <Route path="/organizationpage" element={<OrganisationPage />} />
+              <Route path="/contact" element={<Contact />} />
+                {/* <Route path="/flash" element={<FlashPage />} /> */}
+                {/* <Route path="/transfer-orders" element={<TransferOrder/>} /> */}
+                {/* <Route path="//dgp-orders" element={<IGOfficeOrders/>} /> */}
+                {/* <Route path="/circulars" element={<Circular/>} /> */}
+
+
+  
               {/* <Route path="/employeecorner" element={<EmployeeCorner/>}/> */}
 
+              
               <Route path="*" element={<NotFound />} />
             </Routes>
             <Footer />

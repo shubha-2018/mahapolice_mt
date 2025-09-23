@@ -9,13 +9,13 @@ const KokanRangeTable = () => {
     { sr: 2, commissionerate: { marathi: "ठाणे शहर", english: "Thane City" }, officerName: { marathi: "अयाज शेख", english: "Ayaz Shaikh" }, contact: "9803786100" },
     { sr: 3, commissionerate: { marathi: "मीरा भायंदर शहर", english: "Mira Bahindar City" }, officerName: { marathi: "प्रभाकर झेंडे", english: "Prabhakar Zende" }, contact: "9823112469" },
     { sr: 4, commissionerate: { marathi: "नाशिक शहर", english: "Nashik City" }, officerName: { marathi: "पंकज पवार", english: "Pankaj Pawar" }, contact: "9923430414" },
-    { sr: 5, commissionerate: { marathi: "ठाणे ग्रामीण", english: "Thane Rural" }, officerName: { marathi: "", english: "" }, contact: "" },
+    { sr: 5, commissionerate: { marathi: "ठाणे ग्रामीण", english: "Thane Rural" }, officerName: { marathi: "बाळासाहेब दत्तात्रय झेंडे ", english: "Balasaheb Dattatry Zende" }, contact: "9823112469" },
     { sr: 6, commissionerate: { marathi: "पालघर", english: "Palghar" }, officerName: { marathi: "", english: "" }, contact: "" },
     { sr: 7, commissionerate: { marathi: "नाशिक ग्रामीण", english: "Nashik Rural" }, officerName: { marathi: "अनिल घाडगे", english: "Anil Ghadage" }, contact: "9823168900" },
-    { sr: 8, commissionerate: { marathi: "रायगड", english: "Raigad" }, officerName: { marathi: "", english: "" }, contact: "" },
+    { sr: 8, commissionerate: { marathi: "रायगड", english: "Raigad" }, officerName: { marathi: "मुत्सुफा शेख ", english: "Mustufa Shaikh" }, contact: "9881359199" },
     { sr: 9, commissionerate: { marathi: "रत्नागिरी", english: "Ratnagiri" }, officerName: { marathi: "", english: "" }, contact: "" },
-    { sr: 10, commissionerate: { marathi: "सिंधुदुर्ग", english: "Sindhudurg" }, officerName: { marathi: "", english: "" }, contact: "" },
-    { sr: 11, commissionerate: { marathi: "पोलीस नौका वर्कशॉप", english: "Police Nauka W/Shop" }, officerName: { marathi: "", english: "" }, contact: "" },
+    { sr: 10, commissionerate: { marathi: "सिंधुदुर्ग", english: "Sindhudurg" }, officerName: { marathi: " प्रदीप चव्हाण ", english: "Pradip Chavan" }, contact: "8108343636" },
+    { sr: 11, commissionerate: { marathi: "पोलीस नौका वर्कशॉप", english: "Police Nauka W/Shop" }, officerName: { marathi: "संतोष डोईफोडे ", english: "Santosh Doephode" }, contact: "9049003537" },
     { sr: 12, commissionerate: { marathi: "एसआरपीएफ ग्रुप 8, मुंबई", english: "SRPF Group 8.Mumbai" }, officerName: { marathi: "अशोक निमबाळकर", english: "Ashok Nimbalkar" }, contact: "9372928211" },
     { sr: 13, commissionerate: { marathi: "एसआरपीएफ ग्रुप 11, नवी मुंबई", english: "SRPF Group 11. Navi Mumbai" }, officerName: { marathi: "विठ्ठल बडे", english: "Vitthal Badhe" }, contact: "9773071673" },
   ];
@@ -25,7 +25,7 @@ const KokanRangeTable = () => {
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <h1 className="text-3xl md:text-4xl font-bold text-center text-black mb-8">
-          {language === "marathi" ? "कोकण रेंज" : "KOKAN RANGE"}
+          {language === "marathi" ? "कोकण परिक्षेत्र" : "KOKAN RANGE"}
         </h1>
 
         {/* Table */}

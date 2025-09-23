@@ -61,7 +61,7 @@ export const translations: Translation = {
       english: 'Email'
     },
     copyright: {
-      marathi: '© २०२५ महाराष्ट्र पोलीस मोटर ट्रान्सपोर्ट विभाग. सर्व हक्क राखीव.',
+      marathi: '© २०२५ महाराष्ट्र पोलीस मोटर परिवहन विभाग सर्व हक्क राखीव.',
       english: '© 2025 Maharashtra Police Motor Transport Department. All rights reserved.'
     }
   },

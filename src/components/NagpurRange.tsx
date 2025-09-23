@@ -8,14 +8,14 @@ const NagpurRange: React.FC = () => {
     { sr: 1, commissionerate: { marathi: "नागपूर शहर", english: "Nagpur City" }, officerName: { marathi: "अजीत देशपांडे", english: "Ajeet Deshpande" }, contact: "9923047786" },
     { sr: 2, commissionerate: { marathi: "अमरावती शहर", english: "Amravati City" }, officerName: { marathi: "संजय बोरेकर", english: "Sanjay Borekar" }, contact: "9423913995" },
     { sr: 3, commissionerate: { marathi: "नागपूर ग्रामीण", english: "Nagpur Rural" }, officerName: { marathi: "महेश मुंढे", english: "Mahesh Mundhe" }, contact: "9923405464" },
-    { sr: 4, commissionerate: { marathi: "अमरावती शहर", english: "Amravati City" }, officerName: { marathi: "संजय बोरेकर", english: "Sanjay Borekar" }, contact: "9423913995" },
-    { sr: 5, commissionerate: { marathi: "वर्धा", english: "Wardha" }, officerName: { marathi: "दिवानंद पाटील", english: "Dewanand Patil" }, contact: "9511898519" },
+    { sr: 4, commissionerate: { marathi: "अमरावती ग्रामीण", english: "Amravati City" }, officerName: { marathi: "संजय पवार ", english: "Sanjay pawar" }, contact: "9423913995" },
+    { sr: 5, commissionerate: { marathi: "वर्धा", english: "Wardha" }, officerName: { marathi: "सचिन पवार ", english: "Sachin Pawar" }, contact: "9511898519" },
     { sr: 6, commissionerate: { marathi: "चंद्रपूर", english: "Chandrapur" }, officerName: { marathi: "", english: "" }, contact: "" },
     { sr: 7, commissionerate: { marathi: "गोंदिया", english: "Gondia" }, officerName: { marathi: "", english: "" }, contact: "" },
     { sr: 8, commissionerate: { marathi: "भंडारा", english: "Bhandara" }, officerName: { marathi: "राजेश लाबडे", english: "Rajesh Labde" }, contact: "7020698188" },
     { sr: 9, commissionerate: { marathi: "वाशिम", english: "Washim" }, officerName: { marathi: "", english: "" }, contact: "" },
-    { sr: 10, commissionerate: { marathi: "गडचिरोली", english: "Gadchiroli" }, officerName: { marathi: "", english: "" }, contact: "" },
-    { sr: 11, commissionerate: { marathi: "यवतमाळ", english: "Yavatmal" }, officerName: { marathi: "संजय पवार", english: "Sanjay Pawar" }, contact: "9923460062" },
+    { sr: 10, commissionerate: { marathi: "गडचिरोली", english: "Gadchiroli" }, officerName: { marathi: "विवेक पांडव ", english: "Vivek Pandav" }, contact: "9881748264 " },
+    { sr: 11, commissionerate: { marathi: "यवतमाळ", english: "Yavatmal" }, officerName: { marathi: "राहुल ढवळे ", english: "Rahul Dhavale" }, contact: "9421958318" },
     { sr: 12, commissionerate: { marathi: "अकोला", english: "Akola" }, officerName: { marathi: "", english: "" }, contact: "" },
     { sr: 13, commissionerate: { marathi: "रेल्वे नागपूर", english: "Railway Nagpur" }, officerName: { marathi: "", english: "" }, contact: "" },
     { sr: 14, commissionerate: { marathi: "स्पेशल अ‍ॅक्शन फोर्स, नागपूर", english: "Special Action Force, Nagpur" }, officerName: { marathi: "", english: "" }, contact: "" },
@@ -35,7 +35,7 @@ const NagpurRange: React.FC = () => {
     <div className="py-12 px-6 md:px-12 lg:px-24 bg-white">
       <div className="max-w-6xl mx-auto">
         <h1 className="text-3xl md:text-4xl font-bold text-center text-black mb-8">
-          {language === "marathi" ? "नागपूर रेंज" : "NAGPUR RANGE"}
+          {language === "marathi" ? "नागपूर परिक्षेत्र" : "NAGPUR RANGE"}
         </h1>
 
         <div className="overflow-x-auto shadow-md rounded-lg border border-gray-300">

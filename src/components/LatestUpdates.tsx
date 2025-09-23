@@ -100,7 +100,7 @@ const LatestUpdates = () => {
   };
 
   return (
-    <section className="py-16 police-section-bg">
+    <section className="py-10 police-section-bg ">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className={`police-heading text-3xl md:text-4xl mb-4 ${
@@ -173,12 +173,12 @@ const LatestUpdates = () => {
         </div>
 
         {/* View All Button */}
-        <div className="text-center mt-12">
+        {/* <div className="text-center mt-12">
           <Button variant="outline" size="lg" className="police-button-black group button-visible button-hover-effect">
             {translations.common.viewAll[language]}
             <Clock className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform duration-300" />
           </Button>
-        </div>
+        </div> */}
       </div>
     </section>
   );

@@ -13,18 +13,18 @@ import VehicleTypes from "@/components/VehicleTypes";
 
 const OrganisationPage = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen mt-28">
      <OrganisationStructure/>
      <UnitDyspSp/>
      <PuneRangeTable/>
-     <KokanRangeTable/>
      <ChtrapatiSambhajiNagarRange/>
      <NagpurRange/>
-     <PoliceLaunchSection/>
-     < WorkshopPhotos/>
+     <KokanRangeTable/>
+     {/* <PoliceLaunchSection/> */}
+     < WorkshopPhotos/> 
      <VehicleDepartmentDocument/>
-     <PoliceDepartmentTable/>
-     <VehicleTypes/>
+     {/* <PoliceDepartmentTable/> */}
+     {/* <VehicleTypes/> */}
 
       </div>
   )

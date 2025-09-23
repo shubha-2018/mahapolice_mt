@@ -18,12 +18,9 @@ const DirectorsDesk = () => {
       </>
       ),
       designation: 'Additional Director General of Police and Director, Police Communication, Information Technology and Transport, Maharashtra State Pune.',
-      quote: `The Police Wireless Department prior to Police Communication and Information
-      Technology Department typically handles communication systems used by law
-      enforcement authority that is Maharashtra State Police. This includes managing
-      radio frequencies, dispatching officers, and ensuring secure and efficient
-      communication between police units in the field. Uninterrupted 24×7
-      communication system is provided by our Department. The Police Communication and Information Technology Department plays a vital role in policing by ensuring effective communication and coordination among officers with key functions such as real-time Communication which facilitates immediate contact between officers in the field and dispatch...`
+      quote: `The Maharashtra Police Force is the backbone of our state. As vast as the responsibilities of the police force are, equally important are the resources and vehicles it requires. The responsibility of planning, maintenance, repair, and ensuring efficiency of all these vehicles lies with the Motor Transport Department.
+
+Be it disasters, riots, law-and-order situations, or the need to provide prompt services to citizens – the Motor Transport Department plays a vital role in keeping the police force capable and ready at every moment.Through this department, the police vehicle fleet always remains in functional condition. Not only maintenance but also the adoption of new technologies ensures that vehicle management is becoming more effective day by..`
     },
     marathi: {
       // title: 'विशेष IGP चा संदेश',
@@ -35,7 +32,11 @@ const DirectorsDesk = () => {
          अपर पोलीस महासंचालक व संचालक,<br/> पोलीस दळणवळण, माहिती तंत्रज्ञान व परिवहन<br/> महाराष्ट्र राज्य, पुणे
         </>
       ),
-      quote: `पोलीस वायरलेस विभाग, पोलीस दळणवळण आणि माहिती तंत्रज्ञान विभागापूर्वी, महाराष्ट्र राज्य पोलीस यंत्रणेद्वारे वापरल्या जाणार्‍या संवाद प्रणालींचे व्यवस्थापन करतो. यात रेडिओ फ्रिक्वेन्सीज, अधिकाऱ्यांचे डिस्पॅचिंग आणि पोलीस युनिट्समधील सुरक्षित व कार्यक्षम संवाद सुनिश्चित करणे समाविष्ट आहे. आमच्या विभागाद्वारे २४×७ निरंतर संवाद सेवा प्रदान केली जाते. पोलीस संवाद आणि माहिती तंत्रज्ञान विभाग पोलीसिंगमध्ये अत्यंत महत्त्वाची भूमिका बजावतो, कारण तो अधिकाऱ्यांमध्ये प्रभावी संवाद आणि समन्वय सुनिश्चित करतो. या विभागाचे एक मुख्य कार्य म्हणजे रिअल-टाइम संवाद, ज्यामुळे मैदानातील अधिकाऱ्यांशी आणि डिस्पॅचशी तत्काळ संपर्क साधता येतो, आणि घटनेला वेळेवर प्रतिसाद देणे शक्य होते....`
+      quote: `महाराष्ट्र पोलीस दल हे आपल्या राज्याचे आधारस्तंभ आहे. त्यांच्या विस्तृत जबाबदाऱ्यांसोबतच सक्षम संसाधने आणि विश्वासार्ह वाहन ताफ्याची गरजही तितकीच महत्त्वाची आहे. या वाहनांचे नियोजन, देखभाल, दुरुस्ती आणि कार्यक्षमतेची जबाबदारी मोटर परिवहन विभाग  पार पाडतो.
+
+आपत्ती व्यवस्थापन असो, दंगल नियंत्रण असो, कायदा-सुव्यवस्था राखणे असो किंवा नागरिकांना तत्काळ सेवा पुरविणे असो – मोटर परिवहन विभाग पोलीस दलाला सदैव सज्ज आणि सक्षम ठेवण्यात मोलाची भूमिका बजावतो. हा विभाग केवळ वाहनांची कार्यस्थिती सुनिश्चित करत नाही, तर नवी तंत्रज्ञानं स्वीकारून वाहन व्यवस्थापन अधिक प्रभावी आणि भविष्याभिमुख बनवत आहे.आजच्या आधुनिक युगात पोलीस दलाला वेग, तत्परता आणि तांत्रिक कार्यक्षमतेची गरज असते. हे सर्व पैलू मोटर परिवहन विभाग  सुनिश्चित करतो. नवीन प्रशिक्षण, तांत्रिक साधने आणि प्रणालीबद्ध नियोजनाद्वारे हा विभाग राज्यातील पोलीस यंत्रणेच्या कार्यप्रणालीला अधिक सुरळीत बनवतो
+
+म्हणूनच, मोटर परिवहन विभाग फक्त वाहन व्यवस्थापनाचे केंद्र नाही – तर पोलीस दलाच्या कार्यक्षमतेचा...`
     }
   };
 
@@ -95,7 +96,7 @@ const DirectorsDesk = () => {
                   </p>  
               </div>
 
-              <div className="text-6xl lg:text-7xl text-orange-500 absolute -bottom-10 right-64">
+              <div className="text-6xl lg:text-7xl text-orange-500 absolute -bottom-10 right-60">
                 "
               </div>
               

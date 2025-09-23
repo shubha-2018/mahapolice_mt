@@ -10,9 +10,9 @@ const Footer = () => {
       quickLinks: 'द्रुत दुवे',
       services: 'सेवा',
       contactInfo: 'संपर्क माहिती',
-      address: 'मुख्यालय: मोटर ट्रान्सपोर्ट विभाग, महाराष्ट्र पोलीस, मुंबई - ४००००१',
-      email: 'motortrp@mahapolice.gov.in',
-      phone: '+९१-२२-२२६२६२६२',
+      address: 'मुख्यालय:मोटर परिवहन विभाग, महाराष्ट्र राज्य,औंध-पुणे 411007',
+      email: 'igmtpune@gmail.com',
+      phone: '+91-02025880718',
       serviceItems: [
         'फ्लीट व्यवस्थापन',
         'कार्यशाळा सेवा',
@@ -25,8 +25,8 @@ const Footer = () => {
       services: 'Services',
       contactInfo: 'Contact Information',
       address: 'Headquarters: Motor Transport Department, Maharashtra Police, Mumbai - 400001',
-      email: 'motortrp@mahapolice.gov.in',
-      phone: '+91-22-22626262',
+      email: 'igmtpune@gmail.com',
+      phone: '+91-02025880718',
       serviceItems: [
         'Fleet Management',
         'Workshop Services',
@@ -62,7 +62,7 @@ const Footer = () => {
                 <h3 className={`font-bold text-lg ${
                   language === 'marathi' ? 'marathi-text' : 'english-text'
                 }`}>
-                  {language === 'marathi' ? 'मोटर ट्रान्सपोर्ट' : 'Motor Transport'}
+                  {language === 'marathi' ? 'मोटर परिवहन विभाग' : 'Motor Transport'}
                 </h3>
                 <p className="text-sm opacity-80">Maharashtra Police</p>
               </div>
