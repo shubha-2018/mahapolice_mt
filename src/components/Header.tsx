@@ -109,11 +109,18 @@ const Header = () => {
             {/* Mobile nav */}
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild className="lg:hidden">
-                <Button variant="ghost" size="sm">
-                  <Menu size={24} />
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="p-2 rounded-full hover:bg-accent/20 transition-colors"
+                >
+                  <Menu size={28} className="text-primary" />
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-[700px] sm:w-[300px]">
+              <SheetContent
+                side="right"
+                className="w-[280px] sm:w-[300px] h-full bg-background/95 backdrop-blur-lg shadow-2xl p-6 transform transition-transform duration-300 ease-in-out"
+              >
                 <nav className="flex flex-col gap-4 mt-8">
                   {navItems.map((item) =>
                     item.key === "employee" ? (
@@ -123,7 +130,7 @@ const Header = () => {
                           setIsOpen(false); // Close mobile sheet
                           setEmployeeOpen(true); // Open popup
                         }}
-                        className="police-nav-link text-base py-2 text-left"
+                        className="police-nav-link text-base py-2 text-left hover:text-primary transition-colors"
                       >
                         {getNavLabel(item.key)}
                       </button>
@@ -132,7 +139,7 @@ const Header = () => {
                         key={item.key}
                         to={item.href}
                         onClick={() => setIsOpen(false)}
-                        className="police-nav-link text-base py-2"
+                        className="police-nav-link text-base py-2 hover:text-primary transition-colors"
                       >
                         {getNavLabel(item.key)}
                       </Link>
