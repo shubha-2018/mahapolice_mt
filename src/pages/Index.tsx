@@ -36,13 +36,13 @@ const Index = () => {
       <IGPMessage />
 
       {/* About Motor Transport & What's New */}
-      <AboutSection />
+      {/* <AboutSection /> */}
 
       {/* Quick Access */}
-      <QuickAccess />
+      {/* <QuickAccess /> */}
 
       {/* Latest Updates */}
-      <LatestUpdates />
+      {/* <LatestUpdates /> */}
 
       {/* Footer */}
       {/* <Footer /> */}

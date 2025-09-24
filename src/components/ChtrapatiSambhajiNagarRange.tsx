@@ -34,7 +34,7 @@ const ChtrapatiSambhajiNagarRange: React.FC = () => {
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
         <h1 className="text-3xl md:text-4xl font-bold text-center text-black mb-8">
-          {language === "marathi" ? "छत्रपती संभाजी नगर रेंज" : "CHTRAPATI SAMBHAJI NAGAR RANGE"}
+          {language === "marathi" ? "छत्रपती संभाजीनगर परिक्षेत्र" : "CHTRAPATI SAMBHAJI NAGAR RANGE"}
         </h1>
 
         {/* Table */}

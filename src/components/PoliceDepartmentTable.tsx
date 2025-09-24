@@ -16,15 +16,7 @@ const PoliceDepartmentTable = () => {
         { srNo: "५", post: { marathi: "पोलीस उप निरीक्षक, म.पो.नौका विभाग, ठाणे", english: "Sub Inspector, M.Po. Boat Dept., Thane" }, sanctioned: "१", present: "०", vacant: "१" },
       ],
     },
-    mumbai: {
-      title: { marathi: "पोलीस नौका विभाग, बृहन्मुंबई", english: "Police Boat Department, Mumbai" },
-      rows: [
-        { srNo: "१", post: { marathi: "अपर पोलीस अधीक्षक, म.पो., बृहन्मुंबई", english: "Asst. Police Superintendent, M.Po., Mumbai" }, sanctioned: "१", present: "१", vacant: "०" },
-        { srNo: "२", post: { marathi: "पोलीस उप - अधीक्षक (२), म.पो., बृहन्मुंबई", english: "Deputy Police Superintendent (2), M.Po., Mumbai" }, sanctioned: "१", present: "०", vacant: "१" },
-        { srNo: "३", post: { marathi: "पोलीस उप - अधीक्षक (१), म.पो., बृहन्मुंबई", english: "Deputy Police Superintendent (1), M.Po., Mumbai" }, sanctioned: "१", present: "१", vacant: "०" },
-        { srNo: "४", post: { marathi: "पोलीस निरीक्षक, म.पो., बृहन्मुंबई", english: "Police Inspector, M.Po., Mumbai" }, sanctioned: "१", present: "१", vacant: "०" },
-      ],
-    },
+   
     tableHeaders: {
       srNo: { marathi: "अ.क्र.", english: "Sr.No." },
       post: { marathi: "पद", english: "Post" },
@@ -70,7 +62,7 @@ const PoliceDepartmentTable = () => {
       </div>
 
       {/* विभाग 2 - मुंबई */}
-      <div>
+      {/* <div>
         <h2 className="text-center text-xl md:text-2xl font-bold mb-4">
           {translations.mumbai.title[language]}
         </h2>
@@ -100,7 +92,7 @@ const PoliceDepartmentTable = () => {
             ))}
           </tbody>
         </table>
-      </div>
+      </div> */}
     </div>
   );
 };

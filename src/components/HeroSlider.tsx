@@ -247,112 +247,295 @@
 // };
 
 // export default HeroSlider;
-import { useState, useEffect } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 
-// ✅ Import your actual images
-import policeImg1 from "../assets/images/police0.jpg";
+
+
+
+
+
+
+
+
+// import { useState, useEffect } from "react";
+// import { ChevronLeft, ChevronRight } from "lucide-react";
+
+// // ✅ Import your actual images
+// import policeImg1 from "../assets/images/police0.jpg";
+// import policeImg2 from "../assets/images/police1.jpg";
+// import policeImg4 from "../assets/images/police3.jpg";
+// import policeImg5 from "../assets/images/police4.jpg";
+// import policeImg6 from "../assets/images/police5.jpg";
+// import policeImg7 from "../assets/images/police7.jpg";
+
+// interface SlideData {
+//   id: number;
+//   image: string;
+// }
+
+// const sliderData: SlideData[] = [
+//   { id: 1, image: policeImg1 },
+//   { id: 2, image: policeImg2 },
+//   { id: 4, image: policeImg4 },
+//   { id: 5, image: policeImg5 },
+//   { id: 6, image: policeImg6 },
+//   { id: 7, image: policeImg7 },
+// ];
+
+// const HeroSlider = () => {
+//   const [currentSlide, setCurrentSlide] = useState(0);
+//   const [isHovered, setIsHovered] = useState(false);
+
+//   // ✅ Auto-scroll logic (corrected)
+//   useEffect(() => {
+//     if (isHovered) return;
+
+//     const timer = setInterval(() => {
+//       setCurrentSlide((prev) => (prev + 1) % sliderData.length);
+//     }, 4000); // 4 sec
+
+//     return () => clearInterval(timer);
+//   }, [isHovered]); // 🔑 remove currentSlide from dependency
+
+//   const nextSlide = () => {
+//     setCurrentSlide((prev) => (prev + 1) % sliderData.length);
+//   };
+
+//   const prevSlide = () => {
+//     setCurrentSlide(
+//       (prev) => (prev - 1 + sliderData.length) % sliderData.length
+//     );
+//   };
+
+//   const goToSlide = (index: number) => {
+//     setCurrentSlide(index);
+//   };
+
+//   return (
+//     <div
+//       className="relative w-full max-w-8xl mx-auto h-[580px] overflow-hidden bg-white shadow-2xl mt-28"
+//       onMouseEnter={() => setIsHovered(true)}
+//       onMouseLeave={() => setIsHovered(false)}
+//     >
+//       {/* Image Container */}
+//       <div className="relative h-full flex items-center justify-center px-8">
+//         {sliderData.map((slide, index) => (
+//           <div
+//             key={slide.id}
+//             className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+//               index === currentSlide ? "opacity-100" : "opacity-0"
+//             }`}
+//           >
+//             <img
+//               src={slide.image}
+//               alt={`Police slide ${slide.id}`}
+//               className="w-full h-full object-contain rounded-2xl shadow-2xl"
+//               loading="lazy"
+//             />
+//           </div>
+//         ))}
+//       </div>
+
+//       {/* Arrows */}
+//       <button
+//         onClick={prevSlide}
+//         className="absolute left-6 top-1/2 -translate-y-1/2 z-20 bg-black/30 hover:bg-black/50 p-3 rounded-full"
+//       >
+//         <ChevronLeft className="w-6 h-6 text-white" />
+//       </button>
+
+//       <button
+//         onClick={nextSlide}
+//         className="absolute right-6 top-1/2 -translate-y-1/2 z-20 bg-black/30 hover:bg-black/50 p-3 rounded-full"
+//       >
+//         <ChevronRight className="w-6 h-6 text-white" />
+//       </button>
+
+//       {/* Indicators */}
+//       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
+//         {sliderData.map((_, index) => (
+//           <button
+//             key={index}
+//             onClick={() => goToSlide(index)}
+//             className={`w-3 h-3 rounded-full transition-all ${
+//               index === currentSlide ? "bg-blue-500 scale-125" : "bg-gray-400"
+//             }`}
+//           />
+//         ))}
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default HeroSlider;
+
+
+
+
+import { useState, useEffect } from "react";
+import { ChevronLeft, ChevronRight, Play, Pause } from "lucide-react";
+
+// ✅ Import local images from assets
+// import policeImg1 from "../assets/images/police0.jpg";
 import policeImg2 from "../assets/images/police1.jpg";
-import policeImg4 from "../assets/images/police3.jpg";
-import policeImg5 from "../assets/images/police4.jpg";
-import policeImg6 from "../assets/images/police5.jpg";
-import policeImg7 from "../assets/images/police7.jpg";
+import policeImg3 from "../assets/images/police10.jpg";
+import policeImg4 from "../assets/images/police4.jpg";
+import policeImg5 from "../assets/images/police5.jpg";
+import policeImg6 from "../assets/images/police7.jpg";
+import policecar2 from "../assets/images/PoliceCar2.jpg";
+import policecar from "../assets/images/police8.jpg";
+
+
+
 
 interface SlideData {
   id: number;
   image: string;
+  title: string;
+  subtitle: string;
+  description: string;
 }
 
 const sliderData: SlideData[] = [
-  { id: 1, image: policeImg1 },
-  { id: 2, image: policeImg2 },
-  { id: 4, image: policeImg4 },
-  { id: 5, image: policeImg5 },
-  { id: 6, image: policeImg6 },
-  { id: 7, image: policeImg7 },
+  // { 
+  //   id: 1, 
+  //   image: policeImg1,
+  //   title: "",
+  //   subtitle: "",
+  //   description: ""
+  // },
+  { 
+    id: 1, 
+    image: policeImg2,
+    title: "",
+    subtitle: "",
+    description: ""
+  },
+   { 
+    id:2 , 
+    image: policecar2,
+    title: "",
+    subtitle: "",
+    description: ""
+  }, { 
+    id: 3, 
+    image: policecar,
+    title: "",
+    subtitle: "",
+    description: ""
+  },
+  { 
+    id: 4, 
+    image: policeImg3,
+    title: "",
+    subtitle: "",
+    description: ""
+  },
+  { 
+    id: 5, 
+    image: policeImg4,
+    title: "",
+    subtitle: "",
+    description: ""
+  },
+  { 
+    id: 6, 
+    image: policeImg5,
+    title: "",
+    subtitle: "",
+    description: ""
+  },
+  { 
+    id: 7, 
+    image: policeImg6,
+    title: "",
+    subtitle: "",
+    description: ""
+  },
 ];
 
 const HeroSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
+  const [isPaused, setIsPaused] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
 
-  // ✅ Auto-scroll logic (corrected)
+  // Auto-scroll
   useEffect(() => {
-    if (isHovered) return;
+    if (isHovered || isPaused) return;
 
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % sliderData.length);
-    }, 4000); // 4 sec
+    }, 5000);
 
     return () => clearInterval(timer);
-  }, [isHovered]); // 🔑 remove currentSlide from dependency
+  }, [isHovered, isPaused]);
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % sliderData.length);
-  };
+  // Fade in on mount
+  useEffect(() => {
+    const timer = setTimeout(() => setIsLoaded(true), 100);
+    return () => clearTimeout(timer);
+  }, []);
 
-  const prevSlide = () => {
-    setCurrentSlide(
-      (prev) => (prev - 1 + sliderData.length) % sliderData.length
-    );
-  };
+  const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % sliderData.length);
+  const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + sliderData.length) % sliderData.length);
+  const goToSlide = (index: number) => setCurrentSlide(index);
+  const togglePlayPause = () => setIsPaused(!isPaused);
 
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index);
-  };
+  const currentSlideData = sliderData[currentSlide];
 
   return (
-    <div
-      className="relative w-full max-w-8xl mx-auto h-[580px] overflow-hidden bg-white shadow-2xl"
+    <div 
+      className={`relative w-full max-w-7xl mx-auto overflow-hidden transition-all duration-1000  mt-32
+      ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {/* Image Container */}
-      <div className="relative h-full flex items-center justify-center px-8">
-        {sliderData.map((slide, index) => (
-          <div
-            key={slide.id}
-            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-              index === currentSlide ? "opacity-100" : "opacity-0"
-            }`}
-          >
-            <img
-              src={slide.image}
-              alt={`Police slide ${slide.id}`}
-              className="w-full h-full object-contain rounded-2xl shadow-2xl"
-              loading="lazy"
-            />
-          </div>
-        ))}
+      {/* Slide image */}
+      <img
+        src={currentSlideData.image}
+        alt={currentSlideData.title}
+        className="w-full h-[500px] object-cover rounded-lg"
+      />
+
+      {/* Overlay text */}
+      <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center text-center text-white p-6">
+        <h2 className="text-3xl md:text-5xl font-bold">{currentSlideData.title}</h2>
+        <h3 className="text-lg md:text-2xl mt-2">{currentSlideData.subtitle}</h3>
+        <p className="mt-4 max-w-2xl">{currentSlideData.description}</p>
       </div>
 
-      {/* Arrows */}
+      {/* Navigation buttons */}
       <button
         onClick={prevSlide}
-        className="absolute left-6 top-1/2 -translate-y-1/2 z-20 bg-black/30 hover:bg-black/50 p-3 rounded-full"
+        className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/60 hover:bg-white text-black p-2 rounded-full shadow"
       >
-        <ChevronLeft className="w-6 h-6 text-white" />
+        <ChevronLeft size={24} />
       </button>
-
       <button
         onClick={nextSlide}
-        className="absolute right-6 top-1/2 -translate-y-1/2 z-20 bg-black/30 hover:bg-black/50 p-3 rounded-full"
+        className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/60 hover:bg-white text-black p-2 rounded-full shadow"
       >
-        <ChevronRight className="w-6 h-6 text-white" />
+        <ChevronRight size={24} />
       </button>
 
-      {/* Indicators */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
+      {/* Dots navigation */}
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
         {sliderData.map((_, index) => (
           <button
             key={index}
             onClick={() => goToSlide(index)}
-            className={`w-3 h-3 rounded-full transition-all ${
-              index === currentSlide ? "bg-blue-500 scale-125" : "bg-gray-400"
-            }`}
+            className={`w-3 h-3 rounded-full ${index === currentSlide ? "bg-white" : "bg-gray-400"}`}
           />
         ))}
       </div>
+
+      {/* Play/Pause button */}
+      <button
+        onClick={togglePlayPause}
+        className="absolute bottom-4 right-4 bg-white/60 hover:bg-white text-black p-2 rounded-full shadow"
+      >
+        {isPaused ? <Play size={20} /> : <Pause size={20} />}
+      </button>
     </div>
   );
 };

@@ -5,22 +5,22 @@ const UnitDyspSp: React.FC = () => {
   const { language } = useLanguageContext();
 
   const data = [
-    { sr: 1, unit: { marathi: "ईस्ट झोन, नागपूर", english: "East Zone, Nagpur" }, name: { marathi: "रिक्त", english: "Vacant" }, contact: "" },
-    { sr: 2, unit: { marathi: "एम.टी. वर्कशॉप, नागपूर", english: "M.T. Workshop, Nagpur" }, name: { marathi: "सुरेश असगर", english: "Suresh Asgar" }, contact: "9923243941" },
-    { sr: 3, unit: { marathi: "नागपूर शहर, एमटी सेक्शन", english: "Nagpur city, MT Section" }, name: { marathi: "युवराज शंकरसिंह ठाकूर (राजपूत)", english: "Yuvraj Shankarsingh Thakur (Rajput)" }, contact: "9699224502" },
-    { sr: 4, unit: { marathi: "एम.टी. वर्कशॉप, औरंगाबाद", english: "M.T. Workshop, Aurangabad" }, name: { marathi: "राजपाल यादव", english: "Rajpal Yadav" }, contact: "9921100880" },
+    { sr: 1, unit: { marathi: "पूर्व परिमंडळ, नागपूर", english: "East Zone, Nagpur" }, name: { marathi: "रिक्त", english: "Vacant" }, contact: "" },
+    { sr: 2, unit: { marathi: "मध्यवर्ती कर्मशाळा,नागपूर ", english: "M.T. Workshop, Nagpur" }, name: { marathi: "रिक्त", english: "Suresh Askar" }, contact: "" },
+    { sr: 3, unit: { marathi: "नागपूर शहर", english: "Nagpur city" }, name: { marathi: "युवराज शंकरसिंह ठाकूर (राजपूत)", english: "Yuvraj Shankarsingh Thakur (Rajput)" }, contact: "9699224502" },
+    { sr: 4, unit: { marathi: "मध्यवर्ती कर्मशाळा, छत्रपतीसंभाजी नगर ", english: "M.T. Workshop, chhatrapati Sambhaji Nagar" }, name: { marathi: "रिक्त", english: "Rajpal Yadav" }, contact: "" },
     { sr: 5, unit: { marathi: "नागपाडा, मुंबई", english: "Nagpada, Mumbai" }, name: { marathi: "जयवंतराव रामचंद्र देशमुख", english: "Jaywantrao Ramchandra Deshamukh" }, contact: "9892331525" },
-    { sr: 6, unit: { marathi: "नागपाडा, मुंबई", english: "Nagpada, Mumbai" }, name: { marathi: "रिक्त", english: "Vacant" }, contact: "" },
+    { sr: 6, unit: { marathi: "नागपाडा, मुंबई", english: "Nagpada, Mumbai" }, name: { marathi: "मयूर अरुण तपासे ", english: "Mayur Arun Tapase" }, contact: "" },
     { sr: 7, unit: { marathi: "नागपाडा, मुंबई", english: "Nagpada, Mumbai" }, name: { marathi: "प्रसांजित बाबासाहेब प्रतापे", english: "Prasanjit Babasaheb Pratape" }, contact: "9821560683" },
     { sr: 8, unit: { marathi: "नागपाडा, मुंबई", english: "Nagpada, Mumbai" }, name: { marathi: "सुनित यशवंत धायगुडे", english: "Sunit Yashawant Dhaygude" }, contact: "8087015902" },
-    { sr: 9, unit: { marathi: "नागपाडा, मुंबई", english: "Nagpada, Mumbai" }, name: { marathi: "रिक्त", english: "Vacant" }, contact: "" },
-    { sr: 10, unit: { marathi: "एसीपी, स्पेशल आयजीपी, एमटी लांच सेक्शन, ठाणे", english: "ACP, Spl. IGP, MT Lanch Section, Thane" }, name: { marathi: "रिक्त", english: "Vacant" }, contact: "" },
+    { sr: 9, unit: { marathi: "नागपाडा, मुंबई", english: "Nagpada, Mumbai" }, name: { marathi: "रामानंद मोरेश्वर कळसकर ", english: "Ramanand Moreshwar kalaskar" }, contact: "" },
+    { sr: 10, unit: { marathi: "नौका विभाग ठाणे ", english: "ACP, Spl. IGP, MT Lanch Section, Thane" }, name: { marathi: "रिक्त", english: "Vacant" }, contact: "" },
     { sr: 11, unit: { marathi: "ठाणे शहर, एमटी सेक्शन", english: "Thane City, MT Section" }, name: { marathi: "नशीरखान गुलाबखान पाठान", english: "Nashirkhan Gulabkhan Pathan" }, contact: "9664857867" },
     { sr: 12, unit: { marathi: "साउथ झोन, पुणे", english: "South Zone, Pune" }, name: { marathi: "रविंद्र बलगोविंद हिंगनेकर", english: "Ravindra Balgovind Hingnekar" }, contact: "8108000062" },
-    { sr: 13, unit: { marathi: "एम.टी. वर्कशॉप, पुणे", english: "M.T. Workshop, Pune" }, name: { marathi: "आनंद माळी (अतिरिक्त चार्ज)", english: "Anand Mali (addl. Charge)" }, contact: "9923107242" },
-    { sr: 14, unit: { marathi: "एम.टी. सेक्शन, ड्रायविंग ट्रेनिंग स्कूल, पुणे", english: "M.T. Section, Driving Training School, Pune" }, name: { marathi: "अनंत द्यानेश्वर माळी", english: "Anant Dyaneswar Mali" }, contact: "8378979474" },
-    { sr: 15, unit: { marathi: "एसीपी, स्पेशल आयजीपी, एमटी पुणे सेंट्रल परचेस ब्र., पुणे", english: "ACP, Spl. IGP, MT Pune Central purchase Br. Pune" }, name: { marathi: "रविंद्र बलगोविंद हिंगनेकर (अतिरिक्त चार्ज)", english: "Ravindra Balgovind Hingnekar (addl. Charge)" }, contact: "8108000062" },
-    { sr: 16, unit: { marathi: "पुणे शहर, एमटी सेक्शन", english: "Pune City, MT Section" }, name: { marathi: "सुनील निउरुती कदम", english: "Sunil Niuruti Kadam" }, contact: "9702980753" },
+    { sr: 13, unit: { marathi: "	मध्यवर्ती कर्मशाळा, पुणे", english: "M.T. Workshop, Pune" }, name: { marathi: "रिक्त ", english: "" }, contact: "" },
+    { sr: 14, unit: { marathi: "चालक प्रशिक्षण केंद्र पुणे ", english: "M.T. Section, Driving Training School, Pune" }, name: { marathi: "अनंत द्यानेश्वर माळी", english: "Anant Dyaneswar Mali" }, contact: "8378979474" },
+    { sr: 15, unit: { marathi: "मध्यवर्ती भंडार खरेदी शाखा पुणे ", english: "ACP, Spl. IGP, MT Pune Central purchase Br. Pune" }, name: { marathi: "रिक्त", english: "" }, contact: "" },
+    { sr: 16, unit: { marathi: "पुणे शहर", english: "Pune City" }, name: { marathi: "सुनील निवृत्ती  कदम", english: "Sunil Niuruti Kadam" }, contact: "9702980753" },
     { sr: 17, unit: { marathi: "कंट्रोलर, सरकारी वाहतूक (डेप्यूटेशनवर) (सांवर्गबाह्य पोस्ट) डी.वाय.एस.पी./ए.सी.पी. (एम.टी.) द्वारे ट्रान्सफरद्वारे भरणे आवश्यक", english: "Controller, Govt. transport (On Deputation) (Sanvargbahya post) to be filled up by transfer amongst Dy.Sp./A.C.P. (M.T.)" }, name: { marathi: "रिक्त", english: "Vacant" }, contact: "" },
   ];
 
@@ -30,7 +30,7 @@ const UnitDyspSp: React.FC = () => {
         {/* Header Section */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
-            {language === "marathi" ? "युनिट एसीपी आणि डीवायएसपी" : "UNIT ACP & DYSP"}
+            {language === "marathi" ? "सहाय्यक पोलीस आयुक्त  व पोलीस  उप-अधीक्षक " : "UNIT ACP & DYSP"}
           </h2>
           <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
         </div>

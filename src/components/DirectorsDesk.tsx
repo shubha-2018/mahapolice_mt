@@ -16,11 +16,13 @@ export default function DirectorsDesk() {
         "महाराष्ट्र राज्य, पुणे,",
       ],
       paragraphs: [
-        "पोलीस वायरलेस विभाग (आताचा पोलीस संप्रेषण व माहिती तंत्रज्ञान विभाग) राज्य पोलीसांना संप्रेषण सुविधा उपलब्ध करून देतो...",
-        "पोलीस संप्रेषण व माहिती तंत्रज्ञान विभाग हा पोलीस दलामध्ये अत्यंत महत्त्वाची भूमिका बजावतो...",
-        "कोयना भूकंप १० डिसेंबर १९६७ रोजी ६.३ रिश्टर तीव्रतेचा आणि किल्लारी भूकंप ३० सप्टेंबर १९९३ रोजी ६.०४ तीव्रतेचा झाला. या आपत्तीमध्ये इमारती व पायाभूत सुविधा कोसळल्यामुळे मोठे नुकसान झाले आणि २०० हून अधिक मृत्यू झाले. २६ जुलै २००५ रोजी मुंबईत झालेल्या अतिवृष्टीमुळे पूरस्थिती निर्माण झाली. हजारो नागरिक विस्थापित झाले, वाहतूक विस्कळीत झाली आणि अनेक मृत्यू झाले. २६/११ दहशतवादी हल्ला, दंगली व स्फोट या सर्व घटनांमध्ये खाजगी संप्रेषण जसे की मोबाईल नेटवर्क पूर्णपणे बंद पडले. अशा प्रसंगी पोलीस वायरलेस संप्रेषणाने आपत्ती व्यवस्थापन व प्रतिसाद देण्यासाठी मोलाची भूमिका बजावली. त्यामुळे कार्यक्षम वायरलेस संप्रेषण ही सार्वजनिक सुरक्षितता व पोलिसींगमधील कार्यक्षमता टिकवण्यासाठी अत्यावश्यक बाब आहे.",
-        "आधुनिक तंत्रज्ञानाचा वापर करून पोलीस विभागात संप्रेषण प्रणाली अधिक कार्यक्षम करण्यात येत आहे. नवीन साधने आणि सॉफ्टवेअर वापरल्यामुळे आपत्ती प्रतिसाद वेळ कमी झाला आहे.",
-        "सार्वजनिक सुरक्षिततेसाठी आणि आपत्ती व्यवस्थापनासाठी पोलीस वायरेलस नेटवर्क सातत्याने सुधारत राहणे आवश्यक आहे. प्रशिक्षण आणि उपाययोजना यांमुळे पोलिस दल अधिक तत्पर होऊ शकतो.",
+        " मला मोटर परिवहन विभाग, महाराष्ट्र राज्य, पुणे या आपल्या विभागाबद्दल बोलताना अत्यंत अभिमान वाटतो.",
+        "महाराष्ट्र पोलीस दल हा आपल्या राज्याचा कणा आहे. पोलीस दलाचे कार्यक्षेत्र जितके व्यापक आहे, तितकी त्याला लागणारी साधनसामग्री आणि वाहने हेदेखील महत्त्वाचे घटक आहेत. या सर्व वाहनांचे नियोजन, देखभाल, दुरुस्ती आणि कार्यक्षमतेसाठी जे अखंड परिश्रम घेतले जातात, ती जबाबदारी मोटर परिवहन विभागाची आहे.",
+        "आपत्ती असो, दंगली असोत, कायदा-सुव्यवस्था राखण्याची वेळ असो किंवा नागरिकांसाठी तत्पर सेवा पुरवण्याची आवश्यकता असो – पोलिस दलाला प्रत्येक क्षणी सक्षम आणि सज्ज ठेवण्यामध्ये मोटर परिवहन विभाग मोलाची भूमिका बजावत आहे.",
+        "या विभागामार्फत पोलीस वाहनांचा ताफा नेहमीच कार्यक्षम स्थितीत राहतो. केवळ दुरुस्तीच नाही, तर नवीन तंत्रज्ञानाचा वापर करून वाहन व्यवस्थापन अधिक परिणामकारक बनवण्याचे काम सातत्याने केले जात आहे.",
+        "आजच्या आधुनिक युगात पोलीस दलाला वेग, तत्परता आणि तांत्रिक सक्षमतेची आवश्यकता आहे. मोटर परिवहन विभाग ह्या सगळ्या बाबी सुनिश्चित करतो. नवे प्रशिक्षण, तांत्रिक साधने, आणि नियोजन यांच्या जोरावर हा विभाग संपूर्ण राज्यातील पोलीस यंत्रणेचे कार्य अधिक सुरळीत करतो.",
+        "म्हणूनच, मोटर परिवहन विभाग हे केवळ वाहन व्यवस्थापनाचे केंद्र नसून – तो पोलीस दलाच्या कार्यक्षमतेचा पाया आहे.",
+        "शेवटी, मी एवढेच सांगू इच्छितो की या विभागामुळेच महाराष्ट्र पोलीस दल सदैव तत्पर, सज्ज आणि सक्षम राहतो. या कार्याची जाणीव ठेवून आपण सर्वांनी एकत्रितपणे हा अभिमान वाढवूया.",
       ],
     },
     english: {
@@ -30,21 +32,23 @@ export default function DirectorsDesk() {
         "Additional Director General of Police",
         "and Director,",
         "Police Communication and",
-        "Information Technology Department,",
+        "Information Technology & Transport Department,",
         "Maharashtra State, Pune.",
       ],
       paragraphs: [
-        "The Police Wireless Department prior to Police Communication and Information Technology Department typically handles communication systems...",
-        "The Police Communication and Information Technology Department plays a vital role in policing...",
-        "The Koyna earthquake on December 10, 1967 with a magnitude of 6.3 and the Killari earthquake on September 30, 1993 with a magnitude of 6.04 occurred in Maharashtra state, India. It caused significant damage and resulted in over 200 deaths, largely due to the collapse of buildings and infrastructure. The floods that followed on July 26, 2005, in Mumbai, were devastating. Heavy rainfall led to widespread flooding, impacting transportation, displacing thousands, and causing numerous fatalities. The city faced significant challenges in emergency response and infrastructure resilience during this disaster. 26/11 terrorist attack, riots and blasts were happened in Maharashtra state. Wireless communication has played a crucial role in disaster management and response during such crucial events when private network like mass communication, mobile network failed. Hence effective wireless communication is essential for maintaining public safety and operational efficiency in policing.",
-        "The department has been leveraging modern technology to enhance communication systems. Advanced tools and software have improved response times during emergencies.",
-        "Continuous upgrades of the wireless network are essential for public safety and disaster management. Training and preventive measures ensure that the police force remains proactive and efficient.",
+        "I feel extremely proud to speak about the Motor Transport Department, Maharashtra State, Pune.",
+        "The Maharashtra Police Force is the backbone of our state. As vast as the responsibilities of the police force are, equally important are the resources and vehicles it requires. The responsibility of planning, maintenance, repair, and ensuring efficiency of all these vehicles lies with the Motor Transport Department.",
+        "Be it disasters, riots, law-and-order situations, or the need to provide prompt services to citizens – the Motor Transport Department plays a vital role in keeping the police force capable and ready at every moment.",
+        "Through this department, the police vehicle fleet always remains in functional condition. Not only maintenance but also the adoption of new technologies ensures that vehicle management is becoming more effective day by day.",
+        "In today’s modern era, the police force requires speed, readiness, and technological efficiency. The Motor Transport Department ensures all these aspects. With new training, technical tools, and systematic planning, this department makes the functioning of the state police machinery smoother.",
+        "Thus, the Motor Transport Department is not merely a center of vehicle management – it is the foundation of the police force’s efficiency.",
+        "In conclusion, I would like to state that because of this department, the Maharashtra Police Force always remains ready, capable, and efficient. Let us all collectively take pride in this contribution.",
       ],
     },
   };
 
   return (
-    <div className="max-w-6xl mx-auto p-6 bg-white">
+    <div className="max-w-6xl mx-auto p-6 bg-white mt-28">
       {/* Header */}
       <div className="mb-8">
         <h1 className="text-4xl font-bold text-purple-800 mb-2">
