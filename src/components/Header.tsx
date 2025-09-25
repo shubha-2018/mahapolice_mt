@@ -56,8 +56,8 @@ const Header = () => {
             <div className="text-left max-w-[220px] sm:max-w-none">
               <h1 className={`text-sm sm:text-lg md:text-xl lg:text-2xl font-bold leading-tight ${lang === 'marathi' ? 'marathi-text' : 'english-text'}`}>
                 {lang === 'marathi'
-                  ? 'पोलीस मोटर परिवहन विभाग, महाराष्ट्र राज्य पुणे'
-                  : <>Police Motor Transport Department<br />Maharashtra State, Pune</>}
+                  ? 'मोटर परिवहन विभाग, महाराष्ट्र राज्य पुणे'
+                  : <> Motor Transport Department<br />Maharashtra State, Pune</>}
               </h1>
               <p className={`text-xs sm:text-sm text-muted-foreground ${lang === 'marathi' ? 'marathi-text' : 'english-text'}`}>
                 {lang === 'marathi'

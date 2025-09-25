@@ -103,7 +103,7 @@ const KokanRangeTable = () => {
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <h1 className="text-3xl md:text-4xl font-bold text-center text-black mb-8">
-          {language === "marathi" ? "पोलीस मोटर परिवहन कोकण परिक्षेत्र" : "KOKAN RANGE"}
+          {language === "marathi" ? "पोलीस मोटार  परिवहन कोकण परिक्षेत्र" : "KOKAN RANGE"}
         </h1>
 
         {/* Table */}
@@ -116,15 +116,17 @@ const KokanRangeTable = () => {
                   {language === "marathi" ? "क्र.सं." : "Sr.No."}
                 </th>
                 <th className="px-4 py-3 text-white font-semibold text-left border-r border-blue-500">
-                  {language === "marathi" ? "मोटर परिवहन विभागाचे नाव" : "Commissionerate"}
+                  {language === "marathi" ? "मोटार  परिवहन विभागाचे नाव" : "Commissionerate"}
                 </th>
-                
-                <th className="px-4 py-3 text-white font-semibold text-left border-r border-blue-500">
-                  {language === "marathi" ? "अधिकाऱ्याचे नाव" : "Officer Name"}
+                 <th className="px-4 py-3 text-white font-semibold text-left border-r border-blue-500">
+                  {language === "marathi" ? "प्रभारी अधिकाऱ्याचे नाव" : "Officer Name"}
                 </th>
-                <th className="px-4 py-3 text-white font-semibold text-left border-r border-blue-500">
+                 <th className="px-4 py-3 text-white font-semibold text-left border-r border-blue-500">
                   {language === "marathi" ? "प्रभारी अधिकारी पदनाम" : "Designation"}
                 </th>
+                
+               
+               
                 <th className="px-4 py-3 text-white font-semibold text-left">
                   {language === "marathi" ? "संपर्क क्रमांक" : "Contact Number"}
                 </th>
@@ -141,6 +143,9 @@ const KokanRangeTable = () => {
                   <td className="px-4 py-3 text-gray-900 border-r border-gray-300 font-medium">
                     {row.sr}
                   </td>
+                   <td className="px-4 py-3 text-gray-900 border-r border-gray-300">
+                    {language === "marathi" ? row.designation.marathi : row.designation.english}
+                  </td>
                   <td className="px-4 py-3 text-gray-900 border-r border-gray-300">
                     {language === "marathi" ? row.commissionerate.marathi : row.commissionerate.english}
                   </td>
@@ -148,9 +153,7 @@ const KokanRangeTable = () => {
                   <td className="px-4 py-3 text-gray-900 border-r border-gray-300">
                     {language === "marathi" ? row.officerName.marathi : row.officerName.english}
                   </td>
-                   <td className="px-4 py-3 text-gray-900 border-r border-gray-300">
-                    {language === "marathi" ? row.designation.marathi : row.designation.english}
-                  </td>
+                  
                   <td className="px-4 py-3 text-gray-900">
                     {row.contact || ""}
                   </td>

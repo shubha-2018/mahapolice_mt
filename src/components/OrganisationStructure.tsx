@@ -30,7 +30,7 @@ const OrganisationStructure = () => {
             महाराष्ट्र राज्य, पुणे
           </>
         ),
-        english: "Special Inspector General of Police, Police Transport, IT and Logistics, Maharashtra State, Pune",
+        english: "Additional Director Genral of Police And Director, IT and Logistics, Maharashtra State, Pune",
       },
       image: id0,
     },
@@ -43,11 +43,11 @@ const OrganisationStructure = () => {
           <>
             (IPS)<br />
             विशेष पोलिस महानिरीक्षक <br />
-            मोटर परिवहन विभाग <br />
+            मोटार परिवहन विभाग <br />
             महाराष्ट्र राज्य, पुणे
           </>
         ),
-        english: "Special Inspector General of Police, Motor Transport Department, Maharashtra State, Pune",
+        english: "Special Inspector General of Police, Motor Transport, Maharashtra State, Pune",
       },
       image: id7,
     },
@@ -162,7 +162,7 @@ const OrganisationStructure = () => {
                 <div className="inline-flex items-center gap-2 bg-blue-100 px-3 py-1 rounded-full">
                   <Star className="w-3 h-3 text-blue-600" />
                   <span className="text-black font-bold text-1xl">
-                    {t({ marathi: "उपमहानिरीक्षक", english: "DIG MT" })}
+                    {t({ marathi: "पोलीस उपमहानिरीक्षक मोटार परिवहन महाराष्ट्र राज्य पुणे ", english: "Deputy Inspector General of Police, Motor Transport, Maharashtra State, Pune" })}
                   </span>
                 </div>
               </div>

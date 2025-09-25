@@ -10,7 +10,7 @@ const Footer = () => {
       quickLinks: 'द्रुत दुवे',
       services: 'सेवा',
       contactInfo: 'संपर्क माहिती',
-      address: 'मुख्यालय:मोटर परिवहन विभाग, महाराष्ट्र राज्य,औंध-पुणे 411007',
+      address: 'विशेष पोलिस महानिरीक्षक, महाराष्ट्र राज्य,औंध-पुणे 411007',
       email: 'igmtpune@gmail.com',
       phone: '+91-02025880718',
       serviceItems: [

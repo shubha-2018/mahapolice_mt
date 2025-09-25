@@ -35,7 +35,7 @@ const NagpurRange: React.FC = () => {
     <div className="py-12 px-6 md:px-12 lg:px-24 bg-white">
       <div className="max-w-6xl mx-auto">
         <h1 className="text-3xl md:text-4xl font-bold text-center text-black mb-8">
-          {language === "marathi" ? "पोलीस मोटर परिवहन नागपूर परिक्षेत्र" : "NAGPUR RANGE"}
+          {language === "marathi" ? "पोलीस मोटार  परिवहन नागपूर परिक्षेत्र" : "NAGPUR RANGE"}
         </h1>
 
         <div className="overflow-x-auto shadow-md rounded-lg border border-gray-300">
@@ -46,10 +46,10 @@ const NagpurRange: React.FC = () => {
                   {language === "marathi" ? "क्र.सं." : "Sr.No."}
                 </th>
                 <th className="px-4 py-3 text-white font-semibold text-left border-r border-blue-500">
-                  {language === "marathi" ? "मोटर परिवहन विभागाचे नाव" : "Commissionerate"}
+                  {language === "marathi" ? "मोटार परिवहन विभागाचे नाव" : "Commissionerate"}
                 </th>
                 <th className="px-4 py-3 text-white font-semibold text-left border-r border-blue-500">
-                  {language === "marathi" ? "अधिकाऱ्याचे नाव" : "Officer Name"}
+                  {language === "marathi" ? "	प्रभारी अधिकाऱ्याचे नाव" : "Officer Name"}
                 </th>
                 <th className="px-4 py-3 text-white font-semibold text-left border-r border-blue-500">
                   {language === "marathi" ? "प्रभारी अधिकारी पदनाम" : "Designation"}

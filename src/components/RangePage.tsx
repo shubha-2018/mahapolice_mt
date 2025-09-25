@@ -10,14 +10,15 @@ const RangePage = () => {
 
   const renderTable = () => {
     switch (id) {
-      case "konkan":    // ✅ matches with OrganizationalChart
-        return <KokanRangeTable />;
+      
       case "pune":
         return <PuneRangeTable />;
       case "nagpur":
         return <NagpurRangeTable />;
       case "cs_nagar":
         return <CSNagarRangeTable />;
+        case "konkan":    // ✅ matches with OrganizationalChart
+        return <KokanRangeTable />;
         case "bruhmumbai":
         return <BruhMumbai/>;
       default:
@@ -28,10 +29,10 @@ const RangePage = () => {
   return (
     <div className="p-8">
       <h1 className="text-3xl font-bold mb-6">
-        {id === "konkan" && "SPMT कोकण रेंज"}
         {id === "pune" && "SPMT पुणे रेंज"}
         {id === "nagpur" && "SPMT नागपूर रेंज"}
         {id === "cs_nagar" && "SPMT छ.स. नगर रेंज"}
+        {id === "konkan" && "SPMT कोकण रेंज"}
         {id === "bruhmumbai" && "बृहमुंबई "}
 
       </h1>

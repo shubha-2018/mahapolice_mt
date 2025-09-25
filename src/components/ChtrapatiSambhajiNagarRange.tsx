@@ -34,7 +34,7 @@ const ChtrapatiSambhajiNagarRange: React.FC = () => {
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
         <h1 className="text-3xl md:text-4xl font-bold text-center text-black mb-8">
-          {language === "marathi" ? "पोलीस मोटर परिवहन छत्रपती संभाजीनगर परिक्षेत्र" : "CHTRAPATI SAMBHAJI NAGAR RANGE"}
+          {language === "marathi" ? "पोलीस मोटार परिवहन छत्रपती संभाजीनगर परिक्षेत्र" : "CHTRAPATI SAMBHAJI NAGAR RANGE"}
         </h1>
 
         {/* Table */}
@@ -47,14 +47,15 @@ const ChtrapatiSambhajiNagarRange: React.FC = () => {
                   {language === "marathi" ? "क्र.सं." : "Sr.No."}
                 </th>
                 <th className="px-4 py-3 text-left border-r border-blue-500">
-                  {language === "marathi" ? "मोटर परिवहन विभागाचे नाव" : "State Reserve Police Force"}
+                  {language === "marathi" ? "मोटार परिवहन विभागाचे नाव" : "State Reserve Police Force"}
                 </th>
-                <th className="px-4 py-3 text-left border-r border-blue-500">
-                  {language === "marathi" ? "अधिकाऱ्याचे नाव" : "Officer Name"}
-                </th>
-                <th className="px-4 py-3 text-left border-r border-blue-500">
+                 <th className="px-4 py-3 text-left border-r border-blue-500">
                   {language === "marathi" ? "प्रभारी अधिकारी पदनाम" : "Designation"}
                 </th>
+                <th className="px-4 py-3 text-left border-r border-blue-500">
+                  {language === "marathi" ? "	प्रभारी अधिकाऱ्याचे नाव" : "Officer Name"}
+                </th>
+               
                 <th className="px-4 py-3 text-left">
                   {language === "marathi" ? "संपर्क क्रमांक" : "Contact Number"}
                 </th>
@@ -74,12 +75,13 @@ const ChtrapatiSambhajiNagarRange: React.FC = () => {
                   <td className="px-4 py-3 border-r border-gray-300 text-gray-900">
                     {language === "marathi" ? row.commissionerate.marathi : row.commissionerate.english}
                   </td>
+                   <td className="px-4 py-3 border-r border-gray-300 text-gray-900">
+                    {row.designation.marathi || row.designation.english || "-"}
+                  </td>
                   <td className="px-4 py-3 border-r border-gray-300 text-gray-900">
                     {row.officerName.marathi || row.officerName.english || "-"}
                   </td>
-                  <td className="px-4 py-3 border-r border-gray-300 text-gray-900">
-                    {row.designation.marathi || row.designation.english || "-"}
-                  </td>
+                 
                   <td className="px-4 py-3 text-gray-900">
                     {row.contact || "-"}
                   </td>
