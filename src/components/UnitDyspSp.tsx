@@ -45,7 +45,7 @@ const UnitDyspSp: React.FC = () => {
                     {language === "marathi" ? "क्र.सं" : "Sr. No"}
                   </th>
                   <th className="px-6 py-4 text-left font-semibold border-r border-blue-500">
-                    {language === "marathi" ? "युनिट" : "Unit"}
+                    {language === "marathi" ? "	मोटर परिवहन विभागाचे नाव" : "Unit"}
                   </th>
                   <th className="px-6 py-4 text-left font-semibold border-r border-blue-500">
                     {language === "marathi" ? "नाव" : "Name"}

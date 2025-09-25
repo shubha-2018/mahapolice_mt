@@ -71,17 +71,17 @@ const VehicleDepartmentDocument = () => {
         <div className="bg-white rounded-2xl shadow-lg p-8 mb-10 border border-blue-100">
           <div className="overflow-x-auto">
            <h1 className="text-2xl font-bold text-blue-700 mb-6 text-center">
-  {language === "marathi" ? "जिल्हानिहाय उपलब्ध नौका" : "District-wise Available Patrol Boats"}
+  {language === "marathi" ? "सागरी जिल्हानिहाय मंजूर उप-नौका " : "District-wise Available Patrol Boats"}
 </h1>
             <table className="w-full border-collapse border border-blue-300 rounded-lg overflow-hidden shadow-sm">
               <thead>
                 <tr className="bg-gradient-to-r from-blue-600 to-blue-700 text-white">
                   <th className="border border-blue-300 px-4 py-3 text-center font-semibold">{language === "marathi" ? "अ.क्र." : "Sr.No."}</th>
                   <th className="border border-blue-300 px-4 py-3 text-center font-semibold">{language === "marathi" ? "जिल्हे/आयुक्तालय" : "District/Office"}</th>
-                  <th className="border border-blue-300 px-4 py-3 text-center font-semibold">5 ton</th>
-                  <th className="border border-blue-300 px-4 py-3 text-center font-semibold">12 ton</th>
-                  <th className="border border-blue-300 px-4 py-3 text-center font-semibold">9.5 m</th>
-                  <th className="border border-blue-300 px-4 py-3 text-center font-semibold">12 m</th>
+                  <th className="border border-blue-300 px-4 py-3 text-center font-semibold">{language === "marathi" ? "5 टन" : "5 ton"}</th>
+                  <th className="border border-blue-300 px-4 py-3 text-center font-semibold">{language === "marathi" ? "12 टन" : "12 ton"}</th>
+                  <th className="border border-blue-300 px-4 py-3 text-center font-semibold">{language === "marathi" ? "9.5 मीटर" : "9.5 m"}</th>
+                  <th className="border border-blue-300 px-4 py-3 text-center font-semibold">{language === "marathi" ? "12 मीटर" : "12 m"}</th>
                   <th className="border border-blue-300 px-4 py-3 text-center font-semibold">{language === "marathi" ? "एकुण" : "Total"}</th>
                 </tr>
               </thead>

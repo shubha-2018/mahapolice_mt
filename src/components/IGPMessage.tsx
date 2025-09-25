@@ -20,7 +20,7 @@ const IGPMessage = () => {
       message:
         'The Maharashtra Police Motor Transport Department serves as the backbone of police forces across the state. Our modern fleet and technical facilities play a crucial role in enhancing police efficiency. We are moving towards the future by increasing the use of electric vehicles for environmental protection. The contribution of our skilled drivers and technical staff is invaluable.',
       signature: 'Shri. Ashok Morale (IPS)',
-      designation: 'Special IGP (Motor Transport)',
+      designation: 'Special Inspector General of Police, Motor Transport Department, Maharashtra State',
     },
   };
 
