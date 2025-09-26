@@ -62,7 +62,7 @@ const Footer = () => {
                 <h3 className={`font-bold text-lg ${
                   language === 'marathi' ? 'marathi-text' : 'english-text'
                 }`}>
-                  {language === 'marathi' ? 'मोटर परिवहन विभाग' : 'Motor Transport'}
+                  {language === 'marathi' ? 'मोटार परिवहन विभाग' : 'Motor Transport'}
                 </h3>
                 <p className="text-sm opacity-80">Maharashtra Police</p>
               </div>

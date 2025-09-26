@@ -232,14 +232,14 @@ const leaders: Leader[] = [
    {
     id: 9,
     name: {
-      marathi: 'श्री.अशोक मोराले',
+      marathi: 'श्री.अशोक  मोराळे',
       english: 'Shri.Ashok Morale'
     },
     designation: {
       marathi: (
         <>
          
-          विशेष पोलिस महानिरीक्षक, मोटर परिवहन<br /> महाराष्ट्र राज्य, पुणे
+          विशेष पोलिस महानिरीक्षक, मोटार  परिवहन<br /> महाराष्ट्र राज्य, पुणे
         </>
       ),
       english: (
@@ -276,7 +276,7 @@ const Leadership = () => {
             }`}
           >
             {language === 'marathi'
-              ? 'महाराष्ट्र पोलीस मोटर ट्रान्सपोर्ट विभागाचे नेतृत्व आणि मार्गदर्शन'
+              ? 'महाराष्ट्र पोलीस  ट्रान्सपोर्ट विभागाचे नेतृत्व आणि मार्गदर्शन'
               : 'Leadership and guidance of Maharashtra Police Motor Transport Department'}
           </p>
         </div>

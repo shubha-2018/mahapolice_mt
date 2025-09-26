@@ -1,21 +1,17 @@
-// import { useLanguageContext } from "@/context/LanguageContext";
 import { useLanguageContext } from "../context/LanguageContext";
 
-
 const AboutUs = () => {
-  // const { language } = useLanguageContext();
-  const { language, isMarathi, isEnglish } = useLanguageContext();
-
+  const { language } = useLanguageContext();
 
   const aboutContent = {
     marathi: {
-      title: " मोटर परिवहन विभागाचा इतिहास ",
-      paragraphs: ["महाराष्ट्र राज्य पोलीस मोटर परिवहन विभागाची  स्थापना सन १९४८ साली काही वाहनांच्या लहान ताफ्याने आणि सैनिक चालकांच्या मदतीने स्थापना  झाली. काही वाहने भाड्याने घेण्यात आली होती. पर्यवेक्षण कार्यासाठी तांत्रिक अधिकारी नेमण्यात आले.१९४८ ते २००१ या काळात ही संघटना एसपी ते डी.आय.जी पदावरील तांत्रिक अधिकारी यांच्या नेतृत्वाखाली होती. २००१ नंतर पदोन्नतीसाठी फीडर कॅडरमध्ये तांत्रिक अधिकारी नसल्याने, आयजीपी दर्जाच्या पोलिस अधिकाऱ्यांच्या नेतृत्वाखाली हा विभाग कार्यरत आहे. त्यांना डीआयजी व एसपी पदाचे तांत्रिक अधिकारी सहाय्य करतात. मुंबई शहरासाठी हा विभाग थेट पोलीस आयुक्तांच्या नियंत्रणाखाली असून अति. पोलीस आयुक्त (एमटी) या तांत्रिक अधिकाऱ्यांच्या नेतृत्वाखाली आहे. डीआयजी, एमटी व अति. पोलीस आयुक्त (एमटी) हे दोघेही पदवीधर ऑटोमोबाईल अभियंते आहेत.पुढे सर्व तांत्रिक शाखा एका छताखाली आणण्यासाठी शासनाने ठराव करून मोटर परिवहन विभाग व पोलीस वायरलेस विभाग यांना एकत्र करून त्याचे प्रमुख अपर पोलीस महासंचालक व संचालक पोलीस दळणवळण, माहिती तंत्रज्ञान व परिवहन यांना करण्यात आले.सध्या महाराष्ट्र पोलीस दलाकडे (मुंबईसह) २४,००० वाहने आहेत. प्रशिक्षित व पात्र तांत्रिक अंमलदार यांच्याद्वारे देखभाल व दुरुस्ती कार्य  केले जाते. ऑटोमोबाईल डिप्लोमा व पदवीधर अधिकारी एमटी विभागाचे पर्यवेक्षण करतात.१९८० नंतर या विभागाचा विस्तार सुरू झाला आणि १९९० नंतर हा विस्तार जलद गतीने व मोठ्या प्रमाणावर झाला. राज्य तसेच मुंबईतील संपूर्ण पोलिस दल वाहतुकीसाठी या विभागावर पूर्णपणे अवलंबून आहे."
-        
+      title: "मोटार  परिवहन विभागाचा इतिहास",
+      paragraphs: [
+        "महाराष्ट्र राज्य पोलीस मोटार  परिवहन विभागाची  स्थापना सन १९४८ साली काही वाहनांच्या लहान ताफ्याने आणि सैनिक चालकांच्या मदतीने स्थापना  झाली. काही वाहने भाड्याने घेण्यात आली होती. पर्यवेक्षण कार्यासाठी तांत्रिक अधिकारी नेमण्यात आले.१९४८ ते २००१ या काळात ही संघटना एसपी ते डी.आय.जी पदावरील तांत्रिक अधिकारी यांच्या नेतृत्वाखाली होती. २००१ नंतर पदोन्नतीसाठी फीडर कॅडरमध्ये तांत्रिक अधिकारी नसल्याने, आयजीपी दर्जाच्या पोलिस अधिकाऱ्यांच्या नेतृत्वाखाली हा विभाग कार्यरत आहे. त्यांना डीआयजी व एसपी पदाचे तांत्रिक अधिकारी सहाय्य करतात. मुंबई शहरासाठी हा विभाग थेट पोलीस आयुक्तांच्या नियंत्रणाखाली असून अति. पोलीस आयुक्त (एमटी) या तांत्रिक अधिकाऱ्यांच्या नेतृत्वाखाली आहे. डीआयजी, एमटी व अति. पोलीस आयुक्त (एमटी) हे दोघेही पदवीधर ऑटोमोबाईल अभियंते आहेत.पुढे सर्व तांत्रिक शाखा एका छताखाली आणण्यासाठी शासनाने ठराव करून मोटार  परिवहन विभाग व पोलीस वायरलेस विभाग यांना एकत्र करून त्याचे प्रमुख अपर पोलीस महासंचालक व संचालक पोलीस दळणवळण, माहिती तंत्रज्ञान व परिवहन यांना करण्यात आले.सध्या महाराष्ट्र पोलीस दलाकडे (मुंबईसह) २४,००० वाहने आहेत. प्रशिक्षित व पात्र तांत्रिक अंमलदार यांच्याद्वारे देखभाल व दुरुस्ती कार्य  केले जाते. ऑटोमोबाईल डिप्लोमा व पदवीधर अधिकारी एमटी विभागाचे पर्यवेक्षण करतात.१९८० नंतर या विभागाचा विस्तार सुरू झाला आणि १९९० नंतर हा विस्तार जलद गतीने व मोठ्या प्रमाणावर झाला. राज्य तसेच मुंबईतील संपूर्ण पोलिस दल वाहतुकीसाठी या विभागावर पूर्णपणे अवलंबून आहे."
       ],
     },
     english: {
-      title: " HISTORY OF MT SECTION",
+      title: "HISTORY OF MT SECTION",
       paragraphs: [
         "The Maharashtra State Motor Transport Organisation was established in the year 1948, with a small fleet of vehicles and with the help of Ex-servicemen drivers as some vehicles were taken on hire charge. Technical officers were appointed for supervisory work.",
         "Since 1948 to 2001 this organisation was headed by officers of the rank SP to IGP who were technically qualified. From 2001 onwards, as there were no technical officers in the feeder cadre for promotion, it has been headed by a police officer of IGP Rank, assisted by a technical officer of the DIG and SP rank. For Mumbai City, the MT section is under direct control of CP Mumbai and is headed by a technical officer of the rank Addl. C.P. Both the DIG, MT and Addl. C.P., MT are qualified automobile engineers.",
@@ -27,15 +23,21 @@ const AboutUs = () => {
   };
 
   return (
-    <section id="about-us" className="relative bg-white py-12 px-6 md:px-12 lg:px-24 mt-20">
+    <section
+      id="about-us"
+      className="relative bg-white dark:bg-gray-900 py-12 px-6 md:px-12 lg:px-24 mt-20 transition-colors duration-300"
+    >
       <div className="max-w-5xl mx-auto">
-        <div className="bg-gray-50 shadow-lg rounded-2xl p-6 md:p-10 border border-gray-200">
-          <h2 className="text-2xl md:text-3xl font-bold text-primary mb-6 text-center">
+        <div className="bg-gray-50 dark:bg-gray-800 shadow-lg rounded-2xl p-6 md:p-10 border border-gray-200 dark:border-gray-700 transition-colors duration-300">
+          <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center text-gray-900 dark:text-white transition-colors duration-300">
             {aboutContent[language].title}
           </h2>
 
           {aboutContent[language].paragraphs.map((para, index) => (
-            <p key={index} className="text-gray-700 leading-relaxed text-justify mb-4">
+            <p
+              key={index}
+              className="text-gray-700 dark:text-gray-300 leading-relaxed text-justify mb-4 transition-colors duration-300"
+            >
               {para}
             </p>
           ))}

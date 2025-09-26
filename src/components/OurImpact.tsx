@@ -115,7 +115,7 @@ const OurImpact = () => {
             language === 'marathi' ? 'marathi-text' : 'english-text'
           }`}>
             {language === 'marathi' 
-              ? 'महाराष्ट्र पोलीस मोटर ट्रान्सपोर्ट विभागाची उपलब्धी आणि सेवा'
+              ? 'महाराष्ट्र पोलीस मोटार  ट्रान्सपोर्ट विभागाची उपलब्धी आणि सेवा'
               : 'Achievements and service milestones of Maharashtra Police Motor Transport Department'
             }
           </p>

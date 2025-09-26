@@ -73,18 +73,16 @@ const BoatTable = () => {
     },
   ];
 
-  // Helper function to render boat names
   const renderBoatNames = (boat) => {
     if (!boat) return "";
     const names = Array.isArray(boat[language]) ? boat[language].join(", ") : boat[language];
     return names === "-" ? (
-      <span className="text-gray-500 italic font-medium">N/A</span>
+      <span className="text-gray-500 dark:text-gray-400 italic font-medium">N/A</span>
     ) : (
-      <span className="text-gray-800 font-medium">{names}</span>
+      <span className="text-gray-800 dark:text-gray-200 font-medium">{names}</span>
     );
   };
 
-  // Calculate totals
   const totals = data.reduce(
     (acc, row) => ({
       gsl12: acc.gsl12 + parseInt(row.gsl12Qty || 0),
@@ -96,98 +94,96 @@ const BoatTable = () => {
   );
 
   return (
-    <div className="min-h-screen bg-gray-50">
-     
-        {/* Table Title */}
-        <div className="flex justify-center mb-6">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center">
-            {language === "marathi" ? "जहाजांची तपशीलवार माहिती" : "Detailed Information of Boats"}
-          </h2>
-        </div>
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-500">
+      {/* Table Title */}
+      <div className="flex justify-center mb-6">
+        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-gray-100 text-center">
+          {language === "marathi" ? "जहाजांची तपशीलवार माहिती" : "Detailed Information of Boats"}
+        </h2>
+      </div>
+
       <div className="max-w-7xl mx-auto px-4 py-8">
         {/* Statistics Cards */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-          <div className="bg-white rounded-lg shadow-md p-6 border-t-4 border-green-500">
-            <p className="text-sm font-medium text-gray-600">GSL 12 Ton</p>
+          <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 border-t-4 border-green-500 transition-colors">
+            <p className="text-sm font-medium text-gray-600 dark:text-gray-300">GSL 12 Ton</p>
             <p className="text-2xl font-bold text-green-600">{totals.gsl12}</p>
           </div>
-          <div className="bg-white rounded-lg shadow-md p-6 border-t-4 border-blue-500">
-            <p className="text-sm font-medium text-gray-600">GSL 5 Ton</p>
+          <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 border-t-4 border-blue-500 transition-colors">
+            <p className="text-sm font-medium text-gray-600 dark:text-gray-300">GSL 5 Ton</p>
             <p className="text-2xl font-bold text-blue-600">{totals.gsl5}</p>
           </div>
-          <div className="bg-white rounded-lg shadow-md p-6 border-t-4 border-purple-500">
-            <p className="text-sm font-medium text-gray-600">MFL 12 Meter</p>
+          <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 border-t-4 border-purple-500 transition-colors">
+            <p className="text-sm font-medium text-gray-600 dark:text-gray-300">MFL 12 Meter</p>
             <p className="text-2xl font-bold text-purple-600">{totals.mfl12}</p>
           </div>
-          <div className="bg-white rounded-lg shadow-md p-6 border-t-4 border-orange-500">
-            <p className="text-sm font-medium text-gray-600">MFL 9.5 Meter</p>
+          <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 border-t-4 border-orange-500 transition-colors">
+            <p className="text-sm font-medium text-gray-600 dark:text-gray-300">MFL 9.5 Meter</p>
             <p className="text-2xl font-bold text-orange-600">{totals.mfl9}</p>
           </div>
         </div>
 
-
         {/* Main Table */}
-        <div className="bg-white rounded-lg shadow-md overflow-hidden">
+        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden transition-colors">
           <div className="overflow-x-auto">
-            <table className="min-w-full divide-y divide-gray-200">
-              {/* Table Header */}
-              <thead className="bg-gray-50">
+            <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+              <thead className="bg-gray-50 dark:bg-gray-700">
                 <tr>
-                  <th rowSpan="2" className="px-6 py-4 text-left text-xs font-bold text-gray-700 uppercase tracking-wider border-r border-gray-200">
+                  <th rowSpan={2} className="px-6 py-4 text-left text-xs font-bold text-gray-700 dark:text-gray-200 uppercase tracking-wider border-r border-gray-200 dark:border-gray-600">
                     {language === "marathi" ? "जिल्ह्याचे नाव" : "District Name"}
                   </th>
-                  <th colSpan="4" className="px-6 py-3 text-center text-xs font-bold text-gray-700 uppercase tracking-wider border-r border-gray-200 bg-green-50">
+                  <th colSpan={4} className="px-6 py-3 text-center text-xs font-bold text-gray-700 dark:text-gray-200 uppercase tracking-wider border-r border-gray-200 dark:border-gray-600 bg-green-50 dark:bg-green-900">
                     GSL - {language === "marathi" ? "गोवा शेफर्ड लिमिटेड" : "Goa Shepherd Limited"}
                   </th>
-                  <th colSpan="4" className="px-6 py-3 text-center text-xs font-bold text-gray-700 uppercase tracking-wider bg-purple-50">
+                  <th colSpan={4} className="px-6 py-3 text-center text-xs font-bold text-gray-700 dark:text-gray-200 uppercase tracking-wider bg-purple-50 dark:bg-purple-900">
                     MFL - {language === "marathi" ? "मरीन फ्रोलय प्रा. लि." : "Marine Frolay Pvt. Ltd."}
                   </th>
                 </tr>
                 <tr>
-                  <th className="px-4 py-3 text-center text-xs font-medium text-gray-600 bg-green-50 border-r border-gray-200">{language === "marathi" ? "१२ टन प्रमाण" : "12 Ton Qty"}</th>
-                  <th className="px-4 py-3 text-center text-xs font-medium text-gray-600 bg-green-50 border-r border-gray-200">{language === "marathi" ? "नौकेचे नाव" : "Boat Names"}</th>
-                  <th className="px-4 py-3 text-center text-xs font-medium text-gray-600 bg-green-50 border-r border-gray-200">{language === "marathi" ? "५ टन प्रमाण" : "5 Ton Qty"}</th>
-                  <th className="px-4 py-3 text-center text-xs font-medium text-gray-600 bg-green-50 border-r border-gray-200">{language === "marathi" ? "नौकेचे नाव" : "Boat Names"}</th>
-                  <th className="px-4 py-3 text-center text-xs font-medium text-gray-600 bg-purple-50 border-r border-gray-200">{language === "marathi" ? "१२ मीटर प्रमाण" : "12 Meter Qty"}</th>
-                  <th className="px-4 py-3 text-center text-xs font-medium text-gray-600 bg-purple-50 border-r border-gray-200">{language === "marathi" ? "नौकेचे नाव" : "Boat Names"}</th>
-                  <th className="px-4 py-3 text-center text-xs font-medium text-gray-600 bg-purple-50 border-r border-gray-200">{language === "marathi" ? "९.५ मीटर प्रमाण" : "9.5 Meter Qty"}</th>
-                  <th className="px-4 py-3 text-center text-xs font-medium text-gray-600 bg-purple-50">{language === "marathi" ? "नौकेचे नाव" : "Boat Names"}</th>
+                  {["12 Ton Qty","Boat Names","5 Ton Qty","Boat Names"].map((text, idx) => (
+                    <th key={idx} className="px-4 py-3 text-center text-xs font-medium text-gray-600 dark:text-gray-300 border-r border-gray-200 dark:border-gray-600 bg-green-50 dark:bg-green-900">
+                      {language === "marathi" ? ["१२ टन प्रमाण","नौकेचे नाव","५ टन प्रमाण","नौकेचे नाव"][idx] : text}
+                    </th>
+                  ))}
+                  {["12 Meter Qty","Boat Names","9.5 Meter Qty","Boat Names"].map((text, idx) => (
+                    <th key={idx} className={`px-4 py-3 text-center text-xs font-medium text-gray-600 dark:text-gray-300 ${idx<3?'border-r border-gray-200 dark:border-gray-600':''} bg-purple-50 dark:bg-purple-900`}>
+                      {language === "marathi" ? ["१२ मीटर प्रमाण","नौकेचे नाव","९.५ मीटर प्रमाण","नौकेचे नाव"][idx] : text}
+                    </th>
+                  ))}
                 </tr>
               </thead>
 
-              {/* Table Body */}
-              <tbody className="bg-white divide-y divide-gray-200">
+              <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
                 {data.map((row, index) => (
-                  <tr key={index} className={`${index % 2 === 0 ? "bg-white" : "bg-gray-50"} hover:bg-blue-50 transition-colors`}>
-                    <td className="px-6 py-4 whitespace-nowrap border-r border-gray-200">
+                  <tr key={index} className={`${index % 2 === 0 ? "bg-white dark:bg-gray-800" : "bg-gray-50 dark:bg-gray-700"} hover:bg-blue-50 dark:hover:bg-blue-900 transition-colors`}>
+                    <td className="px-6 py-4 whitespace-nowrap border-r border-gray-200 dark:border-gray-600">
                       <div className="flex items-center">
                         <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
-                        <span className="text-sm font-semibold text-gray-900">{row.district[language]}</span>
+                        <span className="text-sm font-semibold text-gray-900 dark:text-gray-100">{row.district[language]}</span>
                       </div>
                     </td>
-                    <td className="px-4 py-4 text-center border-r border-gray-200">{row.gsl12Qty}</td>
-                    <td className="px-4 py-4 text-center border-r border-gray-200">{renderBoatNames(row.gsl12Boat)}</td>
-                    <td className="px-4 py-4 text-center border-r border-gray-200">{row.gsl5Qty}</td>
-                    <td className="px-4 py-4 text-center border-r border-gray-200">{renderBoatNames(row.gsl5Boat)}</td>
-                    <td className="px-4 py-4 text-center border-r border-gray-200">{row.mfl12Qty}</td>
-                    <td className="px-4 py-4 text-center border-r border-gray-200">{renderBoatNames(row.mfl12Boat)}</td>
-                    <td className="px-4 py-4 text-center border-r border-gray-200">{row.mfl9Qty}</td>
+                    <td className="px-4 py-4 text-center border-r border-gray-200 dark:border-gray-600">{row.gsl12Qty}</td>
+                    <td className="px-4 py-4 text-center border-r border-gray-200 dark:border-gray-600">{renderBoatNames(row.gsl12Boat)}</td>
+                    <td className="px-4 py-4 text-center border-r border-gray-200 dark:border-gray-600">{row.gsl5Qty}</td>
+                    <td className="px-4 py-4 text-center border-r border-gray-200 dark:border-gray-600">{renderBoatNames(row.gsl5Boat)}</td>
+                    <td className="px-4 py-4 text-center border-r border-gray-200 dark:border-gray-600">{row.mfl12Qty}</td>
+                    <td className="px-4 py-4 text-center border-r border-gray-200 dark:border-gray-600">{renderBoatNames(row.mfl12Boat)}</td>
+                    <td className="px-4 py-4 text-center border-r border-gray-200 dark:border-gray-600">{row.mfl9Qty}</td>
                     <td className="px-4 py-4 text-center">{renderBoatNames(row.mfl9Boat)}</td>
                   </tr>
                 ))}
               </tbody>
 
-              {/* Table Footer */}
-              <tfoot className="bg-gray-100 border-t-2 border-gray-300">
+              <tfoot className="bg-gray-100 dark:bg-gray-700 border-t-2 border-gray-300 dark:border-gray-600">
                 <tr>
-                  <td className="px-6 py-4 text-sm font-bold text-gray-800 border-r border-gray-300">{language === "marathi" ? "एकूण" : "TOTAL"}</td>
-                  <td className="px-4 py-4 text-center border-r border-gray-300">{totals.gsl12}</td>
-                  <td className="px-4 py-4 text-center border-r border-gray-300">-</td>
-                  <td className="px-4 py-4 text-center border-r border-gray-300">{totals.gsl5}</td>
-                  <td className="px-4 py-4 text-center border-r border-gray-300">-</td>
-                  <td className="px-4 py-4 text-center border-r border-gray-300">{totals.mfl12}</td>
-                  <td className="px-4 py-4 text-center border-r border-gray-300">-</td>
-                  <td className="px-4 py-4 text-center border-r border-gray-300">{totals.mfl9}</td>
+                  <td className="px-6 py-4 text-sm font-bold text-gray-800 dark:text-gray-100 border-r border-gray-300 dark:border-gray-600">{language === "marathi" ? "एकूण" : "TOTAL"}</td>
+                  <td className="px-4 py-4 text-center border-r border-gray-300 dark:border-gray-600">{totals.gsl12}</td>
+                  <td className="px-4 py-4 text-center border-r border-gray-300 dark:border-gray-600">-</td>
+                  <td className="px-4 py-4 text-center border-r border-gray-300 dark:border-gray-600">{totals.gsl5}</td>
+                  <td className="px-4 py-4 text-center border-r border-gray-300 dark:border-gray-600">-</td>
+                  <td className="px-4 py-4 text-center border-r border-gray-300 dark:border-gray-600">{totals.mfl12}</td>
+                  <td className="px-4 py-4 text-center border-r border-gray-300 dark:border-gray-600">-</td>
+                  <td className="px-4 py-4 text-center border-r border-gray-300 dark:border-gray-600">{totals.mfl9}</td>
                   <td className="px-4 py-4 text-center">-</td>
                 </tr>
               </tfoot>

@@ -112,7 +112,7 @@ const LatestUpdates = () => {
             language === 'marathi' ? 'marathi-text' : 'english-text'
           }`}>
             {language === 'marathi' 
-              ? 'मोटर ट्रान्सपोर्ट विभागातील अलीकडील घडामोडी आणि अपडेट्स'
+              ? 'मोटार  ट्रान्सपोर्ट विभागातील अलीकडील घडामोडी आणि अपडेट्स'
               : 'Recent developments and updates from Motor Transport Department'
             }
           </p>

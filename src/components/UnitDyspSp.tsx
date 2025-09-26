@@ -25,33 +25,39 @@ const UnitDyspSp: React.FC = () => {
   ];
 
   return (
-    <section className="py-12 px-6 md:px-12 lg:px-24 bg-gray-50">
+    <section className="py-12 px-6 md:px-12 lg:px-24 bg-gray-50 dark:bg-gray-900 transition-colors duration-500">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
-            {language === "marathi" ? "सहाय्यक पोलीस आयुक्त  व पोलीस  उप-अधीक्षक " : "UNIT ACP & DYSP"}
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
+            {language === "marathi"
+              ? "सहाय्यक पोलीस आयुक्त  व पोलीस  उप-अधीक्षक "
+              : "UNIT ACP & DYSP"}
           </h2>
-          <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
+          <div className="w-24 h-1 bg-blue-600 dark:bg-blue-400 mx-auto"></div>
         </div>
 
         {/* Table */}
-        <div className="bg-white rounded-lg shadow-lg overflow-hidden border">
+        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700">
           <div className="overflow-x-auto">
             <table className="w-full">
               <thead>
-                <tr className="bg-blue-600 text-white">
-                  <th className="px-6 py-4 text-left font-semibold border-r border-blue-500">
+                <tr className="bg-blue-600 dark:bg-blue-700 text-white">
+                  <th className="px-6 py-4 text-left font-semibold border-r border-blue-500 dark:border-blue-600">
                     {language === "marathi" ? "क्र.सं" : "Sr. No"}
                   </th>
-                  <th className="px-6 py-4 text-left font-semibold border-r border-blue-500">
-                    {language === "marathi" ? "	मोटर परिवहन विभागाचे नाव" : "Unit"}
+                  <th className="px-6 py-4 text-left font-semibold border-r border-blue-500 dark:border-blue-600">
+                    {language === "marathi"
+                      ? "मोटार  परिवहन विभागाचे नाव"
+                      : "Unit"}
                   </th>
-                  <th className="px-6 py-4 text-left font-semibold border-r border-blue-500">
+                  <th className="px-6 py-4 text-left font-semibold border-r border-blue-500 dark:border-blue-600">
                     {language === "marathi" ? "नाव" : "Name"}
                   </th>
                   <th className="px-6 py-4 text-left font-semibold">
-                    {language === "marathi" ? "संपर्क क्रमांक" : "Contact Number"}
+                    {language === "marathi"
+                      ? "संपर्क क्रमांक"
+                      : "Contact Number"}
                   </th>
                 </tr>
               </thead>
@@ -59,27 +65,39 @@ const UnitDyspSp: React.FC = () => {
                 {data.map((row, index) => (
                   <tr
                     key={row.sr}
-                    className={`${index % 2 === 0 ? "bg-white" : "bg-blue-50"} hover:bg-blue-100 border-b border-gray-200`}
+                    className={`${
+                      index % 2 === 0
+                        ? "bg-white dark:bg-gray-800"
+                        : "bg-blue-50 dark:bg-gray-700"
+                    } hover:bg-blue-100 dark:hover:bg-gray-600 border-b border-gray-200 dark:border-gray-700`}
                   >
-                    <td className="px-6 py-4 text-gray-800 font-medium border-r border-gray-200">
+                    <td className="px-6 py-4 text-gray-800 dark:text-gray-200 font-medium border-r border-gray-200 dark:border-gray-700">
                       {row.sr}
                     </td>
-                    <td className="px-6 py-4 text-gray-800 border-r border-gray-200">
+                    <td className="px-6 py-4 text-gray-800 dark:text-gray-200 border-r border-gray-200 dark:border-gray-700">
                       {language === "marathi" ? row.unit.marathi : row.unit.english}
                     </td>
-                    <td className="px-6 py-4 text-gray-800 border-r border-gray-200">
-                      {language === "marathi" ? row.name.marathi : row.name.english === "Vacant" ? <span className="text-red-600 font-medium bg-red-100 px-3 py-1 rounded">{language === "marathi" ? "रिक्त" : "Vacant"}</span> : language === "marathi" ? row.name.marathi : row.name.english}
+                    <td className="px-6 py-4 text-gray-800 dark:text-gray-200 border-r border-gray-200 dark:border-gray-700">
+                      {language === "marathi"
+                        ? row.name.marathi
+                        : row.name.english === "Vacant" ? (
+                          <span className="text-red-600 dark:text-red-400 font-medium bg-red-100 dark:bg-red-900/40 px-3 py-1 rounded">
+                            {language === "marathi" ? "रिक्त" : "Vacant"}
+                          </span>
+                        ) : (
+                          row.name.english
+                        )}
                     </td>
-                    <td className="px-6 py-4 text-gray-800">
+                    <td className="px-6 py-4 text-gray-800 dark:text-gray-200">
                       {row.contact ? (
                         <a
                           href={`tel:${row.contact}`}
-                          className="text-blue-600 hover:underline"
+                          className="text-blue-600 dark:text-blue-400 hover:underline"
                         >
                           {row.contact}
                         </a>
                       ) : (
-                        <span className="text-gray-400">-</span>
+                        <span className="text-gray-400 dark:text-gray-500">-</span>
                       )}
                     </td>
                   </tr>
