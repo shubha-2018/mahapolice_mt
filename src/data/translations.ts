@@ -15,21 +15,22 @@ export const translations: Translation = {
       english: 'Leadership'
     },
     services: {
-      marathi: 'सेवा',
-      english: 'Services'
+      marathi: 'संघटना',
+      english: 'Organization'
     },
     organization: {
       marathi: 'संघटना',
-      english: 'Organization'
+      english: 'Employee Corner'
     },
     employee: {
       marathi: 'कर्मचारी विभाग',
       english: 'Employee Corner'
     },
-    citizen: {
-      marathi: 'नागरिक विभाग',
-      english: 'Citizen Corner'
-    },
+     sss: {
+       english: "SSS",
+        marathi: "SSS"
+       }, 
+
     contact: {
       marathi: 'संपर्क',
       english: 'Contact'

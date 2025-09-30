@@ -1,7 +1,15 @@
 import { useEffect, useRef, useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Truck, Clock, MapPin, Users } from 'lucide-react';
+import { Truck, Clock, MapPin, Users, Ship, Building } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
+
+// Import all 6 different background images
+import cardBg1 from "../assets/images/car4 - Copy.jpg";
+import cardBg2 from "../assets/images/police6.jpg";
+import cardBg3 from "../assets/images/motorlogo.jpg";
+import cardBg4 from "../assets/images/office1.jpg";
+import cardBg5 from "../assets/images/car5.jpg";
+import cardBg6 from "../assets/images/police8.jpg";
 
 interface ImpactStat {
   id: number;
@@ -13,6 +21,7 @@ interface ImpactStat {
     english: string;
   };
   color: string;
+  bgImage: string; // Add background image property
 }
 
 const impactStats: ImpactStat[] = [
@@ -25,10 +34,23 @@ const impactStats: ImpactStat[] = [
       marathi: 'वाहने',
       english: 'Vehicles'
     },
-    color: 'text-primary'
+    color: 'text-primary',
+    bgImage: cardBg1
   },
   {
     id: 2,
+    icon: <Ship className="w-8 h-8" />,
+    value: 55,
+    suffix: '+',
+    label: {
+      marathi: 'नौका',
+      english: 'Boats'
+    },
+    color: 'text-accent',
+    bgImage: cardBg2
+  },
+  {
+    id: 3,
     icon: <Clock className="w-8 h-8" />,
     value: 77,
     suffix: '+',
@@ -36,10 +58,11 @@ const impactStats: ImpactStat[] = [
       marathi: 'वर्षांची सेवा',
       english: 'Years of Service'
     },
-    color: 'text-accent'
+    color: 'text-primary',
+    bgImage: cardBg3
   },
   {
-    id: 3,
+    id: 4,
     icon: <MapPin className="w-8 h-8" />,
     value: 4,
     suffix: '',
@@ -47,10 +70,23 @@ const impactStats: ImpactStat[] = [
       marathi: 'प्रादेशिक कार्यालये',
       english: 'Regional Offices'
     },
-    color: 'text-primary'
+    color: 'text-accent',
+    bgImage: cardBg4
   },
   {
-    id: 4,
+    id: 5,
+    icon: <Building className="w-8 h-8" />,
+    value: 83,
+    suffix: '',
+    label: {
+      marathi: 'मोटार परिवहन विभाग',
+      english: 'Motor Transport Departments'
+    },
+    color: 'text-accent',
+    bgImage: cardBg5
+  },
+  {
+    id: 6,
     icon: <Users className="w-8 h-8" />,
     value: 5000,
     suffix: '+',
@@ -58,8 +94,9 @@ const impactStats: ImpactStat[] = [
       marathi: 'कर्मचारी',
       english: 'Personnel'
     },
-    color: 'text-accent'
-  }
+    color: 'text-primary',
+    bgImage: cardBg6
+  },
 ];
 
 const OurImpact = () => {
@@ -73,7 +110,7 @@ const OurImpact = () => {
       ([entry]) => {
         if (entry.isIntersecting && !isVisible) {
           setIsVisible(true);
-          
+
           // Animate counters
           impactStats.forEach((stat) => {
             let current = 0;
@@ -103,8 +140,20 @@ const OurImpact = () => {
   }, [isVisible]);
 
   return (
-    <section ref={sectionRef} className="py-16 bg-background">
-      <div className="container mx-auto px-4">
+    <section ref={sectionRef} className="relative py-16 bg-background overflow-hidden">
+      {/* Background Watermark Image */}
+      <div className="absolute inset-0">
+        <img 
+          src="/images/watermark.png"
+          alt="watermark background"
+          className="w-full h-full object-cover opacity-10"
+        />
+      </div>
+
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-background/70"></div>
+
+      <div className="relative container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className={`police-heading text-3xl md:text-4xl mb-4 ${
             language === 'marathi' ? 'marathi-text' : 'english-text'
@@ -115,46 +164,67 @@ const OurImpact = () => {
             language === 'marathi' ? 'marathi-text' : 'english-text'
           }`}>
             {language === 'marathi' 
-              ? 'महाराष्ट्र पोलीस मोटार  ट्रान्सपोर्ट विभागाची उपलब्धी आणि सेवा'
+              ? 'महाराष्ट्र पोलीस मोटार परिवहन विभागाची माहिती '
               : 'Achievements and service milestones of Maharashtra Police Motor Transport Department'
             }
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {impactStats.map((stat) => (
-            <Card 
-              key={stat.id} 
-              className={`police-card hover-lift hover-glow text-center group transition-all duration-500 ${
-                isVisible ? 'fade-in-up animate' : 'fade-in-up'
-              }`}
-              style={{ animationDelay: `${stat.id * 150}ms` }}
-            >
-              <CardContent className="p-8">
-                <div className={`${stat.color} mb-4 flex justify-center group-hover:scale-110 transition-transform duration-300`}>
-                  {stat.icon}
-                </div>
-                
-                <div className="mb-2">
-                  <span className={`police-heading text-4xl md:text-5xl font-bold ${stat.color} transition-all duration-300`}>
-                    {animatedValues[stat.id] || 0}
-                  </span>
-                  <span className={`police-heading text-4xl md:text-5xl font-bold ${stat.color}`}>
-                    {stat.suffix}
-                  </span>
-                </div>
-                
-                <p className={`police-subheading text-lg ${
-                  language === 'marathi' ? 'marathi-text' : 'english-text'
-                }`}>
-                  {stat.label[language]}
-                </p>
-                
-                <div className={`w-12 h-1 ${stat.color === 'text-primary' ? 'bg-primary' : 'bg-accent'} mx-auto mt-4 rounded-full group-hover:w-16 transition-all duration-300`}></div>
-              </CardContent>
-            </Card>
-          ))}
+        {/* Single row for all cards */}
+       <div className="grid grid-cols-1 md:grid-cols-6 gap-6">
+  {impactStats.map((stat) => (
+    <Card 
+      key={stat.id} 
+      className={`police-card hover-lift hover-glow text-center group transition-all duration-500 relative overflow-hidden ${
+        isVisible ? 'fade-in-up animate' : 'fade-in-up'
+      }`}
+      style={{ animationDelay: `${stat.id * 150}ms` }}
+    >
+      {/* Card Background Image - Each card has its own image */}
+      <div 
+        className="absolute inset-0 z-0 bg-cover bg-center opacity-30"
+        style={{ backgroundImage: `url(${stat.bgImage})` }}
+      ></div>
+      
+      <CardContent className="p-8 relative z-10">
+        <div 
+          className="mb-4 flex justify-center group-hover:scale-110 transition-transform duration-300" 
+          style={{ color: '#1A4CA1' }}
+        >
+          {stat.icon}
         </div>
+        
+        <div className="mb-2">
+          <span 
+            className="police-heading text-4xl md:text-5xl font-bold transition-all duration-300"
+            style={{ color: '#1A4CA1' }}
+          >
+            {animatedValues[stat.id] || 0}
+          </span>
+          <span 
+            className="police-heading text-4xl md:text-5xl font-bold"
+            style={{ color: '#1A4CA1' }}
+          >
+            {stat.suffix}
+          </span>
+        </div>
+        
+        <p className={`police-subheading text-lg ${
+          language === 'marathi' ? 'marathi-text' : 'english-text'
+        }`}>
+          {stat.label[language]}
+        </p>
+        
+        <div 
+          className="w-12 h-1 mx-auto mt-4 rounded-full group-hover:w-16 transition-all duration-300"
+          style={{ backgroundColor: '#1A4CA1' }}
+        ></div>
+      </CardContent>
+    </Card>
+  ))}
+</div>
+
+
       </div>
     </section>
   );

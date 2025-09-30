@@ -7,7 +7,7 @@ const PuneRangeTable = () => {
   const data = [
     {
       sr: 1,
-      commissionerate: { marathi: "पुणे शहर", english: "Pune City" },
+      commissionerate: { marathi: "मोटार परिवहन विभाग,पुणे शहर", english: "Pune City" },
       officerName: { marathi: "अमित कुमार लिगाडे", english: "Amit Kumar Ligade" },
       designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" },
       contact: "8275304090",
@@ -15,7 +15,7 @@ const PuneRangeTable = () => {
     },
     {
       sr: 2,
-      commissionerate: { marathi: "पिंपरी चिंचवड", english: "Pimpri Chinchwad" },
+      commissionerate: { marathi: "मोटार परिवहन विभाग,पिंपरी चिंचवड", english: "Pimpri Chinchwad" },
       officerName: { marathi: "पी.एस.बावसकर (अतिरिक्त चार्ज)", english: "P.S. Bawaskar (Addl. Charge)" },
       designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" },
       contact: "9552352323",
@@ -23,15 +23,15 @@ const PuneRangeTable = () => {
     },
     {
       sr: 3,
-      commissionerate: { marathi: "सोलापूर शहर", english: "Solapur City" },
-      officerName: { marathi: "महेष काळे", english: "Mahesh Kale" },
+      commissionerate: { marathi: "मोटार परिवहन विभाग,सोलापूर शहर", english: "Solapur City" },
+      officerName: { marathi: "महेश काळे", english: "Mahesh Kale" },
       designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" },
       contact: "9823036560",
       website: "https://solapurpolice.gov.in/",  // <-- example specific
     },
     {
       sr: 4,
-      commissionerate: { marathi: "पुणे ग्रामीण", english: "Pune Rural" },
+      commissionerate: { marathi: "मोटार परिवहन विभाग,पुणे ग्रामीण", english: "Pune Rural" },
       officerName: { marathi: "मंगेश पाटील", english: "Mangesh Patil" },
       designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" },
       contact: "8108970707",
@@ -39,7 +39,7 @@ const PuneRangeTable = () => {
     },
     {
       sr: 5,
-      commissionerate: { marathi: "सातारा", english: "Satara" },
+      commissionerate: { marathi: "मोटार परिवहन विभाग,सातारा", english: "Satara" },
       officerName: { marathi: "राजेंद्र शिंदे", english: "Rajendra Shinde" },
       designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" },
       contact: "9823017588",
@@ -47,15 +47,15 @@ const PuneRangeTable = () => {
     },
     {
       sr: 6,
-      commissionerate: { marathi: "सांगली", english: "Sangli" },
-      officerName: { marathi: "प्रशांत मारुलकर", english: "Prashant Marulkar" },
+      commissionerate: { marathi: "मोटार परिवहन विभाग,सांगली", english: "Sangli" },
+      officerName: { marathi: "प्रशांत मारुळकर", english: "Prashant Marulkar" },
       designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" },
       contact: "9552560091",
       website: "https://sanglipolice.gov.in/",
     },
     {
       sr: 7,
-      commissionerate: { marathi: "कोल्हापूर", english: "Kolhapur" },
+      commissionerate: { marathi: "मोटार परिवहन विभाग,कोल्हापूर", english: "Kolhapur" },
       officerName: { marathi: "सुरजीत सिंह राजपूत", english: "Surjit Singh Rajput" },
       designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" },
       contact: "9923450059",
@@ -63,7 +63,7 @@ const PuneRangeTable = () => {
     },
     {
       sr: 8,
-      commissionerate: { marathi: "सोलापूर ग्रामीण", english: "Solapur Rural" },
+      commissionerate: { marathi: "मोटार परिवहन विभाग,सोलापूर ग्रामीण", english: "Solapur Rural" },
       officerName: { marathi: "सागर खरे", english: "Sagar Khare" },
       designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" },
       contact: "7350619991",
@@ -71,7 +71,7 @@ const PuneRangeTable = () => {
     },
     {
       sr: 9,
-      commissionerate: { marathi: "अहिल्यानगर", english: "Ahilyanagar" },
+      commissionerate: { marathi: "मोटार परिवहन विभाग,अहिल्यानगर", english: "Ahilyanagar" },
       officerName: { marathi: "प्रेमदीप माने", english: "Premdeep Mane" },
       designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" },
       contact: "9960832345",
@@ -127,7 +127,7 @@ const PuneRangeTable = () => {
     },
     {
       sr: 16,
-      commissionerate: { marathi: "पुणे वर्कशॉप", english: "Pune Workshop" },
+      commissionerate: { marathi: "पोलीस मध्यवर्ती मोटर परिवहन कर्मशाळा,पुणे", english: "Pune Workshop" },
       officerName: { marathi: "पी.एस.बावसकर", english: "P.S. Bawaskar" },
       designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" },
       contact: "9552352323",
@@ -135,7 +135,7 @@ const PuneRangeTable = () => {
     },
     {
       sr: 17,
-      commissionerate: { marathi: "ट्रेनिंग सेंटर", english: "Training Center" },
+      commissionerate: { marathi: "पोलीस चालक प्रशिक्षण केंद्र पुणे", english: "Training Center" },
       officerName: { marathi: "अमोल तपासे", english: "Amol Tapase" },
       designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" },
       contact: "9552560082",
@@ -163,7 +163,7 @@ const PuneRangeTable = () => {
             <thead>
               <tr className="bg-blue-600">
                 <th className="px-4 py-3 text-white font-semibold text-left border-r border-blue-500">
-                  {language === "marathi" ? "क्र.सं." : "Sr.No."}
+                  {language === "marathi" ? "अ.क्र" : "Sr.No."}
                 </th>
                 <th className="px-4 py-3 text-white font-semibold text-left border-r border-blue-500">
                   {language === "marathi" ? "मोटार परिवहन विभागाचे नाव" : "Commissionerate"}

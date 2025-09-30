@@ -17,14 +17,14 @@ const OrganisationPage = () => {
     <div className="min-h-screen mt-28">
      <OrganisationStructure/>
      <FlowChart/>
-     <UnitDyspSp/>
+     {/* <UnitDyspSp/> */}
      {/* <PuneRangeTable/> */}
      {/* <ChtrapatiSambhajiNagarRange/> */}
      {/* <NagpurRange/> */}
      {/* <KokanRangeTable/> */}
      {/* <PoliceLaunchSection/> */}
-     < WorkshopPhotos/> 
-     <VehicleDepartmentDocument/>
+     {/* < WorkshopPhotos/>  */}
+     {/* <VehicleDepartmentDocument/> */}
      {/* <PoliceDepartmentTable/> */}
      {/* <VehicleTypes/> */}
 

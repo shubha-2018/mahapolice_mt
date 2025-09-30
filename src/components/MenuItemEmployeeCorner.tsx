@@ -44,7 +44,8 @@ const EmployeeCorner: React.FC<EmployeeCornerProps> = ({ open, onOpenChange }) =
                   {[
                     { label: t({ marathi: "फ्लॅश", english: "Flash" }), path: "/flash" },
                     { label: t({ marathi: "बदली आदेश / पदस्थापना", english: "Transfer Orders" }), path: "/transfer-orders" },
-                    { label: t({ marathi: "मा. विशेष पोलीस महानिरीक्षक कार्यालय आदेश", english: "DGP Orders" }), path: "/dgp-orders" },
+                    { label: t({ marathi: "सेवा ज्येष्ठता यादी ", english: "Transfer Orders" }), path: "/transfer-orders" },
+                    { label: t({ marathi: "कार्यालयीन आदेश व परिपत्रक ", english: "DGP Orders" }), path: "/dgp-orders" },
                     { label: t({ marathi: "उपक्रम", english: "Circulars" }), path: "/circulars" },
                   ].map((item, idx) => (
                     <Link

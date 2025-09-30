@@ -276,7 +276,7 @@ const Leadership = () => {
             }`}
           >
             {language === 'marathi'
-              ? 'महाराष्ट्र पोलीस  ट्रान्सपोर्ट विभागाचे नेतृत्व आणि मार्गदर्शन'
+              ? 'महाराष्ट्र पोलीस परिवहन  विभागाचे नेतृत्व आणि मार्गदर्शन'
               : 'Leadership and guidance of Maharashtra Police Motor Transport Department'}
           </p>
         </div>

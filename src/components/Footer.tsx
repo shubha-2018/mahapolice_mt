@@ -7,17 +7,21 @@ const Footer = () => {
 
   const footerContent = {
     marathi: {
-      quickLinks: 'द्रुत दुवे',
+      quickLinks: 'Links',
       services: 'सेवा',
       contactInfo: 'संपर्क माहिती',
-      address: 'विशेष पोलिस महानिरीक्षक, महाराष्ट्र राज्य,औंध-पुणे 411007',
+      address: 'मा.विशेष पोलिस महानिरीक्षक,मोटार परिवहन विभाग,महाराष्ट्र राज्य,औंध-पुणे 411007',
       email: 'igmtpune@gmail.com',
       phone: '+91-02025880718',
       serviceItems: [
-        'फ्लीट व्यवस्थापन',
-        'कार्यशाळा सेवा',
-        'ड्रायव्हर प्रशिक्षण',
-        'तांत्रिक सहाय्य'
+        
+       ' वाहनांची दुरुस्ती व देखभाल सेवा' ,
+        'वाहन ताफा व्यवस्थापन सेवा' ,
+        'चालक व तांत्रिक प्रशिक्षण सेवा ',
+       ' सागरी किनारा पेट्रोलिंग सेवा ',
+       'RTI',
+
+        
       ]
     },
     english: {
@@ -40,11 +44,16 @@ const Footer = () => {
     { key: 'home', href: '#home' },
     { key: 'about', href: '#about' },
     { key: 'services', href: '#services' },
+    { key: 'sss', href: '#sss' },   // ✅ Added SSS here
     { key: 'contact', href: '#contact' }
   ];
 
   const getNavLabel = (key: string) => {
-    return translations.nav[key as keyof typeof translations.nav][language];
+    const item = translations.nav[key as keyof typeof translations.nav];
+    if (!item) {
+      return key.toUpperCase();
+    }
+    return item[language] || key.toUpperCase();
   };
 
   return (
@@ -71,7 +80,7 @@ const Footer = () => {
               language === 'marathi' ? 'marathi-text' : 'english-text'
             }`}>
               {language === 'marathi' 
-                ? 'सेवा, सुरक्षा आणि विश्वसनीयतेसह महाराष्ट्राची सेवा करत आहोत.'
+                ? 'मनुष्यबळ ,वाहन व्यवस्थापन व  तत्पर सेवा '
                 : 'Serving Maharashtra with dedication, security and reliability.'
               }
             </p>

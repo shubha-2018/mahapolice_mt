@@ -12,7 +12,7 @@ const ContactPage = () => {
         english: 'Motor Transport Department, Maharashtra State Pune',
       },
       address: {
-        marathi: 'विशेष पोलीस निरीक्षक, मोटार परिवहन, महाराष्ट्र राज्य, औंध, पुणे. 411007',
+        marathi: 'मा.विशेष पोलीस निरीक्षक, मोटार परिवहन विभाग, महाराष्ट्र राज्य, औंध, पुणे. 411007',
         english: 'Special Inspector General of Police, Motor Transport, Maharashtra State, Aundh, Pune. 411007',
       },
       phone: '02025880718',

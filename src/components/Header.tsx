@@ -33,11 +33,17 @@ const Header = () => {
     { key: 'about', href: '/aboutpage' },
     { key: 'organization', href: '/organizationpage' },
     { key: 'employee', href: '#employeecorner' },
+    { key: 'sss', href: 'https://117.222.38.165/SSS', external: true }, // ✅ external link
     { key: 'contact', href: '/contact' },
   ];
 
-  const getNavLabel = (key: string) =>
-    translations.nav[key as keyof typeof translations.nav][lang];
+  const getNavLabel = (key: string) => {
+    const item = translations.nav[key as keyof typeof translations.nav];
+    if (!item) {
+      return key.toUpperCase();
+    }
+    return item[lang] || key.toUpperCase();
+  };
 
   return (
     <header className="police-header fixed top-0 left-0 w-full z-50 bg-background shadow-md">
@@ -69,16 +75,32 @@ const Header = () => {
 
           {/* Desktop nav */}
           <nav className="hidden lg:flex items-center space-x-6">
-            {navItems.map((item) =>
-              item.key === "employee" ? (
-                <button
-                  key={item.key}
-                  className={`police-nav-link ${lang === 'marathi' ? 'marathi-text' : 'english-text'}`}
-                  onClick={() => setEmployeeOpen(true)}
-                >
-                  {getNavLabel(item.key)}
-                </button>
-              ) : (
+            {navItems.map((item) => {
+              if (item.key === "employee") {
+                return (
+                  <button
+                    key={item.key}
+                    className={`police-nav-link ${lang === 'marathi' ? 'marathi-text' : 'english-text'}`}
+                    onClick={() => setEmployeeOpen(true)}
+                  >
+                    {getNavLabel(item.key)}
+                  </button>
+                );
+              }
+              if (item.external) {
+                return (
+                  <a
+                    key={item.key}
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`police-nav-link ${lang === 'marathi' ? 'marathi-text' : 'english-text'}`}
+                  >
+                    {getNavLabel(item.key)}
+                  </a>
+                );
+              }
+              return (
                 <Link
                   key={item.key}
                   to={item.href}
@@ -86,8 +108,8 @@ const Header = () => {
                 >
                   {getNavLabel(item.key)}
                 </Link>
-              )
-            )}
+              );
+            })}
           </nav>
 
           {/* Right side */}
@@ -115,19 +137,35 @@ const Header = () => {
               </SheetTrigger>
               <SheetContent side="right" className="w-[700px] sm:w-[300px]">
                 <nav className="flex flex-col gap-4 mt-8">
-                  {navItems.map((item) =>
-                    item.key === "employee" ? (
-                      <button
-                        key={item.key}
-                        onClick={() => {
-                          setIsOpen(false); // Close mobile sheet
-                          setEmployeeOpen(true); // Open popup
-                        }}
-                        className="police-nav-link text-base py-2 text-left"
-                      >
-                        {getNavLabel(item.key)}
-                      </button>
-                    ) : (
+                  {navItems.map((item) => {
+                    if (item.key === "employee") {
+                      return (
+                        <button
+                          key={item.key}
+                          onClick={() => {
+                            setIsOpen(false); // Close mobile sheet
+                            setEmployeeOpen(true); // Open popup
+                          }}
+                          className="police-nav-link text-base py-2 text-left"
+                        >
+                          {getNavLabel(item.key)}
+                        </button>
+                      );
+                    }
+                    if (item.external) {
+                      return (
+                        <a
+                          key={item.key}
+                          href={item.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="police-nav-link text-base py-2"
+                        >
+                          {getNavLabel(item.key)}
+                        </a>
+                      );
+                    }
+                    return (
                       <Link
                         key={item.key}
                         to={item.href}
@@ -136,8 +174,8 @@ const Header = () => {
                       >
                         {getNavLabel(item.key)}
                       </Link>
-                    )
-                  )}
+                    );
+                  })}
                 </nav>
               </SheetContent>
             </Sheet>

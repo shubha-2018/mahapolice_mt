@@ -113,7 +113,7 @@ const KokanRangeTable = () => {
             <thead>
               <tr className="bg-blue-600">
                 <th className="px-4 py-3 text-white font-semibold text-left border-r border-blue-500">
-                  {language === "marathi" ? "क्र.सं." : "Sr.No."}
+                  {language === "marathi" ? "अ.क्र" : "Sr.No."}
                 </th>
                 <th className="px-4 py-3 text-white font-semibold text-left border-r border-blue-500">
                   {language === "marathi" ? "मोटार  परिवहन विभागाचे नाव" : "Commissionerate"}

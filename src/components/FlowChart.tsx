@@ -63,15 +63,15 @@ const OrganizationalChart = () => {
       {
         id: "pune",
         title: {
-          marathi: "अप्पर पोलीस अधीक्षक मोटार  परिवहन,पुणे परिक्षेत्र",
+          marathi: "पोलीस अधीक्षक,पुणे परिक्षेत्र",
           english: "Additional Superintendent of Police, Motor Transport, Pune",
         },
         name: {
-          marathi: "तुषार देशमुख",
-          english: "Tushar Deshmukh",
+          // marathi: "तुषार देशमुख",
+          // english: "Tushar Deshmukh",
         },
         description: {
-          marathi: "अप्पर पोलीस अधीक्षक,मोटार परिवहन पुणे परिक्षेत्र",
+          marathi: " पोलीस अधीक्षक, पुणे परिक्षेत्र",
           english: "Additional Superintendent of Police, Pune Range",
         },
         color: "from-indigo-500 to-indigo-700",
@@ -79,15 +79,15 @@ const OrganizationalChart = () => {
       {
         id: "nagpur",
         title: {
-          marathi: "पोलीस अधीक्षक,मोटार  परिवहन,नागपूर परिक्षेत्र",
+          marathi: "पोलीस अधीक्षक,नागपूर परिक्षेत्र",
           english: "Additional Superintendent of Police, Motor Transport, Nagpur",
         },
         name: {
-          marathi: "श्री संदीप शिंदे",
-          english: "Sandip Shinde",
+          // marathi: "श्री संदीप शिंदे",
+          // english: "Sandip Shinde",
         },
         description: {
-          marathi: "अप्पर पोलीस अधीक्षक नागपूर परिक्षेत्र",
+          marathi: " पोलीस अधीक्षक नागपूर परिक्षेत्र",
           english: "Additional Superintendent of Police, Nagpur Range",
         },
         color: "from-teal-500 to-teal-700",
@@ -95,16 +95,16 @@ const OrganizationalChart = () => {
       {
         id: "cs_nagar",
         title: {
-          marathi: "पोलीस अधीक्षक,मोटार  परिवहन, छ.स. नगर परिक्षेत्र",
+          marathi: "पोलीस अधीक्षक, छ.संभाजीनगर परिक्षेत्र",
           english:
             "Additional Superintendent of Police, Motor Transport, C.S.Nagar Range",
         },
         name: {
-          marathi: "श्री संदीप शिंदे",
-          english: "Sandip Shinde",
+          // marathi: "श्री संदीप शिंदे",
+          // english: "Sandip Shinde",
         },
         description: {
-          marathi: "अप्पर पोलीस अधीक्षक संभाजीनगर परिक्षेत्र (अति. कार्यभार)",
+          marathi: " पोलीस अधीक्षक छ.संभाजीनगर परिक्षेत्र ",
           english: "Additional Superintendent of Police, C.S.Nagar Range",
         },
         color: "from-orange-500 to-orange-700",
@@ -112,15 +112,15 @@ const OrganizationalChart = () => {
       {
         id: "konkan",
         title: {
-          marathi: "पोलीस अधीक्षक,मोटार  परिवहन,कोकण परिक्षेत्र",
+          marathi: "पोलीस अधीक्षक,कोकण परिक्षेत्र",
           english: "Additional Superintendent of Police, Motor Transport, Kokan",
         },
         name: {
-          marathi: "तुषार देशमुख",
-          english: "Tushar Deshmukh",
+          // marathi: "तुषार देशमुख",
+          // english: "Tushar Deshmukh",
         },
         description: {
-          marathi: "अप्पर पोलीस अधीक्षक कोकण परिक्षेत्र (अति. कार्यभार)",
+          marathi: " पोलीस अधीक्षक कोकण परिक्षेत्र ",
           english: "Additional Superintendent of Police, Kokan Range",
         },
         color: "from-purple-500 to-purple-700",
@@ -133,25 +133,20 @@ const OrganizationalChart = () => {
       
       {/* Header */}
       <div className="bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-900 dark:from-gray-800 dark:via-gray-900 dark:to-gray-950 py-14 text-center relative">
-        <div className="inline-flex items-center bg-white/10 dark:bg-gray-700/30 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
-          <Shield className="w-5 h-5 text-white mr-2" />
-          <span className="text-white text-sm font-medium">
-            {language === "marathi" ? "महाराष्ट्र पोलिस" : "Maharashtra Police"}
-          </span>
-        </div>
+{/*       
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 mb-4 md:mb-6 drop-shadow-lg animate-pulse">
           {language === "marathi" ? "संघटना चार्ट" : "Organizational Chart"}
-        </h1>
-        <p className="text-blue-200 dark:text-blue-300 text-sm sm:text-base md:text-medium">
+        </h1> */}
+        <p className="text-3xl sm:text-4xl md:text-5xl text-blue-200 dark:text-blue-300 text-sm sm:text-base md:text-medium">
           {language === "marathi"
-            ? "राज्य पोलिस मोटार परिवहन विभागाची संघटन रचना"
+            ? "राज्य पोलिस मोटार परिवहन विभागाची परिक्षेत्र निहाय माहिती "
             : "State Police Motor Transport Department Organizational Structure"}
         </p>
       </div>
 
       <div className="container mx-auto px-4 py-16">
         {/* HQ */}
-        <div className="flex justify-center mb-12">
+        {/* <div className="flex justify-center mb-12">
           <div className="bg-gradient-to-r from-orange-400 via-orange-500 to-orange-700 dark:from-orange-600 dark:via-orange-700 dark:to-orange-800 text-white rounded-2xl p-6 sm:p-8 shadow-xl text-center w-64 sm:w-72">
             <Building2 className="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-3" />
             <h2 className="text-base sm:text-lg font-bold mb-1">
@@ -161,30 +156,26 @@ const OrganizationalChart = () => {
               <span>{organizationData.headquarters.location[language]}</span>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Main Leadership */}
-        <div className="flex flex-col sm:flex-row justify-center sm:space-x-6 lg:space-x-10 space-y-6 sm:space-y-0 relative mb-12 sm:mb-20">
-          {organizationData.mainStructure.map((position) => (
-            <div
-              key={position.id}
-              className={`bg-gradient-to-r ${position.color} dark:from-gray-700 dark:to-gray-800 text-white rounded-xl shadow-lg p-4 sm:p-6 w-full sm:w-64 text-center`}
-            >
-              <Users className="w-6 h-6 sm:w-8 sm:h-8 mx-auto mb-2" />
-              <h3 className="font-bold text-sm sm:text-base md:text-lg">
-                {position.title[language]}
-              </h3>
-              <p className="text-xs sm:text-sm md:text-sm opacity-90">
-                {position.fullName[language]}
-              </p>
-            </div>
-          ))}
-          <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-gray-300 dark:bg-gray-600 -z-10 hidden sm:block"></div>
-        </div>
+       <div className="flex justify-center relative mb-12 sm:mb-20"> 
+  <div 
+    className="bg-gradient-to-r from-yellow-400 to-yellow-600 dark:from-gray-700 dark:to-gray-800 text-white rounded-xl shadow-lg p-4 sm:p-6 w-full sm:w-64 text-center" 
+  > 
+    <Users className="w-6 h-6 sm:w-8 sm:h-8 mx-auto mb-2" /> 
+    <h3 className="font-bold text-sm sm:text-base md:text-lg"> 
+     पोलिस  अधीक्षक,मुख्यालय. 
+    </h3> 
+    {/* <p className="text-xs sm:text-sm md:text-sm opacity-90"> 
+     मोटार परिवहन<br/> महाराष्ट्र राज्य पुणे
+    </p>  */}
+  </div> 
+</div>
 
         {/* Regional Ranges Grid */}
         <h3 className="text-xl sm:text-2xl font-bold text-center mb-6 sm:mb-8 text-gray-800 dark:text-gray-100">
-          {language === "marathi" ? "प्रादेशिक परिक्षेत्र" : "Regional Ranges"}
+          {language === "marathi" ? " परिक्षेत्र कार्यालय " : "Regional Ranges"}
         </h3>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 place-items-center">
