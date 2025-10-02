@@ -384,10 +384,21 @@ import policeImg5 from "../assets/images/police5.jpg";
 import policeImg6 from "../assets/images/police7.jpg";
 import policecar2 from "../assets/images/PoliceCar2.jpg";
 import car4 from "../assets/images/car4.jpg"
-import car5 from "../assets/images/car5.jpg"
-import car6 from "../assets/images/car6.jpg"
-import bike1 from "../assets/images/bike1.jpg"
+import boat1 from "../assets/images/boat1.jpg"
+import boat3 from "../assets/images/boat3.jpg"
+import police1 from "../assets/images/police1.jpg"
 import allpoliceteam  from "../assets/images/allpoliceteam.jpg"
+import police2 from "../assets/images/police22.jpg"
+import police11 from "../assets/images/igoffice.jpg"
+import car11 from "../assets/images/car11.jpg"
+import bus1 from "../assets/images/bus1.jpg"
+import kaman from "../assets/images/bus2.jpg"
+import kaman1 from "../assets/images/prashikshanoffice1.jpg"
+
+// import kaman from "../assets/images/prashikshanoffice1.jpgx"
+
+
+
 
 
 
@@ -412,61 +423,86 @@ const sliderData: SlideData[] = [
   //   subtitle: "",
   //   description: ""
   // },
+  // { 
+  //   id: 1, 
+  //   image: policeImg2,
+  //   title: "",
+  //   subtitle: "",
+  //   description: ""
+  // },
   { 
-    id: 1, 
-    image: policeImg2,
+    id:3 , 
+    image: police1,
+    title: "",
+    subtitle: "",
+    description: ""
+  },
+ 
+   { 
+    id:3 , 
+    image: police2,
     title: "",
     subtitle: "",
     description: ""
   },
    { 
     id:2 , 
-    image: policecar,
+    image: police11,
     title: "",
     subtitle: "",
     description: ""
   },
-   { 
-    id:3 , 
-    image: allpoliceteam,
+    { 
+    id:2 , 
+    image: car11,
     title: "",
     subtitle: "",
     description: ""
-  }, { 
+  },
+  //  { 
+  //   id: 4, 
+  //   image: policecar2,
+  //   title: "",
+  //   subtitle: "",
+  //   description: ""
+  // },
+  { 
     id: 4, 
-    image: policecar2,
+    image: bus1,
     title: "",
     subtitle: "",
     description: ""
   },
-  { 
-    id: 5, 
-    image: car4,
-    title: "",
-    subtitle: "",
-    description: ""
-  },
-  { 
-    id: 6, 
-    image:  car5,
-    title: "",
-    subtitle: "",
-    description: ""
-  },
-  { 
-    id: 7, 
-    image:  car6,
-    title: "",
-    subtitle: "",
-    description: ""
-  },
+  // { 
+  //   id: 5, 
+  //   image: car4,
+  //   title: "",
+  //   subtitle: "",
+  //   description: ""
+  // },
    { 
-    id: 8, 
-    image: bike1,
+    id: 5, 
+    image:kaman,
     title: "",
     subtitle: "",
     description: ""
   },
+  //  { 
+  //   id: 5, 
+  //   image:kaman1,
+  //   title: "",
+  //   subtitle: "",
+  //   description: ""
+  // },
+  
+  // { 
+  //   id: 5, 
+  //   image: boat1,
+  //   title: "",
+  //   subtitle: "",
+  //   description: ""
+  // },
+ 
   { 
     id: 9, 
     image: policeImg5,
@@ -481,6 +517,14 @@ const sliderData: SlideData[] = [
     subtitle: "",
     description: ""
   },
+  //  { 
+  //   id: 5, 
+  //   image: boat3,
+  //   title: "",
+  //   subtitle: "",
+  //   description: ""
+  // },
+ 
 ];
 
 const HeroSlider = () => {

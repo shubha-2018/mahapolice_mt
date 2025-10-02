@@ -12,11 +12,11 @@ const ContactPage = () => {
         english: 'Motor Transport Department, Maharashtra State Pune',
       },
       address: {
-        marathi: 'मा.विशेष पोलीस निरीक्षक, मोटार परिवहन विभाग, महाराष्ट्र राज्य, औंध, पुणे. 411007',
-        english: 'Special Inspector General of Police, Motor Transport, Maharashtra State, Aundh, Pune. 411007',
+        marathi: 'विशेष पोलीस निरीक्षक, मोटार परिवहन विभाग, महाराष्ट्र राज्य, औंध, पुणे. 411067',
+        english: 'Special Inspector General of Police, Motor Transport, Maharashtra State, Aundh, Pune. 411067',
       },
       phone: '02025880718',
-      email: 'igmtpune@gmail.com',
+      email: 'ig.mt.pune@mahapolice.gov.in',
       // department: { marathi: '', english: 'Police Vehicle Management' }
     }
   ];
@@ -116,7 +116,7 @@ const ContactPage = () => {
                     </p>
                     <div className="space-y-3">
                       <a
-                        href="https://maps.google.com?q=Anna+Saheb+Nagar+Pune+Maharashtra"
+                        href="https://maps.google.com?q=Police+MT+Workshop+Aundh+Pune+Maharashtra"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center justify-center w-full bg-white text-blue-600 dark:text-blue-400 dark:bg-gray-800 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 dark:hover:bg-gray-700 transition-colors"

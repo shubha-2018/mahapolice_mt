@@ -10,8 +10,8 @@ const Footer = () => {
       quickLinks: 'Links',
       services: 'सेवा',
       contactInfo: 'संपर्क माहिती',
-      address: 'मा.विशेष पोलिस महानिरीक्षक,मोटार परिवहन विभाग,महाराष्ट्र राज्य,औंध-पुणे 411007',
-      email: 'igmtpune@gmail.com',
+      address: 'विशेष पोलिस महानिरीक्षक,मोटार परिवहन विभाग,महाराष्ट्र राज्य,औंध-पुणे 411067',
+      email: 'ig.mt.pune@mahapolice.gov.in',
       phone: '+91-02025880718',
       serviceItems: [
         
@@ -29,7 +29,7 @@ const Footer = () => {
       services: 'Services',
       contactInfo: 'Contact Information',
       address: 'Headquarters: Motor Transport Department, Maharashtra Police, Mumbai - 400001',
-      email: 'igmtpune@gmail.com',
+      email: 'ig.mt.pune@mahapolice.gov.in',
       phone: '+91-02025880718',
       serviceItems: [
         'Fleet Management',
@@ -65,7 +65,7 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center">
-                <span className="text-primary font-bold text-sm">MP</span>
+                <span className="text-primary font-bold text-sm">MT</span>
               </div>
               <div>
                 <h3 className={`font-bold text-lg ${
@@ -80,7 +80,7 @@ const Footer = () => {
               language === 'marathi' ? 'marathi-text' : 'english-text'
             }`}>
               {language === 'marathi' 
-                ? 'मनुष्यबळ ,वाहन व्यवस्थापन व  तत्पर सेवा '
+                ? 'वाहन व्यवस्थापन व  तत्पर सेवा '
                 : 'Serving Maharashtra with dedication, security and reliability.'
               }
             </p>
@@ -169,6 +169,7 @@ const Footer = () => {
                   {footerContent[language].email}
                 </a>
               </div>
+              
             </div>
           </div>
         </div>

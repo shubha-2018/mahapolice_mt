@@ -2,6 +2,7 @@ import React from "react";
 import { Users, Building2, Shield } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useLanguage } from "@/hooks/useLanguage";
+ import { Link } from "react-router-dom";
 
 const OrganizationalChart = () => {
   const { language } = useLanguage();
@@ -139,7 +140,7 @@ const OrganizationalChart = () => {
         </h1> */}
         <p className="text-3xl sm:text-4xl md:text-5xl text-blue-200 dark:text-blue-300 text-sm sm:text-base md:text-medium">
           {language === "marathi"
-            ? "राज्य पोलिस मोटार परिवहन विभागाची परिक्षेत्र निहाय माहिती "
+            ? " पोलीस मोटार परिवहन विभागाची परिक्षेत्र निहाय माहिती "
             : "State Police Motor Transport Department Organizational Structure"}
         </p>
       </div>
@@ -159,19 +160,24 @@ const OrganizationalChart = () => {
         </div> */}
 
         {/* Main Leadership */}
-       <div className="flex justify-center relative mb-12 sm:mb-20"> 
-  <div 
-    className="bg-gradient-to-r from-yellow-400 to-yellow-600 dark:from-gray-700 dark:to-gray-800 text-white rounded-xl shadow-lg p-4 sm:p-6 w-full sm:w-64 text-center" 
-  > 
-    <Users className="w-6 h-6 sm:w-8 sm:h-8 mx-auto mb-2" /> 
-    <h3 className="font-bold text-sm sm:text-base md:text-lg"> 
-     पोलिस  अधीक्षक,मुख्यालय. 
-    </h3> 
-    {/* <p className="text-xs sm:text-sm md:text-sm opacity-90"> 
-     मोटार परिवहन<br/> महाराष्ट्र राज्य पुणे
-    </p>  */}
-  </div> 
+     
+
+
+
+<div className="flex justify-center relative mb-12 sm:mb-20">
+  <Link to="/unit-dysp" className="w-full sm:w-64">
+    <div
+      className="bg-gradient-to-r from-yellow-400 to-yellow-600 dark:from-gray-700 dark:to-gray-800 text-white rounded-xl shadow-lg p-4 sm:p-6 text-center hover:scale-105 transition-transform duration-300 cursor-pointer"
+    >
+      <Users className="w-6 h-6 sm:w-8 sm:h-8 mx-auto mb-2" />
+      <h3 className="font-bold text-sm sm:text-base md:text-lg">
+        पोलिस अधीक्षक, मुख्यालय
+      </h3>
+    </div>
+  </Link>
 </div>
+
+
 
         {/* Regional Ranges Grid */}
         <h3 className="text-xl sm:text-2xl font-bold text-center mb-6 sm:mb-8 text-gray-800 dark:text-gray-100">

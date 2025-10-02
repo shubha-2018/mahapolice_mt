@@ -2,6 +2,10 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Quote } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
 import { useState } from 'react';
+import { Description } from '@radix-ui/react-toast';
+import AshokMoraleImg from '../assets/images/morale_sir.jpg'; 
+// 👆 adjust the path according to your project structure
+
 
 const IGPMessage = () => {
   const { language } = useLanguage();
@@ -9,11 +13,17 @@ const IGPMessage = () => {
 
   const messageContent = {
     marathi: { 
-      title: 'मा.विशेष पोलिस महानिरीक्षक यांचा संदेश',
+      title: 'विशेष पोलिस महानिरीक्षक यांचा संदेश',
       message:
         'महाराष्ट्र पोलीस मोटार  परिवहन विभाग राज्यभरातील पोलीस बलांचा मेरुदंड आहे. आमचे आधुनिक वाहन संच आणि तांत्रिक सुविधा पोलीस कार्यक्षमता वाढवण्यात महत्त्वपूर्ण भूमिका बजावतात. पर्यावरण संरक्षणासाठी इलेक्ट्रिक वाहनांचा वापर वाढवून आम्ही भविष्याच्या दिशेने वाटचाल करत आहोत. आमच्या कुशल ड्रायव्हर्स आणि तांत्रिक कर्मचार्‍यांचे योगदान अतुलनीय आहे.',
-      signature: 'श्री. अशोक मोराळे (IPS)',
-      designation: 'विशेष पोलिस महानिरीक्षक,मोटार  परिवहन विभाग,महाराष्ट्र राज्य ',
+     signature: (
+  <>
+    श्री. अशोक मोराळे.
+    <span className="text-sm"> भा पो से</span>
+  </>
+),
+
+      designation: 'विशेष  पोलीस महानिरीक्षक,मोटार  परिवहन विभाग,महाराष्ट्र राज्य ',
     },
     english: {
       title: "Special IGP's Message",
@@ -35,12 +45,13 @@ const IGPMessage = () => {
                 <div className="flex-shrink-0 mx-auto lg:mx-0">
                   <div className="relative w-48 h-56 rounded-xl overflow-hidden bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center shadow-xl">
                     {!imgError ? (
-                      <img
-                        src="https://rhtechnology.in/MT1/images/leaders/ashok-morale.jpg" // <-- Replace with actual image path
-                        alt="Special IGP Shri. Ashok Morale (IPS)"
-                        className="w-40 h-48 rounded-lg object-cover"
-                        onError={() => setImgError(true)}
-                      />
+                     <img
+  src={AshokMoraleImg}   // 👈 use imported image instead of URL
+  alt="Special IGP Shri. Ashok Morale (IPS)"
+  className="w-40 h-48 rounded-lg object-cover"
+  onError={() => setImgError(true)}
+/>
+
                     ) : (
                       <div className="w-40 h-48 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center">
                         <span className="text-4xl text-white">👨‍💼</span>

@@ -5,19 +5,20 @@ const KokanRangeTable = () => {
   const { language } = useLanguageContext();
 
   const data = [
+   
     { 
       sr: 1, 
+      commissionerate: { marathi: "ठाणे शहर", english: "Thane City" }, 
+      designation: { marathi: "सहा .पोलीस आयुक्त", english: "Police Inspector" }, 
+      officerName: { marathi: "अयाज शेख", english: "Ayaz Shaikh" }, 
+      contact: "9803786100" 
+    },
+     { 
+      sr: 2, 
       commissionerate: { marathi: "नवी मुंबई शहर", english: "Navi Mumbai City" }, 
       designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" }, 
       officerName: { marathi: "सचिन दंताल", english: "Sachin Dantal" }, 
       contact: "8108383006" 
-    },
-    { 
-      sr: 2, 
-      commissionerate: { marathi: "ठाणे शहर", english: "Thane City" }, 
-      designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" }, 
-      officerName: { marathi: "अयाज शेख", english: "Ayaz Shaikh" }, 
-      contact: "9803786100" 
     },
     { 
       sr: 3, 

@@ -3,12 +3,10 @@ import { Shield, MapPin, Badge, Users } from "lucide-react";
 import { useLanguageContext } from "@/context/LanguageContext";
 
 // Import your images
-import id1 from "@/assets/images/Tushar-Deshmukh.jpg";
+import id1 from "@/assets/images/deshmukh123.jpg";
 import id3 from "@/assets/images/sandip_shinde.jpg";
 import id0 from "@/assets/images/Deepak_IPS.jpeg";
-import id7 from "@/assets/images/Ashok_morale.jpeg";
-
-const digpImage = "https://pbs.twimg.com/media/Do2CbyMXUAAbkN4.jpg";
+import id7 from "@/assets/images/morale_sir.jpg";
 
 const officers = [
   {
@@ -18,7 +16,7 @@ const officers = [
     position: {
       marathi: (
         <>
-          (भा.पो.से.)<br />
+          भा पो से<br />
           अपर पोलीस महासंचालक व संचालक <br />
           पोलीस दळणवळण, माहिती तंत्रज्ञान व परिवहन<br />
           महाराष्ट्र राज्य, पुणे
@@ -36,7 +34,7 @@ const officers = [
     position: {
       marathi: (
         <>
-          (भा.पो.से.)<br />
+          भा पो से<br />
           विशेष पोलिस महानिरीक्षक <br />
           मोटार परिवहन विभाग <br />
           महाराष्ट्र राज्य, पुणे
@@ -47,7 +45,7 @@ const officers = [
     },
     image: id7,
   },
-   {
+  {
     id: 3,
     type: "sp",
     name: { marathi: "श्रीमती गायत्री पवार", english: "Gayatri Pawar" },
@@ -63,7 +61,7 @@ const officers = [
     type: "sp",
     name: { marathi: "श्री तुषार देशमुख", english: "Shri Tushar Deshmukh" },
     position: {
-      marathi: " पोलीस अधीक्षक पुणे परिक्षेत्र",
+      marathi: "पोलीस अधीक्षक पुणे परिक्षेत्र",
       english: "Additional Superintendent of Police, Pune Range",
     },
     location: { marathi: "पुणे परिक्षेत्र", english: "Pune Range" },
@@ -74,7 +72,7 @@ const officers = [
     type: "sp",
     name: { marathi: "श्री संदीप शिंदे", english: "Shri Sandip Shinde" },
     position: {
-      marathi: " पोलीस अधीक्षक संभाजीनगर परिक्षेत्र (अति. कार्यभार)",
+      marathi: "पोलीस अधीक्षक संभाजीनगर परिक्षेत्र",
       english: "Additional Superintendent of Police, CH. Sambhaji Nagar Range (Additional Charge)",
     },
     location: { marathi: "संभाजी नगर परिक्षेत्र", english: "Sambhaji Nagar Range" },
@@ -96,13 +94,12 @@ const officers = [
     type: "sp",
     name: { marathi: "श्री तुषार देशमुख", english: "Shri Tushar Deshmukh" },
     position: {
-      marathi: " पोलीस अधीक्षक कोकण परिक्षेत्र (अति. कार्यभार)",
+      marathi: "पोलीस अधीक्षक कोकण परिक्षेत्र",
       english: "Additional Superintendent of Police, Kokan Range (Additional Charge)",
     },
     location: { marathi: "कोकण परिक्षेत्र", english: "Kokan Range" },
     image: null,
   },
- 
 ];
 
 const OfficerCard = ({ officer }: { officer: typeof officers[0] }) => {
@@ -112,7 +109,7 @@ const OfficerCard = ({ officer }: { officer: typeof officers[0] }) => {
 
   return (
     <div className="group relative bg-white dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-xl p-4 sm:p-6 border border-blue-200 dark:border-gray-700 hover:border-blue-400 dark:hover:border-blue-600 transform hover:-translate-y-1 transition-all duration-300">
-      <div className="relative mb-4 sm:mb-6 mx-auto w-36 h-40 sm:w-40 sm:h-48 rounded-xl overflow-hidden shadow-lg ring-2 ring-blue-100 dark:ring-gray-600 group-hover:ring-blue-300 transition-all duration-300">
+      <div className="relative mb-2 sm:mb-3 mx-auto w-36 h-40 sm:w-40 sm:h-48 rounded-xl overflow-hidden shadow-lg ring-2 ring-blue-100 dark:ring-gray-600 group-hover:ring-blue-300 transition-all duration-300">
         <img
           src={officer.image!}
           alt={t(officer.name)}
@@ -120,7 +117,7 @@ const OfficerCard = ({ officer }: { officer: typeof officers[0] }) => {
         />
       </div>
       <div className="text-center">
-        <h3 className="text-lg sm:text-xl font-bold text-gray-800 dark:text-gray-100 mb-1 sm:mb-2 group-hover:text-blue-700 dark:group-hover:text-blue-400 transition-colors duration-300">
+        <h3 className="text-lg sm:text-xl font-bold text-gray-800 dark:text-gray-100 mb-1 sm:mb-1 group-hover:text-blue-700 dark:group-hover:text-blue-400 transition-colors duration-300">
           {t(officer.name)}
         </h3>
         <p className="text-xs sm:text-sm md:text-base text-gray-600 dark:text-gray-300 leading-relaxed bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-700 dark:to-gray-800 p-2 sm:p-3 rounded-lg border-l-4 border-blue-400 dark:border-blue-600 shadow-inner">
@@ -138,103 +135,65 @@ const OrganisationStructure = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-950 transition-colors duration-500">
-
-      {/* Organisation Structure Section */}
-      <section className="py-12 px-4 sm:px-6 md:px-8 lg:px-16">
-        <div className="text-center mb-12 sm:mb-16">
-          <div className="inline-flex items-center space-x-3 mb-4 sm:mb-6">
+      <section className="py-6 px-4 sm:px-6 md:px-8 lg:px-16">
+        {/* Header */}
+        <div className="text-center mb-4 sm:mb-6">
+          <div className="inline-flex items-center space-x-3 mb-1 sm:mb-2">
             <div className="bg-blue-600 dark:bg-blue-500 rounded-full p-2">
               <Users className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
             </div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-blue-800 to-indigo-800 bg-clip-text text-transparent dark:from-blue-400 dark:to-indigo-400">
-              {t({ marathi: "संघटनात्मक रचना", english: "ORGANISATIONAL STRUCTURE" })}
+              {t({ marathi: "संरचना", english: "ORGANISATIONAL STRUCTURE" })}
             </h2>
           </div>
-          <div className="w-24 sm:w-32 h-1.5 bg-gradient-to-r from-blue-600 via-indigo-500 to-blue-600 dark:from-blue-400 dark:via-indigo-400 mx-auto rounded-full mb-4 sm:mb-6"></div>
+          <div className="w-24 sm:w-32 h-1.5 bg-gradient-to-r from-blue-600 via-indigo-500 to-blue-600 dark:from-blue-400 dark:via-indigo-400 mx-auto rounded-full mb-2 sm:mb-3"></div>
           <p className="text-sm sm:text-base md:text-lg text-slate-600 dark:text-slate-300 max-w-md sm:max-w-3xl mx-auto leading-relaxed">
             {t({
-              marathi: "महाराष्ट्र राज्य पोलिस मोटार परिवहन विभागाची संघटनात्मक रचना",
+              marathi: "महाराष्ट्र राज्य पोलीस मोटार परिवहन विभागाची संरचना",
               english: "Organizational hierarchy of Maharashtra State Police Motor Transport Department showcasing our leadership structure",
             })}
           </p>
         </div>
 
-        
+        {/* SPL.IGP Officers */}
+        <div className="max-w-4xl mx-auto space-y-4 sm:space-y-5">
+          {officers.filter((o) => o.type === "splIgp").map((officer) => (
+            <OfficerCard key={officer.id} officer={officer} />
+          ))}
+        </div>
 
-       
-
-        {/* SPL.IGP Officers Rows */}
-        <div className="max-w-4xl mx-auto space-y-6">
-          {/* Row 1: Deepak Pandey */}
-          <div className="grid grid-cols-1 sm:grid-cols-1 gap-6 sm:gap-8">
-            {officers
-              .filter((o) => o.type === "splIgp" && o.name.english.includes("Deepak"))
-              .map((officer) => (
-                <OfficerCard key={officer.id} officer={officer} />
-              ))}
-          </div>
-
-          {/* Row 2: Ashok Morale */}
-          <div className="grid grid-cols-1 sm:grid-cols-1 gap-6 sm:gap-8">
-            {officers
-              .filter((o) => o.type === "splIgp" && o.name.english.includes("Ashok"))
-              .map((officer) => (
-                <OfficerCard key={officer.id} officer={officer} />
-              ))}
+        {/* Atul Patil Card */}
+        <div className="max-w-4xl mx-auto mt-4 sm:mt-6">
+          <div className="bg-white rounded-lg shadow-md overflow-hidden border border-blue-200 dark:border-gray-700">
+            <div className="flex justify-center pt-6 pb-4">
+              <div className="w-48 h-56 rounded-lg overflow-hidden shadow-lg">
+                <img
+                  // src="https://pbs.twimg.com/media/Do2CbyMXUAAbkN4.jpg"
+                  // alt="Shri. Atul Patil"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+            <div className="text-center px-6 pb-6">
+              <h2 className="text-2xl font-bold text-gray-800 mb-3">श्री. अतुल पाटील</h2>
+              <div className="bg-blue-50 rounded-lg p-4 border-l-4 border-blue-400 space-y-1">
+                <p className="text-base text-gray-700 leading-relaxed">पोलीस उप-महानिरीक्षक</p>
+                <p className="text-base text-gray-700 leading-relaxed">मोटार परिवहन विभाग</p>
+                <p className="text-base text-gray-700 leading-relaxed">महाराष्ट्र राज्य, पुणे</p>
+              </div>
+            </div>
           </div>
         </div>
-        {/* तांत्रिक अधिकारी Title */}
-        {/* <h3 className="text-center text-7xl font-bold text-gray-800 dark:text-gray-100 mb-6 mt-16"> */}
-            <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-blue-800 to-indigo-800 bg-clip-text text-transparent dark:from-blue-400 dark:to-indigo-400 mt-16 text-center  mb-10">
-  {t({ marathi: "तांत्रिक अधिकारी", english: "Technical Officers" })}
-</h3>
 
-         {/* Atul Patil Card */}
-      <div className="bg-white rounded-lg shadow-md overflow-hidden">
-  {/* Officer Image */}
-  <div className="flex justify-center pt-8 pb-4">
-    <div className="w-48 h-56 rounded-lg overflow-hidden shadow-lg">
-      <img
-        src="https://pbs.twimg.com/media/Do2CbyMXUAAbkN4.jpg" // <-- Your image URL here
-        alt="Shri. Atul Patil"
-        className="w-full h-full object-cover"
-      />
-    </div>
-  </div>
-
-  {/* Officer Name */}
-  <div className="text-center px-6 pb-6">
-    <h2 className="text-2xl font-bold text-gray-800 mb-4">
-      श्री. अतुल पाटील
-    </h2>
-
-    {/* Details Box */}
-    <div className="bg-blue-50 rounded-lg p-6 border-l-4 border-blue-400">
-      <p className="text-base text-gray-700 leading-relaxed">
-        पोलीस उप-महानिरीक्षक
-      </p>
-      <p className="text-base text-gray-700 leading-relaxed">
-        मोटार परिवहन विभाग
-      </p>
-      <p className="text-base text-gray-700 leading-relaxed">
-        महाराष्ट्र राज्य, पुणे
-      </p>
-    </div>
-  </div>
-</div>
-
-
-
-
-        {/* SP Officers Section */}
-        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6 md:gap-8">
+        {/* SP Officers */}
+        <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6 md:gap-8">
           {officers.filter((o) => o.type === "sp").map((officer) => (
             <div
               key={officer.id}
-              className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-blue-200 dark:border-gray-700 hover:border-blue-400 dark:hover:border-blue-600 group transform hover:-translate-y-1"
+              className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg transition-all duration-300 overflow-hidden border-[10px] border-blue-500 dark:border-blue-400 group transform"
             >
               <div className="p-4 sm:p-6">
-                <div className="relative mb-4 sm:mb-6 group-hover:scale-105 transition-transform duration-300">
+                <div className="relative mb-2 sm:mb-3">
                   <div className="w-full h-40 sm:h-48 rounded-xl overflow-hidden shadow-lg bg-gradient-to-br from-blue-100 to-blue-200 dark:from-gray-700 dark:to-gray-800 border-2 border-white ring-2 dark:ring-gray-600 flex items-center justify-center">
                     {officer.image ? (
                       <img src={officer.image} alt={t(officer.name)} className="w-full h-full object-cover" />
@@ -248,24 +207,22 @@ const OrganisationStructure = () => {
                 </div>
 
                 <div className="space-y-2 sm:space-y-3">
-                  <h4 className="font-bold text-slate-800 dark:text-gray-100 text-base sm:text-lg leading-tight group-hover:text-blue-700 dark:group-hover:text-blue-400 transition-colors duration-300">
+                  <h4 className="font-bold text-slate-800 dark:text-gray-100 text-base sm:text-lg leading-tight transition-colors duration-300">
                     {t(officer.name)}
                   </h4>
 
-                  <div className="space-y-2">
-                    <div className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-700 dark:to-gray-800 rounded-lg p-2 sm:p-3 border-l-4 border-blue-400 dark:border-blue-600 shadow-inner">
-                      <p className="text-xs sm:text-sm md:text-base font-medium text-slate-700 dark:text-gray-300 leading-relaxed">
-                        {t(officer.position)}
-                      </p>
-                    </div>
-
-                    {officer.location && (
-                      <div className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-gray-700 dark:to-gray-800 rounded-lg p-2 sm:p-3 border border-blue-200 dark:border-gray-600 flex items-center space-x-2 text-slate-700 dark:text-gray-300 text-xs sm:text-sm">
-                        <MapPin className="w-3 h-3 sm:w-4 sm:h-4 text-white bg-blue-600 dark:bg-blue-500 rounded-full p-0.5 sm:p-1" />
-                        <span className="font-medium">{t(officer.location)}</span>
-                      </div>
-                    )}
+                  <div className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-700 dark:to-gray-800 rounded-lg p-2 sm:p-3 border-l-4 border-blue-400 dark:border-blue-600 shadow-inner">
+                    <p className="text-xs sm:text-sm md:text-base font-medium text-slate-700 dark:text-gray-300 leading-relaxed">
+                      {t(officer.position)}
+                    </p>
                   </div>
+
+                  {officer.location && (
+                    <div className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-gray-700 dark:to-gray-800 rounded-lg p-2 sm:p-3 border border-blue-200 dark:border-gray-600 flex items-center space-x-2 text-slate-700 dark:text-gray-300 text-xs sm:text-sm">
+                      <MapPin className="w-3 h-3 sm:w-4 sm:h-4 text-white bg-blue-600 dark:bg-blue-500 rounded-full p-0.5 sm:p-1" />
+                      <span className="font-medium">{t(officer.location)}</span>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>

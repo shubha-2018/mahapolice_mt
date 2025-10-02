@@ -19,12 +19,12 @@ export const translations: Translation = {
       english: 'Organization'
     },
     organization: {
-      marathi: 'संघटना',
-      english: 'Employee Corner'
+      marathi: 'संरचना',
+      english: ' Organaization Structure'
     },
     employee: {
-      marathi: 'कर्मचारी विभाग',
-      english: 'Employee Corner'
+      marathi: 'फ्लॅश ',
+      english: 'Flash'
     },
      sss: {
        english: "SSS",

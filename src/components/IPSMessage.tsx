@@ -20,7 +20,7 @@ Be it disasters, riots, law-and-order situations, or the need to provide prompt 
       name: 'श्री. दीपक शिवानंद पाण्डेय् ',
       designation: (
         <>
-         (भा.पो.से.) <br/>
+         भा पो से <br/>
          अपर पोलीस महासंचालक व संचालक,<br/> पोलीस दळणवळण, माहिती तंत्रज्ञान व परिवहन<br/> महाराष्ट्र राज्य, पुणे
         </>
       ),

@@ -5,8 +5,9 @@ const NagpurRange: React.FC = () => {
   const { language } = useLanguageContext();
 
   const data = [
-    { sr: 1, commissionerate: { marathi: "	मोटार परिवहन पूर्व परिमंडळ, नागपूर", english: "" }, officerName: { marathi: "", english: "" }, designation: { marathi: "", english: "" }, contact: "" },
-    { sr: 1, commissionerate: { marathi: "मोटार परिवहन विभाग,नागपूर शहर", english: "Nagpur City" }, officerName: { marathi: "अजीत देशपांडे", english: "Ajeet Deshpande" }, designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" }, contact: "9923047786" },
+    // { sr: 1, commissionerate: { marathi: "	मोटार परिवहन पूर्व परिमंडळ, नागपूर", english: "" }, officerName: { marathi: "", english: "" }, designation: { marathi: "", english: "" }, contact: "" },
+    { sr: 1, commissionerate: { marathi: "पोलीस मध्यवर्ती मोटार परिवहन कर्मशाळा,नागपूर शहर", english: "" }, officerName: { marathi: "रिक्त ", english: "" }, designation: { marathi: "	पोलीस उप-अधीक्षक", english: "" }, contact: "" },
+    { sr: 1, commissionerate: { marathi: "मोटार परिवहन विभाग,नागपूर शहर", english: "Nagpur City" }, officerName: { marathi: "युवराजसिंह ठाकुर ", english: "" }, designation: { marathi: "	सहा .पोलीस आयुक्त", english: "" }, contact: "9923047786" },
     { sr: 2, commissionerate: { marathi: "मोटार परिवहन विभाग,अमरावती शहर", english: "Amravati City" }, officerName: { marathi: "संजय बोरेकर", english: "Sanjay Borekar" }, designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" }, contact: "9423913995" },
     { sr: 3, commissionerate: { marathi: "मोटार परिवहन विभाग,नागपूर ग्रामीण", english: "Nagpur Rural" }, officerName: { marathi: "महेश मुंढे", english: "Mahesh Mundhe" }, designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" }, contact: "9923405464" },
     { sr: 4, commissionerate: { marathi: "मोटार परिवहन विभाग,अमरावती ग्रामीण", english: "Amravati City" }, officerName: { marathi: "संजय पवार ", english: "Sanjay pawar" }, designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" }, contact: "9423913995" },
