@@ -18,3 +18,19 @@
 - Used Tailwind CSS classes: `text-right` for right alignment
 - Used `ml-auto` instead of `mx-auto` to push content to the right
 - Maintained responsive design and language switching functionality
+
+
+### 2025-10-02 - Contact page opens at top on first scroll
+
+**File Updated:** `src/pages/Contact.tsx`
+**Lines Modified:** 1, 5-9
+
+**Changes Made:**
+- Added `useEffect` to force window scroll to top when Contact mounts.
+- Updated React import to include `useEffect`.
+
+**Purpose:** Ensure Contact page shows from the first section (top) when navigated to.
+
+**Technical Details:**
+- `useEffect(() => { window.scrollTo({ top: 0, left: 0, behavior: 'auto' }); }, []);`
+- Kept global `ScrollToTop` for route changes; this is an extra guard for direct loads.

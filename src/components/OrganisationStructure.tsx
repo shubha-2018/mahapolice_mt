@@ -6,7 +6,11 @@ import { useLanguageContext } from "@/context/LanguageContext";
 import id1 from "@/assets/images/deshmukh123.jpg";
 import id3 from "@/assets/images/sandip_shinde.jpg";
 import id0 from "@/assets/images/Deepak_IPS.jpeg";
-import id7 from "@/assets/images/morale_sir.jpg";
+import id7 from "@/assets/images/morale_sir12.jpg";
+import id8 from "@/assets/images/gayatri_sp-removebg-preview.png";
+import id2 from "@/assets/images/atul_patilsir.jpg";
+
+
 
 const officers = [
   {
@@ -36,7 +40,7 @@ const officers = [
         <>
           भा पो से<br />
           विशेष पोलिस महानिरीक्षक <br />
-          मोटार परिवहन विभाग <br />
+          मोटार परिवहन  <br />
           महाराष्ट्र राज्य, पुणे
         </>
       ),
@@ -54,7 +58,7 @@ const officers = [
       english: "Superintendent of Police, Headquarters, Pune",
     },
     location: { marathi: "मुख्यालय, पुणे", english: "Headquarters, Pune" },
-    image: null,
+    image: id8,
   },
   {
     id: 4,
@@ -70,7 +74,7 @@ const officers = [
   {
     id: 5,
     type: "sp",
-    name: { marathi: "श्री संदीप शिंदे", english: "Shri Sandip Shinde" },
+    name: { marathi: "रिक्त ", english: "Vacant" },
     position: {
       marathi: "पोलीस अधीक्षक संभाजीनगर परिक्षेत्र",
       english: "Additional Superintendent of Police, CH. Sambhaji Nagar Range (Additional Charge)",
@@ -92,7 +96,7 @@ const officers = [
   {
     id: 7,
     type: "sp",
-    name: { marathi: "श्री तुषार देशमुख", english: "Shri Tushar Deshmukh" },
+    name: { marathi: "रिक्त ", english: "Vacant" },
     position: {
       marathi: "पोलीस अधीक्षक कोकण परिक्षेत्र",
       english: "Additional Superintendent of Police, Kokan Range (Additional Charge)",
@@ -166,19 +170,20 @@ const OrganisationStructure = () => {
         <div className="max-w-4xl mx-auto mt-4 sm:mt-6">
           <div className="bg-white rounded-lg shadow-md overflow-hidden border border-blue-200 dark:border-gray-700">
             <div className="flex justify-center pt-6 pb-4">
-              <div className="w-48 h-56 rounded-lg overflow-hidden shadow-lg">
-                <img
-                  // src="https://pbs.twimg.com/media/Do2CbyMXUAAbkN4.jpg"
-                  // alt="Shri. Atul Patil"
-                  className="w-full h-full object-cover"
-                />
+             <div className="w-48 h-56 rounded-lg overflow-hidden shadow-lg">
+              <img
+  src={id2}  // Use the imported image variable
+  alt="Shri. Atul Patil"
+  className="w-full h-full object-cover"
+/>
+
               </div>
             </div>
             <div className="text-center px-6 pb-6">
               <h2 className="text-2xl font-bold text-gray-800 mb-3">श्री. अतुल पाटील</h2>
               <div className="bg-blue-50 rounded-lg p-4 border-l-4 border-blue-400 space-y-1">
                 <p className="text-base text-gray-700 leading-relaxed">पोलीस उप-महानिरीक्षक</p>
-                <p className="text-base text-gray-700 leading-relaxed">मोटार परिवहन विभाग</p>
+                <p className="text-base text-gray-700 leading-relaxed">मोटार परिवहन</p>
                 <p className="text-base text-gray-700 leading-relaxed">महाराष्ट्र राज्य, पुणे</p>
               </div>
             </div>

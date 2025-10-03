@@ -1,9 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Truck, Clock, MapPin, Users, Ship, Building } from 'lucide-react';
+import { Truck, Clock, MapPin, Users, Ship, Building, Car } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
-import { Car } from 'lucide-react'
-
 
 // Import all 6 different background images
 import cardBg1 from "../assets/images/car4 - Copy.jpg";
@@ -29,75 +27,57 @@ interface ImpactStat {
 const impactStats: ImpactStat[] = [
   {
     id: 1,
-   icon: <Car className="w-8 h-8" />,
+    icon: <Car className="w-8 h-8" />,
     value: 24000,
     suffix: '+',
-    label: {
-      marathi: 'वाहने',
-      english: 'Vehicles'
-    },
+    label: { marathi: 'वाहने', english: 'Vehicles' },
     color: 'text-primary',
-    bgImage: cardBg1
+    bgImage: cardBg1,
   },
   {
     id: 2,
     icon: <Ship className="w-8 h-8" />,
     value: 55,
     suffix: '+',
-    label: {
-      marathi: 'नौका',
-      english: 'Boats'
-    },
+    label: { marathi: 'नौका', english: 'Boats' },
     color: 'text-accent',
-    bgImage: cardBg2
+    bgImage: cardBg2,
   },
   {
     id: 3,
     icon: <Clock className="w-8 h-8" />,
     value: 77,
     suffix: '+',
-    label: {
-      marathi: 'वर्षांची सेवा',
-      english: 'Years of Service'
-    },
+    label: { marathi: 'वर्षांची सेवा', english: 'Years of Service' },
     color: 'text-primary',
-    bgImage: cardBg3
+    bgImage: cardBg3,
   },
   {
     id: 4,
     icon: <MapPin className="w-8 h-8" />,
     value: 4,
     suffix: '',
-    label: {
-      marathi: 'प्रादेशिक कार्यालये',
-      english: 'Regional Offices'
-    },
+    label: { marathi: 'प्रादेशिक कार्यालये', english: 'Regional Offices' },
     color: 'text-accent',
-    bgImage: cardBg4
+    bgImage: cardBg4,
   },
   {
     id: 5,
     icon: <Building className="w-8 h-8" />,
     value: 91,
     suffix: '',
-    label: {
-      marathi: 'मोटार परिवहन विभाग',
-      english: 'Motor Transport Departments'
-    },
+    label: { marathi: 'मोटार परिवहन विभाग', english: 'Motor Transport Departments' },
     color: 'text-accent',
-    bgImage: cardBg5
+    bgImage: cardBg5,
   },
   {
     id: 6,
     icon: <Users className="w-8 h-8" />,
     value: 3000,
     suffix: '+',
-    label: {
-      marathi: 'कर्मचारी',
-      english: 'Personnel'
-    },
+    label: { marathi: 'कर्मचारी', english: 'Personnel' },
     color: 'text-primary',
-    bgImage: cardBg6
+    bgImage: cardBg6,
   },
 ];
 
@@ -156,13 +136,13 @@ const OurImpact = () => {
       <div className="absolute inset-0 bg-background/70"></div>
 
       <div className="relative container mx-auto px-4">
-        <div className="text-right mb-12">
+        <div className="text-center mb-12">
           <h2 className={`police-heading text-3xl md:text-4xl mb-4 ${
             language === 'marathi' ? 'marathi-text' : 'english-text'
           }`}>
             {language === 'marathi' ? 'आमचा प्रभाव' : 'Our Impact'}
           </h2>
-          <p className={`police-body text-lg max-w-2xl ml-auto text-black ${
+          <p className={`police-body text-lg max-w-2xl mx-auto text-black ${
             language === 'marathi' ? 'marathi-text' : 'english-text'
           }`}>
             {language === 'marathi' 
@@ -173,7 +153,7 @@ const OurImpact = () => {
         </div>
 
         {/* Single row for all cards */}
-        <div className="grid grid-cols-1 md:grid-cols-6 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-6 gap-6 text-center">
           {impactStats.map((stat) => (
             <Card 
               key={stat.id} 
@@ -196,7 +176,7 @@ const OurImpact = () => {
                   {stat.icon}
                 </div>
                 
-                <div className="mb-2">
+                <div className="mb-2 text-center">
                   <span 
                     className="police-heading text-4xl md:text-5xl font-bold transition-all duration-300"
                     style={{ color: '#1A4CA1' }}
@@ -211,10 +191,9 @@ const OurImpact = () => {
                   </span>
                 </div>
                 
-                {/* Bigger text size for all Marathi labels */}
                 <p className={`police-subheading ${
                   language === 'marathi' ? 'text-2xl font-bold' : 'text-lg'
-                } ${language === 'marathi' ? 'marathi-text' : 'english-text'}`}>
+                } ${language === 'marathi' ? 'marathi-text' : 'english-text'} text-center`}>
                   {stat.label[language]}
                 </p>
                 

@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { MapPin, Phone, Mail, ExternalLink } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage'; // Custom hook for language
 
 const ContactPage = () => {
   const { language: lang } = useLanguage(); // Get current language
+
+  // Ensure the Contact page opens at the very top
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+  }, []);
 
   const contacts = [
     {
@@ -47,8 +52,6 @@ const ContactPage = () => {
                     <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-2">
                       {contact.title[lang]}
                     </h3>
-                    {/* Optional Department */}
-                    {/* <p className="text-blue-600 dark:text-blue-400 font-semibold text-lg">{contact.department[lang]}</p> */}
                   </div>
 
                   <div className="space-y-6">
@@ -116,7 +119,7 @@ const ContactPage = () => {
                     </p>
                     <div className="space-y-3">
                       <a
-                        href="https://maps.google.com?q=Police+MT+Workshop+Aundh+Pune+Maharashtra"
+                        href="https://www.google.com/maps?q=18.562883246780896,73.81327144433503"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center justify-center w-full bg-white text-blue-600 dark:text-blue-400 dark:bg-gray-800 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 dark:hover:bg-gray-700 transition-colors"
@@ -124,6 +127,7 @@ const ContactPage = () => {
                         <ExternalLink className="w-5 h-5 mr-2" />
                         {lang === 'marathi' ? 'नकाशावर पहा' : 'View on Maps'}
                       </a>
+
                       <a
                         href={`tel:${contact.phone}`}
                         className="inline-flex items-center justify-center w-full border-2 border-white dark:border-gray-400 text-white dark:text-gray-200 px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 dark:hover:bg-gray-400 dark:hover:text-gray-900 transition-colors"

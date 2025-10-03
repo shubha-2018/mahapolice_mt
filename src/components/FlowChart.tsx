@@ -140,7 +140,7 @@ const OrganizationalChart = () => {
         </h1> */}
         <p className="text-3xl sm:text-4xl md:text-5xl text-blue-200 dark:text-blue-300 text-sm sm:text-base md:text-medium">
           {language === "marathi"
-            ? " पोलीस मोटार परिवहन विभागाची परिक्षेत्र निहाय माहिती "
+            ? " पोलीस मोटार परिवहन विभागाची परिक्षेत्रे "
             : "State Police Motor Transport Department Organizational Structure"}
         </p>
       </div>
@@ -171,7 +171,7 @@ const OrganizationalChart = () => {
     >
       <Users className="w-6 h-6 sm:w-8 sm:h-8 mx-auto mb-2" />
       <h3 className="font-bold text-sm sm:text-base md:text-lg">
-        पोलिस अधीक्षक, मुख्यालय
+      पोलीस अधीक्षक, मुख्यालय
       </h3>
     </div>
   </Link>
@@ -181,7 +181,7 @@ const OrganizationalChart = () => {
 
         {/* Regional Ranges Grid */}
         <h3 className="text-xl sm:text-2xl font-bold text-center mb-6 sm:mb-8 text-gray-800 dark:text-gray-100">
-          {language === "marathi" ? " परिक्षेत्र कार्यालय " : "Regional Ranges"}
+          {language === "marathi" ? " परिक्षेत्रीय  कार्यालय " : "Regional Ranges"}
         </h3>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 place-items-center">

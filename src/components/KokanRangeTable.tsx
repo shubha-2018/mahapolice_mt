@@ -10,79 +10,86 @@ const KokanRangeTable = () => {
       sr: 1, 
       commissionerate: { marathi: "ठाणे शहर", english: "Thane City" }, 
       designation: { marathi: "सहा .पोलीस आयुक्त", english: "Police Inspector" }, 
-      officerName: { marathi: "अयाज शेख", english: "Ayaz Shaikh" }, 
-      contact: "9803786100" 
+      officerName: { marathi: "नासिर पठाण ", english: "Nasir Pathan" }, 
+      contact: "9664857867" 
+    },
+    { 
+      sr: 2, 
+      commissionerate: { marathi: "पोलीस  नौखा कर्मशाळा ठाणे ", english: "" }, 
+      designation: { marathi: "पोलीस  उप-अधीक्षक", english: "" }, 
+      officerName: { marathi: "", english: "" }, 
+      contact: "" 
     },
      { 
-      sr: 2, 
+      sr: 3, 
       commissionerate: { marathi: "नवी मुंबई शहर", english: "Navi Mumbai City" }, 
       designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" }, 
       officerName: { marathi: "सचिन दंताल", english: "Sachin Dantal" }, 
       contact: "8108383006" 
     },
     { 
-      sr: 3, 
+      sr: 4, 
       commissionerate: { marathi: "मीरा भायंदर शहर", english: "Mira Bahindar City" }, 
       designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" }, 
       officerName: { marathi: "प्रभाकर झेंडे", english: "Prabhakar Zende" }, 
       contact: "9823112469" 
     },
     { 
-      sr: 4, 
+      sr: 5, 
       commissionerate: { marathi: "नाशिक शहर", english: "Nashik City" }, 
       designation: { marathi: "पोलीस निरीक्षक", english: "" }, 
       officerName: { marathi: "पंकज पवार", english: "Pankaj Pawar" }, 
       contact: "9923430414" 
     },
     { 
-      sr: 5, 
+      sr: 6, 
       commissionerate: { marathi: "ठाणे ग्रामीण", english: "Thane Rural" }, 
       designation: { marathi: "पोलीस निरीक्षक", english: "" }, 
       officerName: { marathi: "बाळासाहेब दत्तात्रय झेंडे ", english: "Balasaheb Dattatry Zende" }, 
       contact: "9823112469" 
     },
     { 
-      sr: 6, 
+      sr: 7, 
       commissionerate: { marathi: "पालघर", english: "Palghar" }, 
       designation: { marathi: "", english: "" }, 
       officerName: { marathi: "", english: "" }, 
       contact: "" 
     },
     { 
-      sr: 7, 
+      sr: 8, 
       commissionerate: { marathi: "नाशिक ग्रामीण", english: "Nashik Rural" }, 
       designation: { marathi: "पोलीस निरीक्षक", english: "" }, 
       officerName: { marathi: "अनिल घाडगे", english: "Anil Ghadage" }, 
       contact: "9823168900" 
     },
     { 
-      sr: 8, 
+      sr: 9, 
       commissionerate: { marathi: "रायगड", english: "Raigad" }, 
       designation: { marathi: "पोलीस उपनिरीक्षक", english: "Police Sub Inspector" }, 
       officerName: { marathi: "मुत्सुफा शेख ", english: "Mustufa Shaikh" }, 
       contact: "9881359199" 
     },
     { 
-      sr: 9, 
+      sr: 10, 
       commissionerate: { marathi: "रत्नागिरी", english: "Ratnagiri" }, 
       designation: { marathi: "", english: "" }, 
       officerName: { marathi: "", english: "" }, 
       contact: "" 
     },
     { 
-      sr: 10, 
+      sr: 11, 
       commissionerate: { marathi: "सिंधुदुर्ग", english: "Sindhudurg" }, 
       designation: { marathi: "पोलीस उपनिरीक्षक", english: "Police Sub Inspector" }, 
       officerName: { marathi: " प्रदीप चव्हाण ", english: "Pradip Chavan" }, 
       contact: "8108343636" 
     },
-    { 
-      sr: 11, 
-      commissionerate: { marathi: "पोलीस नौका वर्कशॉप", english: "Police Nauka W/Shop" }, 
-      designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" }, 
-      officerName: { marathi: "संतोष डोईफोडे ", english: "Santosh Doephode" }, 
-      contact: "9049003537" 
-    },
+    // { 
+    //   sr: 11, 
+    //   commissionerate: { marathi: "पोलीस नौका वर्कशॉप", english: "Police Nauka W/Shop" }, 
+    //   designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" }, 
+    //   officerName: { marathi: "संतोष डोईफोडे ", english: "Santosh Doephode" }, 
+    //   contact: "9049003537" 
+    // },
     { 
       sr: 12, 
       commissionerate: { marathi: "एसआरपीएफ ग्रुप 8, मुंबई", english: "SRPF Group 8.Mumbai" }, 

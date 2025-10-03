@@ -21,9 +21,9 @@ const EmployeeCorner: React.FC<EmployeeCornerProps> = ({ open, onOpenChange }) =
     { label: t({ marathi: "बदली आदेश / पदस्थापना", english: "Transfer Orders" }), path: "/transfer-orders" },
     { label: t({ marathi: "सेवा ज्येष्ठता यादी", english: "Seniority List" }), path: "/seniority-list" },
     { label: t({ marathi: "कार्यालयीन आदेश व परिपत्रक", english: "DGP Orders" }), path: "/dgp-orders" },
+    { label: t({ marathi: "प्रशिक्षण", english: "Training" }), path: "/training" },
     { label: t({ marathi: "फोटो गॅलरी", english: "Photo Gallery" }), path: "/photo-gallery" },
     { label: t({ marathi: "उपक्रम", english: "Undertaking Gellary" }), path: "/undertaking-gellary" },
-    { label: t({ marathi: "प्रशिक्षण", english: "Training" }), path: "/training" },
 
   ];
 

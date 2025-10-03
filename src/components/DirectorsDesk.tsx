@@ -16,13 +16,7 @@ export default function DirectorsDesk() {
         "महाराष्ट्र राज्य, पुणे,",
       ],
       paragraphs: [
-        " पोलीस मोटार परिवहन विभाग, महाराष्ट्र राज्य, पुणे या आपल्या विभागाबद्दल बोलताना अत्यंत अभिमान वाटतो.",
-        "महाराष्ट्र पोलीस दल हा आपल्या राज्याचा कणा आहे. पोलीस दलाचे कार्यक्षेत्र जितके व्यापक आहे, तितकी त्याला लागणारी साधनसामग्री आणि वाहने हेदेखील महत्त्वाचे घटक आहेत. या सर्व वाहनांचे नियोजन, देखभाल, दुरुस्ती आणि कार्यक्षमतेसाठी जे अखंड परिश्रम घेतले जातात, ती जबाबदारी मोटार  परिवहन विभागाची आहे.",
-        "आपत्ती असो, दंगली असो, कायदा-सुव्यवस्था राखण्याची वेळ असो किंवा नागरिकांसाठी तत्पर सेवा पुरवण्याची आवश्यकता असो – पोलिस दलाला प्रत्येक क्षणी सक्षम आणि सज्ज ठेवण्यामध्ये मोटार  परिवहन विभाग मोलाची भूमिका बजावत आहे.",
-        "या विभागामार्फत पोलीस वाहनांचा ताफा नेहमीच कार्यक्षम स्थितीत राहतो. केवळ दुरुस्तीच नाही, तर नवीन तंत्रज्ञानाचा वापर करून वाहन व्यवस्थापन अधिक परिणामकारक बनवण्याचे काम सातत्याने केले जात आहे.",
-        "आजच्या आधुनिक युगात पोलीस दलाला वेग, तत्परता आणि तांत्रिक सक्षमतेची आवश्यकता आहे. मोटार परिवहन विभाग ह्या सगळ्या बाबी सुनिश्चित करतो. नवे प्रशिक्षण, तांत्रिक साधने, आणि नियोजन यांच्या जोरावर हा विभाग संपूर्ण राज्यातील पोलीस यंत्रणेचे कार्य अधिक सुरळीत करतो.",
-        "म्हणूनच, मोटार  परिवहन विभाग हे केवळ वाहन व्यवस्थापनाचे केंद्र नसून – तो पोलीस दलाच्या कार्यक्षमतेचा पाया आहे.",
-        "शेवटी, मी एवढेच सांगू इच्छितो की या विभागामुळेच महाराष्ट्र पोलीस दल सदैव तत्पर, सज्ज आणि सक्षम राहतो. या कार्याची जाणीव ठेवून आपण सर्वांनी एकत्रितपणे हा अभिमान वाढवूया.",
+        "महाराष्ट्र पोलीस दल हा आपल्या राज्याचा कणा आहे. पोलीस दलाचे कार्यक्षेत्र जितके व्यापक आहे, तितकी त्याला लागणारी साधनसामग्री आणि वाहने हे देखील महत्त्वाचे घटक आहेत. या सर्व वाहनांचे नियोजन, देखभाल, दुरुस्ती आणि उच्च कार्यक्षमता राखणेसाठी जे अखंड परिश्रम घेतले जातात, ती जबाबदारी मोटार परिवहन विभागामार्फत पार पाङली जाते.\n\nआपत्ती असो, दंगली असो, कायदा सुव्यवस्था राखण्याची वेळ असो, किंवा नागरीकांसाठी तत्परसेवा पुरविण्याची आवश्यकता असो, परिवहन सुविधा पुरविण्याकरिता विशेष अत्याधुनिक वाहने, सागरी सुरक्षा दरम्यान येणारी आव्हाने पार पाडण्यासाठी व सागरी गस्तीकरिता हाय स्पीड पोलीस नौका तसेच सर्व वाहने व नौका सुसज्ज व कार्यरत ठेवणेकरिता मोटार परिवहन विभाग मोलाची भूमीका बजावत असतो.\n\nआजच्या आधुनिक युगात पोलीस दलातील वेग, तत्परता आणि तांत्रिक क्षमतेने सुसज्ज असलेल्या व नागरिकांच्या तत्पर सेवेत कार्यरत असलेल्या विभागाचे नेतृत्व करण्याचा मला सार्थ अभिमान आहे. मोटार परिवहन विभाग, महाराष्ट्र राज्य पोलीस दलाकरिता अविरत प्रयत्नशील राहील.\n\nजय हिंद..........!!!",
       ],
     },
     english: {
@@ -36,13 +30,7 @@ export default function DirectorsDesk() {
         "Maharashtra State, Pune.",
       ],
       paragraphs: [
-        "I feel extremely proud to speak about the Motor Transport Department, Maharashtra State, Pune.",
-        "The Maharashtra Police Force is the backbone of our state. As vast as the responsibilities of the police force are, equally important are the resources and vehicles it requires. The responsibility of planning, maintenance, repair, and ensuring efficiency of all these vehicles lies with the Motor Transport Department.",
-        "Be it disasters, riots, law-and-order situations, or the need to provide prompt services to citizens – the Motor Transport Department plays a vital role in keeping the police force capable and ready at every moment.",
-        "Through this department, the police vehicle fleet always remains in functional condition. Not only maintenance but also the adoption of new technologies ensures that vehicle management is becoming more effective day by day.",
-        "In today’s modern era, the police force requires speed, readiness, and technological efficiency. The Motor Transport Department ensures all these aspects. With new training, technical tools, and systematic planning, this department makes the functioning of the state police machinery smoother.",
-        "Thus, the Motor Transport Department is not merely a center of vehicle management – it is the foundation of the police force’s efficiency.",
-        "In conclusion, I would like to state that because of this department, the Maharashtra Police Force always remains ready, capable, and efficient. Let us all collectively take pride in this contribution.",
+        "The Maharashtra Police Force is the backbone of our state. As vast as the responsibilities of the police force are, equally important are the resources and vehicles it requires. The responsibility of planning, maintenance, repair, and ensuring high efficiency of all these vehicles lies with the Motor Transport Department.\n\nBe it disasters, riots, law-and-order situations, or the need to provide prompt services to citizens – the Motor Transport Department plays a vital role in providing special state-of-the-art vehicles, overcoming challenges during maritime security, and maintaining all vehicles and high-speed police boats ready and operational for patrols.\n\nI feel proud to lead a department equipped with speed, readiness, and technical efficiency, working in the service of the citizens. The Motor Transport Department will continue its relentless efforts for the Maharashtra Police Force.\n\nJai Hind..........!!!",
       ],
     },
   };

@@ -1,6 +1,6 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { useLanguage } from '@/hooks/useLanguage';
-import AshokMoraleImg from "../assets/images/morale_sir.jpg"
+import AshokMoraleImg from "../assets/images/morale_sir12.jpg"
 
 interface Leader {
   id: number;
@@ -163,7 +163,9 @@ const leaders: Leader[] = [
       marathi: 
       (
         <>
-    मा. अपर मुख्य सचिव ( गृह) <br/>भा प्र से 
+        भा प्र से 
+        <br/>
+    मा. अपर मुख्य सचिव ( गृह) 
        <br/>
         महाराष्ट्र राज्य 
 

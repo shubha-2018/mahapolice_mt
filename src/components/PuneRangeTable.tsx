@@ -7,7 +7,7 @@ const PuneRangeTable = () => {
   const data = [
     {
       sr: 1,
-      commissionerate: { marathi: "पोलीस मध्यवर्ती मोटार परिवहन  कर्मशाळा ", english: "Pune City" },
+      commissionerate: { marathi: "पोलीस मध्यवर्ती मोटार परिवहन कर्मशाळा पुणे   ", english: "Pune City" },
       officerName: { marathi: "अनंत माळी (अतिरिक्त कार्यभार) ", english: "" },
       designation: { marathi: "पोलीस  उप-अधीक्षक", english: "" },
       contact: "8378979474",
@@ -21,8 +21,24 @@ const PuneRangeTable = () => {
       contact: "8275304090",
       // website: "https://punepolice.gov.in/",
     },
-    {
+     {
       sr: 3,
+      commissionerate: { marathi: " दक्षिण परिमंडळ पुणे ", english: "Pune City" },
+      officerName: { marathi: "रवींद्र हिंगणेकर ", english: "Ravindra Hinganekar" },
+      designation: { marathi: "	पोलीस  उप-अधीक्षक ", english: "" },
+      contact: "8275304090",
+      // website: "https://punepolice.gov.in/",
+    },
+     {
+      sr: 4,
+      commissionerate: { marathi: "बॉडी बिल्डिंग सेक्शन, पुणे", english: "Body Building Section, Pune" },
+      officerName: { marathi: "अबरार सय्यद", english: "Abrar Sayad" },
+      designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" },
+      contact: "9823186786",
+      // website: "https://pune.police.gov.in/body-building",
+    },
+    {
+      sr: 5,
       commissionerate: { marathi: "मोटार परिवहन विभाग,पिंपरी चिंचवड", english: "Pimpri Chinchwad" },
       officerName: { marathi: "पी.एस.बावसकर (अतिरिक्त चार्ज)", english: "P.S. Bawaskar (Addl. Charge)" },
       designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" },
@@ -30,7 +46,7 @@ const PuneRangeTable = () => {
       // website: "https://pune.police.gov.in/pimpri-chinchwad",  // <-- example specific
     },
     {
-      sr: 4,
+      sr: 6,
       commissionerate: { marathi: "मोटार परिवहन विभाग,सोलापूर शहर", english: "Solapur City" },
       officerName: { marathi: "महेश काळे", english: "Mahesh Kale" },
       designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" },
@@ -38,7 +54,7 @@ const PuneRangeTable = () => {
       // website: "https://solapurpolice.gov.in/",  // <-- example specific
     },
     {
-      sr: 5,
+      sr: 7,
       commissionerate: { marathi: "मोटार परिवहन विभाग,पुणे ग्रामीण", english: "Pune Rural" },
       officerName: { marathi: "मंगेश पाटील", english: "Mangesh Patil" },
       designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" },
@@ -46,7 +62,7 @@ const PuneRangeTable = () => {
       // website: "https://pune.police.gov.in/rural",  // <-- example specific
     },
     {
-      sr: 6,
+      sr: 8,
       commissionerate: { marathi: "मोटार परिवहन विभाग,सातारा", english: "Satara" },
       officerName: { marathi: "राजेंद्र शिंदे", english: "Rajendra Shinde" },
       designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" },
@@ -54,7 +70,7 @@ const PuneRangeTable = () => {
       // website: "https://satarapolice.gov.in/",
     },
     {
-      sr: 7,
+      sr: 9,
       commissionerate: { marathi: "मोटार परिवहन विभाग,सांगली", english: "Sangli" },
       officerName: { marathi: "प्रशांत मारुळकर", english: "Prashant Marulkar" },
       designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" },
@@ -62,7 +78,7 @@ const PuneRangeTable = () => {
       // website: "https://sanglipolice.gov.in/",
     },
     {
-      sr: 8,
+      sr: 10,
       commissionerate: { marathi: "मोटार परिवहन विभाग,कोल्हापूर", english: "Kolhapur" },
       officerName: { marathi: "सुरजीत सिंह राजपूत", english: "Surjit Singh Rajput" },
       designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" },
@@ -70,7 +86,7 @@ const PuneRangeTable = () => {
       // website: "https://kolhapurpolice.gov.in/",
     },
     {
-      sr: 9,
+      sr: 11,
       commissionerate: { marathi: "मोटार परिवहन विभाग,सोलापूर ग्रामीण", english: "Solapur Rural" },
       officerName: { marathi: "सागर खरे", english: "Sagar Khare" },
       designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" },
@@ -86,7 +102,7 @@ const PuneRangeTable = () => {
     //   // website: "https://ahilyanagarpolice.gov.in/",
     // },
     {
-      sr: 10,
+      sr: 12,
       commissionerate: { marathi: "एसआरपीएफ ग्रुप 1, पुणे", english: "SRPF Group 1, Pune" },
       officerName: { marathi: "स्नेहलराज पाटील", english: "Snehlraj Patil" },
       designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" },
@@ -94,7 +110,7 @@ const PuneRangeTable = () => {
       // website: "https://srpf1.pune.police.gov.in/",
     },
     {
-      sr: 11,
+      sr: 13,
       commissionerate: { marathi: "एसआरपीएफ ग्रुप 2, पुणे", english: "SRPF Group 2, Pune" },
       officerName: { marathi: "दत्तात्रय भोंगले", english: "Dattatraya Bhongale" },
       designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" },
@@ -102,7 +118,7 @@ const PuneRangeTable = () => {
       // website: "https://srpf2.pune.police.gov.in/",
     },
     {
-      sr: 12,
+      sr: 14,
       commissionerate: { marathi: "एसआरपीएफ ग्रुप 5, दौंड", english: "SRPF Group 5, Dound" },
       officerName: { marathi: "अविनाश हराळ", english: "Avinash Haral" },
       designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" },
@@ -110,7 +126,7 @@ const PuneRangeTable = () => {
       // website: "https://srpf5.dound.police.gov.in/",
     },
     {
-      sr: 13,
+      sr: 15,
       commissionerate: { marathi: "एसआरपीएफ ग्रुप 7, दौंड", english: "SRPF Group 7, Dound" },
       officerName: { marathi: "मोहम्मद वारुणकर", english: "Mohammad Warumkar" },
       designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" },
@@ -118,7 +134,7 @@ const PuneRangeTable = () => {
       // website: "https://srpf7.dound.police.gov.in/",
     },
     {
-      sr: 14,
+      sr: 16,
       commissionerate: { marathi: "एसआरपीएफ ग्रुप 10, सोलापूर", english: "SRPF Group 10, Solapur" },
       officerName: { marathi: "अंबर निंबाळकर", english: "Amber Nimbalkar" },
       designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" },
@@ -126,7 +142,7 @@ const PuneRangeTable = () => {
       // website: "https://srpf10.solapur.police.gov.in/",
     },
      {
-      sr: 15,
+      sr: 17,
       commissionerate: { marathi: "आय आर बी  ग्रुप १६, कोल्हापूर ", english: "" },
       officerName: { marathi: "", english: "" },
       designation: { marathi: "", english: "" },
@@ -134,37 +150,16 @@ const PuneRangeTable = () => {
       // website: "https://srpf10.solapur.police.gov.in/",
     },
     {
-      sr: 16,
+      sr: 18,
       commissionerate: { marathi: "एसआरपीएफ ग्रुप 19, कुसडगाव", english: "SRPF Group 19, Kusadgaon" },
       officerName: { marathi: "", english: "" },
       designation: { marathi: "", english: "" },
       contact: "",
       website: "",  // no link
     },
-    {
-      sr: 17,
-      commissionerate: { marathi: "पोलीस मध्यवर्ती मोटर परिवहन कर्मशाळा,पुणे", english: "Pune Workshop" },
-      officerName: { marathi: "पी.एस.बावसकर", english: "P.S. Bawaskar" },
-      designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" },
-      contact: "9552352323",
-      // website: "https://pune.police.gov.in/workshop",
-    },
-    {
-      sr: 18,
-      commissionerate: { marathi: "पोलीस चालक प्रशिक्षण केंद्र पुणे", english: "Training Center" },
-      officerName: { marathi: "अमोल तपासे", english: "Amol Tapase" },
-      designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" },
-      contact: "9552560082",
-      // website: "https://pune.police.gov.in/training",
-    },
-    {
-      sr: 19,
-      commissionerate: { marathi: "बॉडी बिल्डिंग सेक्शन, पुणे", english: "Body Building Section, Pune" },
-      officerName: { marathi: "अबरार सय्यद", english: "Abrar Sayad" },
-      designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" },
-      contact: "9823186786",
-      // website: "https://pune.police.gov.in/body-building",
-    },
+    
+   
+   
   ];
 
   return (
