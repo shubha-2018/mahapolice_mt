@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { X, Heart, Maximize2, Award } from 'lucide-react';
 import { useLanguage } from "@/hooks/useLanguage";
 
-// ✅ Your locally imported images
+// ✅ Import all images
 import img1 from "../assets/images/tr1.jpg";
 import img2 from "../assets/images/ss1.jpg";
 import img3 from "../assets/images/ss2.jpg";
@@ -36,7 +36,7 @@ import img25 from "../assets/images/pp20.jpg";
 export default function PhotoGallery() {
   const [selectedImage, setSelectedImage] = useState(null);
   const [likedImages, setLikedImages] = useState(new Set());
-  const { language } = useLanguage(); // ✅ Use global hook
+  const { language } = useLanguage();
 
   const galleryData = {
     featured: [ 
@@ -77,15 +77,18 @@ export default function PhotoGallery() {
   };
 
   const translations = {
-    pageTitle: { marathi: ' प्रशिक्षण फोटो गॅलरी', english: 'Photo Gallery' },
-    pageSubtitle: { marathi: 'मोटार परिवहन  विभागाच्या प्रशिक्षणाचे  फोटो ', english: 'Documenting Important Events of Maharashtra Police Department' },
+    pageTitle: { marathi: 'प्रशिक्षण फोटो गॅलरी', english: 'Photo Gallery' },
+    pageSubtitle: { marathi: 'मोटार परिवहन विभागाच्या प्रशिक्षणाचे फोटो', english: 'Documenting Important Events of Maharashtra Police Department' },
     maharashtraPolice: { marathi: '', english: '' },
-    featuredTitle: { marathi: 'चालक प्रशिक्षण  ', english: 'Driver Training' },
-    secondTitle: { marathi: 'पोलीस चालक प्रशिक्षण सत्र ७१ ', english: '' },
-    fourthTitle: { marathi: 'पोलीस चालक प्रशिक्षण सत्र ७२', english: '' },
+    featuredTitle: { marathi: 'चालक प्रशिक्षण', english: 'Driver Training' },
+    secondTitle: { marathi: 'पोलीस चालक प्रशिक्षण सत्र ७१', english: 'Police Driver Training Session 71' },
+    fourthTitle: { marathi: 'पोलीस चालक प्रशिक्षण सत्र ७२', english: 'Police Driver Training Session 72' },
     viewButton: { marathi: 'पाहा', english: 'VIEW' },
     likeText: { marathi: 'आवडले', english: 'Liked' },
     likeBtn: { marathi: 'आवडते', english: 'Like' },
+    firstRowDescription: { marathi: 'हा फोटो पहिल्या प्रशिक्षण सत्राचा संच दर्शवतो.', english: 'This gallery represents the first training session.' },
+    thirdRowDescription: { marathi: 'हा फोटो तिसऱ्या प्रशिक्षण सत्राचा संच दर्शवतो.', english: 'This gallery represents the third training session.' },
+    lastRowDescription: { marathi: 'हा फोटो अंतिम प्रशिक्षण सत्राचा संच दर्शवतो.', english: 'This gallery represents the last training session.' }
   };
 
   const t = (key) => translations[key][language];
@@ -111,32 +114,6 @@ export default function PhotoGallery() {
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-60 group-hover:opacity-90 transition-opacity duration-500" />
-      </div>
-
-      <div className="absolute inset-0 flex flex-col justify-end p-5">
-        <h3 className="text-white font-bold text-sm md:text-base mb-2">
-          {photo.title[language]}
-        </h3>
-        <div className="flex items-center justify-between gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-          <div className="flex gap-2">
-            <button
-              onClick={(e) => toggleLike(photo.id, e)}
-              className="p-2 rounded-xl bg-white/20 backdrop-blur-md hover:bg-white/30"
-            >
-              <Heart
-                className={`w-5 h-5 ${
-                  likedImages.has(photo.id) ? 'fill-red-500 text-red-500' : 'text-white'
-                }`}
-              />
-            </button>
-            <button className="p-2 rounded-xl bg-white/20 backdrop-blur-md hover:bg-white/30">
-              <Maximize2 className="w-5 h-5 text-white" />
-            </button>
-          </div>
-          <div className="px-3 py-1 rounded-xl bg-gradient-to-r from-blue-600 to-blue-800 text-white text-xs font-bold">
-            {t('viewButton')}
-          </div>
-        </div>
       </div>
     </div>
   );
@@ -165,21 +142,34 @@ export default function PhotoGallery() {
             <Award className="w-4 h-4 text-yellow-400" />
             <span className="text-blue-200 font-semibold text-sm">{t('maharashtraPolice')}</span>
           </div>
-          <h1 className="text-2xl md:text-3xl font-bold text-white mb-3">
-            {t('pageTitle')}
-          </h1>
-          <p className="text-blue-100 text-sm md:text-base max-w-2xl mx-auto">
-            {t('pageSubtitle')}
-          </p>
+          <h1 className="text-2xl md:text-3xl font-bold text-white mb-3">{t('pageTitle')}</h1>
+          <p className="text-blue-100 text-sm md:text-base max-w-2xl mx-auto">{t('pageSubtitle')}</p>
         </div>
       </div>
 
-      {/* Rows */}
+      {/* First row with description */}
       {renderRow(galleryData.featured, 'featuredTitle')}
+      <div className="max-w-7xl mx-auto px-4 mb-6 text-center">
+        <p className="text-gray-700 text-sm md:text-base">{t('firstRowDescription')}</p>
+      </div>
+
+      {/* Second row */}
       {renderRow(galleryData.second, 'secondTitle')}
-      {renderRow(galleryData.third)} {/* no title */}
-      {renderRow(galleryData.fourth, 'fourthTitle')} 
-      {renderRow(galleryData.fifth)} {/* title removed */}
+
+      {/* Third row with description */}
+      {renderRow(galleryData.third)}
+      <div className="max-w-7xl mx-auto px-4 mb-6 text-center">
+        <p className="text-gray-700 text-sm md:text-base">{t('thirdRowDescription')}</p>
+      </div>
+
+      {/* Fourth row */}
+      {renderRow(galleryData.fourth, 'fourthTitle')}
+
+      {/* Last row with description */}
+      {renderRow(galleryData.fifth)}
+      <div className="max-w-7xl mx-auto px-4 mb-6 text-center">
+        <p className="text-gray-700 text-sm md:text-base">{t('lastRowDescription')}</p>
+      </div>
 
       {/* Modal */}
       {selectedImage && (
@@ -217,7 +207,6 @@ export default function PhotoGallery() {
           </div>
         </div>
       )}
-
     </div>
   );
 }

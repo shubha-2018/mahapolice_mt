@@ -12,7 +12,7 @@ import img5 from "../assets/images/u5.jpg";
 export default function PhotoGallery() {
   const [selectedImage, setSelectedImage] = useState(null);
   const [likedImages, setLikedImages] = useState(new Set());
-  const { language, toggleLanguage } = useLanguage(); // ✅ Use global hook
+  const { language } = useLanguage();
 
   const galleryData = {
     featured: [
@@ -26,9 +26,13 @@ export default function PhotoGallery() {
 
   const translations = {
     pageTitle: { marathi: 'उपक्रम फोटो गॅलरी', english: 'Photo Gallery' },
-    pageSubtitle: { marathi: 'मोटार परिवहन विभागाच्या महत्त्वाच्या कार्यक्रमांचे फोटो ', english: 'Documenting Important Events of Maharashtra Police Department' },
+    pageSubtitle: { marathi: 'मोटार परिवहन विभागाच्या महत्त्वाच्या कार्यक्रमांचे फोटो', english: 'Documenting Important Events of Maharashtra Police Department' },
     maharashtraPolice: { marathi: '', english: '' },
-    featuredTitle: { marathi: 'सेवा  निवृत्ती कार्यक्रम ', english: '' },
+    featuredTitle: { marathi: 'सेवा  निवृत्ती कार्यक्रम', english: 'Retirement Ceremony' },
+    galleryDescription: { 
+      marathi: 'हा फोटो सर्व उपक्रम दर्शवतो.', 
+      english: 'This gallery represents all events.' 
+    },
     viewButton: { marathi: 'पहा', english: 'VIEW' },
     likeText: { marathi: 'आवडले', english: 'Liked' },
     likeBtn: { marathi: 'आवडते', english: 'Like' },
@@ -44,10 +48,8 @@ export default function PhotoGallery() {
     setLikedImages(newLiked);
   };
 
-  // ✅ Photo Card Component
   const PhotoCard = ({ photo }) => (
     <div
-      key={photo.id}
       className="group relative overflow-hidden rounded-2xl cursor-pointer transform transition-all duration-500 hover:scale-105 shadow-lg"
       onClick={() => setSelectedImage(photo)}
     >
@@ -59,37 +61,12 @@ export default function PhotoGallery() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-60 group-hover:opacity-90 transition-opacity duration-500" />
       </div>
-
-      <div className="absolute inset-0 flex flex-col justify-end p-5">
-        <h3 className="text-white font-bold text-sm md:text-base mb-2">
-          {photo.title[language]}
-        </h3>
-        <div className="flex items-center justify-between gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-          <div className="flex gap-2">
-            <button
-              onClick={(e) => toggleLike(photo.id, e)}
-              className="p-2 rounded-xl bg-white/20 backdrop-blur-md hover:bg-white/30"
-            >
-              <Heart
-                className={`w-5 h-5 ${
-                  likedImages.has(photo.id) ? 'fill-red-500 text-red-500' : 'text-white'
-                }`}
-              />
-            </button>
-            <button className="p-2 rounded-xl bg-white/20 backdrop-blur-md hover:bg-white/30">
-              <Maximize2 className="w-5 h-5 text-white" />
-            </button>
-          </div>
-          <div className="px-3 py-1 rounded-xl bg-gradient-to-r from-blue-600 to-blue-800 text-white text-xs font-bold">
-            {t('viewButton')}
-          </div>
-        </div>
-      </div>
     </div>
   );
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-950 transition-colors duration-500 mt-20">
+
       {/* Hero Section */}
       <div className="relative py-10 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-indigo-800 to-purple-900" />
@@ -99,29 +76,25 @@ export default function PhotoGallery() {
             <span className="text-blue-200 font-semibold text-sm">{t('maharashtraPolice')}</span>
           </div>
 
-          {/* ✅ Smaller Title */}
-          <h1 className="text-2xl md:text-3xl font-bold text-white mb-3">
-            {t('pageTitle')}
-          </h1>
-          <p className="text-blue-100 text-sm md:text-base max-w-2xl mx-auto">
-            {t('pageSubtitle')}
-          </p>
+          <h1 className="text-2xl md:text-3xl font-bold text-white mb-3">{t('pageTitle')}</h1>
+          <p className="text-blue-100 text-sm md:text-base max-w-2xl mx-auto">{t('pageSubtitle')}</p>
         </div>
       </div>
 
       {/* Featured Section */}
-      <div className="max-w-7xl mx-auto px-4 py-12">
-        <h2 className="text-xl md:text-2xl font-bold mb-6 text-center">
-          {t('featuredTitle')}
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
+      <div className="max-w-7xl mx-auto px-4 py-12 text-center">
+        <h2 className="text-xl md:text-2xl font-bold mb-6">{t('featuredTitle')}</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
           {galleryData.featured.map((photo) => (
             <PhotoCard key={photo.id} photo={photo} />
           ))}
         </div>
+
+        {/* ✅ Single description below the grid */}
+        <p className="mt-4 text-gray-700 text-sm md:text-base">{t('galleryDescription')}</p>
       </div>
 
-      {/* ✅ Modal */}
+      {/* Modal */}
       {selectedImage && (
         <div
           className="fixed inset-0 bg-black/95 backdrop-blur-md z-50 flex items-center justify-center p-4"
@@ -137,23 +110,15 @@ export default function PhotoGallery() {
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img src={selectedImage.url} alt={selectedImage.title[language]} />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent p-6">
-                <h3 className="text-white text-lg font-semibold mb-2">
-                  {selectedImage.title[language]}
-                </h3>
+                <h3 className="text-white text-lg font-semibold mb-2">{selectedImage.title[language]}</h3>
                 <button
                   onClick={(e) => toggleLike(selectedImage.id, e)}
                   className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/20 hover:bg-white/30"
                 >
                   <Heart
-                    className={`w-5 h-5 ${
-                      likedImages.has(selectedImage.id)
-                        ? 'fill-red-500 text-red-500'
-                        : 'text-white'
-                    }`}
+                    className={`w-5 h-5 ${likedImages.has(selectedImage.id) ? 'fill-red-500 text-red-500' : 'text-white'}`}
                   />
-                  <span className="text-white text-sm">
-                    {likedImages.has(selectedImage.id) ? t('likeText') : t('likeBtn')}
-                  </span>
+                  <span className="text-white text-sm">{likedImages.has(selectedImage.id) ? t('likeText') : t('likeBtn')}</span>
                 </button>
               </div>
             </div>

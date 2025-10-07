@@ -107,5 +107,8 @@ export const translations: Translation = {
       marathi: 'ताज्या अपडेट्स',
       english: 'Latest Updates'
     }
+
+
+    
   }
 };

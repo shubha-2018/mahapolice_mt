@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, Heart, Maximize2, Award } from 'lucide-react';
+import { X, Heart, Maximize2 } from 'lucide-react';
 import { useLanguage } from "@/hooks/useLanguage";
 
 // ✅ Import all images
@@ -53,7 +53,7 @@ export default function PhotoGallery() {
     pageTitle: { marathi: 'फोटो गॅलरी', english: 'Photo Gallery' },
     pageSubtitle: { marathi: '', english: '' },
     maharashtraPolice: { marathi: '', english: '' },
-    section1Title: { marathi: 'महिंद्रा कंपनी भेट ', english: 'Police Events & Ceremonies' },
+    section1Title: { marathi: 'महिंद्रा कंपनी भेट', english: 'Police Events & Ceremonies' },
     section2Title: { marathi: 'आढावा बैठक / उत्कृष्ठ मोटार परिवहन विभाग पुरस्कार वितरण', english: 'Police Training & Operations' },
     viewButton: { marathi: 'पहा', english: 'VIEW' },
     closeText: { marathi: 'बाहेर क्लिक करा बंद करण्यासाठी', english: 'Click outside to close' }
@@ -104,6 +104,7 @@ export default function PhotoGallery() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-slate-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-950 transition-colors duration-500 mt-28">
+      
       {/* Hero Header */}
       <div className="relative py-8 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900 via-blue-800 to-blue-900 dark:from-gray-800 dark:via-gray-900 dark:to-gray-800" />
@@ -117,12 +118,14 @@ export default function PhotoGallery() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 py-12">
+        
         {/* Featured Section */}
         <div className="mb-16 text-center">
-          <h2 className="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-4">{language === 'marathi' ? 'टाटा मोटर्स भेट ' : 'Featured Photos'}</h2>
+          <h2 className="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-4">{language === 'marathi' ? 'टाटा मोटर्स भेट' : 'Featured Photos'}</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
             {galleryData.featured.map((photo) => <PhotoCard key={photo.id} photo={photo} />)}
           </div>
+          <h1 className='mt-4 text-gray-700 text-sm md:text-base'>{language === 'marathi' ? 'मा . अप्पर पोलीस महासंचालक श्री दीपक  पाण्डेय्  सर यांची टाटा मोटर येथे भेट सोबत टाटा मोटर चे अधिकारी' : 'Hon. ADGP Mr. Deepak Pandey visiting Tata Motors with their officials'}</h1>
         </div>
 
         {/* Police Section 1 */}
@@ -131,6 +134,7 @@ export default function PhotoGallery() {
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
             {galleryData.policeSection1.map((photo) => <PhotoCard key={photo.id} photo={photo} />)}
           </div>
+          <h1 className='mt-4 text-gray-700 text-sm md:text-base'>{language === 'marathi' ? 'महिंद्रा कंपनी भेट कार्यक्रमातील फोटो' : 'Photos from Mahindra Company Visit'}</h1>
         </div>
 
         {/* Police Section 2 */}
@@ -139,7 +143,9 @@ export default function PhotoGallery() {
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
             {galleryData.policeSection2.map((photo) => <PhotoCard key={photo.id} photo={photo} />)}
           </div>
+          <h1 className='mt-4 text-gray-700 text-sm md:text-base'>{language === 'marathi' ? 'आढावा बैठक आणि उत्कृष्ठ मोटार परिवहन विभाग पुरस्कार वितरण कार्यक्रमातील फोटो' : 'Photos from Police Training & Operations Awards'}</h1>
         </div>
+
       </div>
 
       {/* Lightbox Modal */}

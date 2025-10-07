@@ -28,7 +28,7 @@ const IGPMessage = () => {
     english: {
       title: "Special IGP's Message",
       message:
-        'The Maharashtra Police Motor Transport Department serves as the backbone of police forces across the state. Our modern fleet and technical facilities play a crucial role in enhancing police efficiency. We are moving towards the future by increasing the use of electric vehicles for environmental protection. The contribution of our skilled drivers and technical staff is invaluable.',
+        'The Maharashtra State Motor Transport Department is responsible for providing vehicles to maintain law and order and deliver prompt service to citizens through proper maintenance of police vehicles, fleet management, and coordination of technical and driving personnel. The department is headed by Police Deputy Superintendents / Assistant Police Commissioners as well as Motor Transport Officers of Inspector rank for all police units across the state. Vehicle management and maintenance work are carried out based on technical manpower.For maritime security in the coastal districts of the state, high-speed police boats are available for patrolling. The maintenance and repair of these boats are carried out through police boat workshops and stations.To maintain law and order, the Motor Transport Department continually strives to provide modern vehicles, keep boats in good condition for patrolling the state’s 720 km coastline, and supply manpower. Leading a department that is always ready to serve is a matter of pride and I am deeply honored to do so',
       signature: 'Shri. Ashok Morale (IPS)',
       designation: 'Special Inspector General of Police, Motor Transport Department, Maharashtra State',
     },
