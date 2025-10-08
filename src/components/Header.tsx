@@ -5,12 +5,12 @@ import { LanguageToggle } from './LanguageToggle';
 import { ThemeToggle } from './ThemeToggle';
 import { useLanguage } from '@/hooks/useLanguage';
 import { translations } from '@/data/translations';
-import { Menu, Accessibility } from 'lucide-react';
+import { Menu, Accessibility, ExternalLink, ChevronDown } from 'lucide-react';
 import policelogo from "../assets/images/mahapolice-logo-removebg-preview.png";
 import Emblem from "../assets/images/Emblem12.png";
 import motorlogo from "../assets/images/motorlogo.jpg";
 import { Link } from "react-router-dom";
-import EmployeeCorner from "@/components/MenuItemEmployeeCorner"; // popup component
+import EmployeeCorner from "@/components/MenuItemEmployeeCorner"; // Popup component
 
 declare global {
   interface Window {
@@ -24,20 +24,35 @@ declare global {
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [employeeOpen, setEmployeeOpen] = useState(false);
+  const [sssDropdownOpen, setSssDropdownOpen] = useState(false);
   const { language: lang } = useLanguage();
   const [widgetReady, setWidgetReady] = useState(false);
-  const [employeeOpen, setEmployeeOpen] = useState(false); // Popup state
 
   const navItems = [
     { key: 'home', href: '/' },
     { key: 'about', href: '/aboutpage' },
     { key: 'organization', href: '/organizationpage' },
     { key: 'employee', href: '#employeecorner' },
+    { key: 'sss', href: 'https://117.222.38.165/SSS', external: true },
     { key: 'contact', href: '/contact' },
   ];
 
-  const getNavLabel = (key: string) =>
-    translations.nav[key as keyof typeof translations.nav][lang];
+  const sssServices = [
+    'वाहनांची दुरुस्ती व देखभाल सेवा',
+    'वाहन ताफा व्यवस्थापन सेवा',
+    'चालक व तांत्रिक प्रशिक्षण सेवा',
+    'सागरी किनारा पेट्रोलिंग सेवा',
+    'RTI',
+    'SSS' // only this is clickable
+  ];
+
+  const getNavLabel = (key: string) => {
+    if (key === "sss") return lang === 'marathi' ? 'सेवा विभाग' : ' Services';
+    const item = translations.nav[key as keyof typeof translations.nav];
+    if (!item) return key.toUpperCase();
+    return item[lang] || key.toUpperCase();
+  };
 
   return (
     <header className="police-header fixed top-0 left-0 w-full z-50 bg-background shadow-md">
@@ -56,7 +71,7 @@ const Header = () => {
             <div className="text-left max-w-[220px] sm:max-w-none">
               <h1 className={`text-sm sm:text-lg md:text-xl lg:text-2xl font-bold leading-tight ${lang === 'marathi' ? 'marathi-text' : 'english-text'}`}>
                 {lang === 'marathi'
-                  ? 'मोटर परिवहन विभाग, महाराष्ट्र राज्य पुणे'
+                  ? 'मोटार परिवहन विभाग, महाराष्ट्र राज्य पुणे'
                   : <>Motor Transport Department<br />Maharashtra State, Pune</>}
               </h1>
               <p className={`text-xs sm:text-sm text-muted-foreground ${lang === 'marathi' ? 'marathi-text' : 'english-text'}`}>
@@ -68,17 +83,82 @@ const Header = () => {
           </div>
 
           {/* Desktop nav */}
-          <nav className="hidden lg:flex items-center space-x-6">
-            {navItems.map((item) =>
-              item.key === "employee" ? (
-                <button
-                  key={item.key}
-                  className={`police-nav-link ${lang === 'marathi' ? 'marathi-text' : 'english-text'}`}
-                  onClick={() => setEmployeeOpen(true)}
-                >
-                  {getNavLabel(item.key)}
-                </button>
-              ) : (
+          <nav className="hidden lg:flex items-center space-x-6 relative">
+            {navItems.map((item) => {
+              if (item.key === "employee") {
+                return (
+                  <div key={item.key} className="relative">
+                    <button
+                      onClick={() => setEmployeeOpen(true)}
+                      className={`police-nav-link flex items-center gap-1 ${lang === 'marathi' ? 'marathi-text' : 'english-text'}`}
+                    >
+                      {getNavLabel(item.key)}
+                      <ChevronDown className="w-4 h-4" />
+                    </button>
+                  </div>
+                );
+              }
+
+              if (item.key === "sss") {
+                return (
+                  <div key={item.key} className="relative">
+                    <button
+                      onClick={() => setSssDropdownOpen(!sssDropdownOpen)}
+                      className={`police-nav-link flex items-center gap-1 ${lang === 'marathi' ? 'marathi-text' : 'english-text'}`}
+                    >
+                      {getNavLabel(item.key)}
+                      <ChevronDown className="w-4 h-4" />
+                    </button>
+
+                    {sssDropdownOpen && (
+                      <div className="absolute top-full left-0 mt-2 w-64 bg-white border border-gray-200 rounded-lg shadow-lg z-50 animate-slide-down">
+                        <div className="px-4 py-2 font-bold text-gray-700 border-b">{getNavLabel(item.key)}</div>
+                        {sssServices.map((service, index) => {
+                          if (service === "SSS") {
+                            return (
+                              <a
+                                key={index}
+                                href={item.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="block px-4 py-2 text-gray-700 hover:bg-blue-50 transition-colors rounded flex items-center justify-between"
+                              >
+                                {service}
+                                <ExternalLink className="w-4 h-4 text-gray-400" />
+                              </a>
+                            );
+                          }
+                          return (
+                            <div
+                              key={index}
+                              className="block px-4 py-2 text-gray-500 flex items-center justify-between cursor-default"
+                            >
+                              {service}
+                            </div>
+                          );
+                        })}
+                      </div>
+                    )}
+                  </div>
+                );
+              }
+
+              if (item.external) {
+                return (
+                  <a
+                    key={item.key}
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`police-nav-link flex items-center gap-1 ${lang === 'marathi' ? 'marathi-text' : 'english-text'}`}
+                  >
+                    {getNavLabel(item.key)}
+                    <ExternalLink className="w-4 h-4 text-gray-400" />
+                  </a>
+                );
+              }
+
+              return (
                 <Link
                   key={item.key}
                   to={item.href}
@@ -86,13 +166,12 @@ const Header = () => {
                 >
                   {getNavLabel(item.key)}
                 </Link>
-              )
-            )}
+              );
+            })}
           </nav>
 
           {/* Right side */}
           <div className="flex items-center gap-2 sm:gap-3">
-            {/* Accessibility Button */}
             <Button
               variant="ghost"
               size="sm"
@@ -117,10 +196,7 @@ const Header = () => {
                   <Menu size={28} className="text-primary" />
                 </Button>
               </SheetTrigger>
-              <SheetContent
-                side="right"
-                className="w-[280px] sm:w-[300px] h-full bg-background/95 backdrop-blur-lg shadow-2xl p-6 transform transition-transform duration-300 ease-in-out"
-              >
+              <SheetContent side="right" className="w-[700px] sm:w-[300px]">
                 <nav className="flex flex-col gap-4 mt-8">
                   {navItems.map((item) =>
                     item.key === "employee" ? (
@@ -130,7 +206,7 @@ const Header = () => {
                           setIsOpen(false); // Close mobile sheet
                           setEmployeeOpen(true); // Open popup
                         }}
-                        className="police-nav-link text-base py-2 text-left hover:text-primary transition-colors"
+                        className="police-nav-link text-base py-2 text-left"
                       >
                         {getNavLabel(item.key)}
                       </button>

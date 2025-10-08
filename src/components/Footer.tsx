@@ -7,17 +7,21 @@ const Footer = () => {
 
   const footerContent = {
     marathi: {
-      quickLinks: 'द्रुत दुवे',
+      quickLinks: 'Links',
       services: 'सेवा',
       contactInfo: 'संपर्क माहिती',
-      address: 'मुख्यालय:मोटर परिवहन विभाग, महाराष्ट्र राज्य,औंध-पुणे 411007',
-      email: 'igmtpune@gmail.com',
+      address: 'विशेष पोलिस महानिरीक्षक,मोटार परिवहन विभाग,महाराष्ट्र राज्य,औंध-पुणे 411067',
+      email: 'ig.mt.pune@mahapolice.gov.in',
       phone: '+91-02025880718',
       serviceItems: [
-        'फ्लीट व्यवस्थापन',
-        'कार्यशाळा सेवा',
-        'ड्रायव्हर प्रशिक्षण',
-        'तांत्रिक सहाय्य'
+        
+       ' वाहनांची दुरुस्ती व देखभाल सेवा' ,
+        'वाहन ताफा व्यवस्थापन सेवा' ,
+        'चालक व तांत्रिक प्रशिक्षण सेवा ',
+       ' सागरी किनारा पेट्रोलिंग सेवा ',
+       'RTI',
+
+        
       ]
     },
     english: {
@@ -25,7 +29,7 @@ const Footer = () => {
       services: 'Services',
       contactInfo: 'Contact Information',
       address: 'Headquarters: Motor Transport Department, Maharashtra Police, Mumbai - 400001',
-      email: 'igmtpune@gmail.com',
+      email: 'ig.mt.pune@mahapolice.gov.in',
       phone: '+91-02025880718',
       serviceItems: [
         'Fleet Management',
@@ -40,29 +44,35 @@ const Footer = () => {
     { key: 'home', href: '#home' },
     { key: 'about', href: '#about' },
     { key: 'services', href: '#services' },
+    { key: 'sss', href: '#sss' },   // ✅ Added SSS here
     { key: 'contact', href: '#contact' }
   ];
 
   const getNavLabel = (key: string) => {
-    return translations.nav[key as keyof typeof translations.nav][language];
+    const item = translations.nav[key as keyof typeof translations.nav];
+    if (!item) {
+      return key.toUpperCase();
+    }
+    return item[language] || key.toUpperCase();
   };
 
   return (
     <footer className="police-footer-bg text-white py-12">
       <div className="container mx-auto px-4">
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           
           {/* Logo and Description */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center">
-                <span className="text-primary font-bold text-sm">MP</span>
+                <span className="text-primary font-bold text-sm">MT</span>
               </div>
               <div>
                 <h3 className={`font-bold text-lg ${
                   language === 'marathi' ? 'marathi-text' : 'english-text'
                 }`}>
-                  {language === 'marathi' ? 'मोटर परिवहन विभाग' : 'Motor Transport'}
+                  {language === 'marathi' ? 'मोटार परिवहन विभाग' : 'Motor Transport'}
                 </h3>
                 <p className="text-sm opacity-80">Maharashtra Police</p>
               </div>
@@ -71,7 +81,7 @@ const Footer = () => {
               language === 'marathi' ? 'marathi-text' : 'english-text'
             }`}>
               {language === 'marathi' 
-                ? 'सेवा, सुरक्षा आणि विश्वसनीयतेसह महाराष्ट्राची सेवा करत आहोत.'
+                ? 'वाहन व्यवस्थापन व  तत्पर सेवा '
                 : 'Serving Maharashtra with dedication, security and reliability.'
               }
             </p>
@@ -160,6 +170,7 @@ const Footer = () => {
                   {footerContent[language].email}
                 </a>
               </div>
+              
             </div>
           </div>
         </div>

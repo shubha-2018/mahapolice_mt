@@ -9,6 +9,7 @@ import QuickAccess from '@/components/QuickAccess';
 import LatestUpdates from '@/components/LatestUpdates';
 import DirectorsDesk from  '@/components/IPSMessage';
 import { Link } from "react-router-dom";
+import SocialMediaFloatButton from '@/components/SocialMediaFloatButton';
 
 
 import Footer from '@/components/Footer';

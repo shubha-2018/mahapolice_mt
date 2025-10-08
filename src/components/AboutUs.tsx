@@ -5,67 +5,74 @@ const AboutUs = () => {
 
   const aboutContent = {
     marathi: {
-      title: "मोटर परिवहन विभागाचा इतिहास",
+      title: "पोलीस मोटार परिवहन विभागाचा इतिहास",
       paragraphs: [
-        "महाराष्ट्र राज्य पोलीस मोटर परिवहन विभागाची स्थापना सन १९४८ साली काही वाहनांच्या लहान ताफ्याने आणि सैनिक चालकांच्या मदतीने झाली. काही वाहने भाड्याने घेण्यात आली होती आणि पर्यवेक्षण कार्यासाठी तांत्रिक अधिकारी नेमण्यात आले.",
-        "१९४८ ते २००१ या काळात ही संघटना एसपी ते डी.आय.जी पदावरील तांत्रिक अधिकारी यांच्या नेतृत्वाखाली होती. २००१ नंतर, फीडर कॅडरमध्ये तांत्रिक अधिकारी नसल्याने, आयजीपी दर्जाच्या पोलिस अधिकाऱ्यांच्या नेतृत्वाखाली हा विभाग कार्यरत आहे. त्यांना डीआयजी व एसपी पदाचे तांत्रिक अधिकारी सहाय्य करतात.",
-        "मुंबई शहरासाठी हा विभाग थेट पोलीस आयुक्तांच्या नियंत्रणाखाली असून अति. पोलीस आयुक्त (एमटी) यांच्या नेतृत्वाखाली आहे. डीआयजी, एमटी व अति. पोलीस आयुक्त (एमटी) हे दोघेही पदवीधर ऑटोमोबाईल अभियंते आहेत.",
-        "सर्व तांत्रिक शाखा एका छताखाली आणण्यासाठी शासनाने ठराव करून मोटर परिवहन विभाग व पोलीस वायरलेस विभाग यांना एकत्र करून त्याचे प्रमुख अपर पोलीस महासंचालक व संचालक पोलीस दळणवळण, माहिती तंत्रज्ञान व परिवहन यांना करण्यात आले.",
-        "सध्या महाराष्ट्र पोलीस दलाकडे (मुंबईसह) २४,००० वाहने आहेत. प्रशिक्षित व पात्र तांत्रिक अंमलदार यांच्याद्वारे देखभाल व दुरुस्ती कार्य केले जाते. ऑटोमोबाईल डिप्लोमा व पदवीधर अधिकारी एमटी विभागाचे पर्यवेक्षण करतात.",
-        "१९८० नंतर या विभागाचा विस्तार सुरू झाला आणि १९९० नंतर हा विस्तार जलद गतीने व मोठ्या प्रमाणावर झाला. राज्य तसेच मुंबईतील संपूर्ण पोलिस दल वाहतुकीसाठी या विभागावर पूर्णपणे अवलंबून आहे."
+        `मुंबई राज्य पोलीस मोटर परिवहन विभागाची स्थापना १९४८ साली झाली. सुरुवातीस काही वाहने आणि सैन्यामधून निवृत्त झालेले चालक यांची जिल्हयाच्या मोटार परिवहन विभागामध्ये नेमणूक करण्यात आली. काही वाहने सैन्यदलाकडून घेण्यात आली, काही खाजगी मोटार कंत्राटदाराकडून भाडे तत्वावर घेतली होती. तांत्रिक अधिकाऱ्यांची निवड पोलीस मोटार परिवहन विभागासाठी करण्यात आली.`,
+        `प्रथम पोलीस अधीक्षक, पोलीस मोटार परिवहन महाराष्ट्र राज्य या पदावर श्री. डी.पी. राव, एम.एस.सी. (इंजिनिअरिंग) बी.ई., एम.आय.व्ही. (लंडन), एम.आय.ई.एस. (ग्लास ग्लो) जी.एम.आय.आर.ई. (यू.एस.ए.) यांची निवड झाली व श्री. राव यांच्या मार्गदर्शनाखाली आवश्यक तांत्रिक अधिकाऱ्यांची निवड झाली.`,
+        `१९४९ साली मुंबई प्रांतामध्ये काही नवीन जिल्हयांचा समावेश झाला आणि तीन राज्य राखीव पोलीस बल गट निर्माण करण्यात आले. ते मोटार वाहने व कर्मचारी देवून कार्यान्वित करण्यात आले.`,
+        `त्याचवेळी पोलीस वाहनाची देखभाल व दुरुस्ती स्वतंत्ररित्या करण्यासाठी तसेच मोठ्या स्वरूपातील कामे उत्तम व किफायतशीर करण्यासाठी क्षेत्रीय मध्यवर्ती कर्मशाळा पुणे, बेळगांव, बडोदा येथे प्रस्तावित करण्यात आली.`,
+        `1950 साली बेळगांव येथील किल्ल्यामध्ये जुन्या जेलच्या आवारात क्षेत्रीय कर्मशाळा चालू करण्यात आली.`,
+        `1951 साली चालक प्रशिक्षण केंद्र प्रताप लाईन्स, बडोदया येथे दुसरी क्षेत्रीय कर्मशाळा चालू झाली. नंतर मे 1960 पर्यंत सुधारणा व नवनिर्माण करून गुजरात राज्याला हस्तांतरीत करण्यात आली.`,
+        `1956 साली आधुनिक कर्मशाळा नव्या इमारतीमध्ये चालू झाली व त्याच वर्षी 1 नोव्हेंबर रोजी म्हैसुर राज्य निर्मिती झाल्यानंतर सदर कर्मशाळा म्हैसूर राज्याकडे हस्तांतरीत झाली.`,
+        `1956 साली सौराष्ट्र व कच्छ विभाग मुंबई राज्यामध्ये विलीन झाल्यानंतर राज्य पोलीस मोटार परिवहन विभाग वाढविण्यात आला व राजकोट येथे नवीन क्षेत्रीय कर्मशाळा निर्माण करण्यात आली.`,
+        `नोव्हेंबर 1956 साली विदर्भ व मराठवाडा मुंबई राज्यात विलीन झाल्यानंतर पोलीस परिवहन विभाग वाढविण्यात आला. त्यामध्ये औरंगाबाद व नागपूर क्षेत्रीय कर्मशाळा तात्पुरत्या जागेत निवडक कर्मचारी घेऊन तंबूच्या शेडमध्ये चालू करण्यात आली.`,
+        `1960 साली पुणे शहरापासून 6.5 किलोमीटर अंतरावर औंध येथे मोटार परिवहन विभागाच्या नव्या इमारतीमध्ये स्थलांतरित करण्यात आले.`
       ],
     },
     english: {
-      title: "HISTORY OF MT SECTION",
+      title: "History of Police Motor Transport, Maharashtra State, Pune",
       paragraphs: [
-        "The Maharashtra State Motor Transport Organisation was established in the year 1948, with a small fleet of vehicles and with the help of Ex-servicemen drivers as some vehicles were taken on hire charge. Technical officers were appointed for supervisory work.",
-        "Since 1948 to 2001 this organisation was headed by officers of the rank SP to IGP who were technically qualified. From 2001 onwards, as there were no technical officers in the feeder cadre for promotion, it has been headed by a police officer of IGP Rank, assisted by a technical officer of the DIG and SP rank.",
-        "For Mumbai City, the MT section is under direct control of CP Mumbai and is headed by a technical officer of the rank Addl. C.P. Both the DIG, MT and Addl. C.P., MT are qualified automobile engineers.",
-        "Further, in order to bring all technical wings under one roof, government resolution was passed to bring the Motor Transport Section and Police Wireless Department together, headed by Addl. DGP/Director Police Communication & Transport.",
-        "Presently, Maharashtra Police (including Mumbai) have 24,000 vehicles on road. In-house repair and maintenance is carried out by trained and qualified technicians. Automobile diploma and degree holder officers supervise the MT Section.",
-        "From 1980 onwards this organisation began expanding and after 1990 this expansion took place rapidly and on a large scale. The entire force of the state as well as Mumbai is totally dependent on this organisation for mobility."
+        `The Mumbai State Police Motor Transport Department was established in 1948. Initially, some vehicles and retired drivers from the army were appointed to the district Motor Transport Department. Some vehicles were obtained from the military, while others were hired from private motor contractors. Technical officers were selected for the Motor Transport Department.`,
+        `Shri D.P. Rao, M.Sc. (Engineering) B.E., M.I.V. (London), M.I.E.S. (Glasgow) G.M.I.R.E. (U.S.A.) was appointed as the first Superintendent of Police, Police Motor Transport Maharashtra State, and under his guidance, the necessary technical officers were selected.`,
+        `In 1949, new districts were added to the Bombay Province and three State Reserve Police Force battalions were formed. They were made operational with motor vehicles and staff.`,
+        `At the same time, regional central workshops were proposed at Pune, Belgaum, and Baroda for independent maintenance and repair of police vehicles and to carry out large-scale work efficiently and economically.`,
+        `In 1950, the regional workshop was started in the old jail premises at Belgaum Fort.`,
+        `In 1951, a second regional workshop was started at the Driver Training Center, Pratap Lines, Baroda. Gradual improvements and renovations were made until May 1960, after which it was transferred to Gujarat State.`,
+        `In 1956, a modern workshop started in a new building, and on 1st November 1956, after the formation of Mysore State, the workshop was transferred to Mysore State.`,
+        `After the Saurashtra and Kutch divisions merged into Bombay State in 1956, the State Police Motor Transport Department expanded and a new regional workshop was established in Rajkot.`,
+        `In November 1956, after Vidarbha and Marathwada merged into Bombay State, the Police Transport Department expanded there. Aurangabad and Nagpur regional workshops were started in temporary locations with selected staff in tent sheds.`,
+        `In 1960, the new Motor Transport Department building at Aundh, 6.5 km from Pune city, was inaugurated.`
       ],
     },
   };
 
+  const content = aboutContent[language];
+
   return (
     <section
       id="about-us"
-      className="relative py-20 px-6 md:px-12 lg:px-24 mt-20
-                 bg-gradient-to-b from-white to-gray-50
-                 dark:from-gray-950 dark:to-gray-900
-                 transition-colors duration-700"
+      className="relative bg-gradient-to-br from-slate-50 via-blue-50 to-slate-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-950 py-16 px-6 md:px-12 lg:px-24 mt-20 transition-colors duration-500"
     >
-      <div className="max-w-5xl mx-auto">
-        {/* Title */}
-        <div className="text-center mb-14">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold
-                         text-gray-900 dark:text-gray-100">
-            {aboutContent[language].title}
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-black text-gray-900 dark:text-white mb-4 tracking-tight px-4">
+            {content.title}
           </h2>
-          <div className="mt-4 w-24 h-1 bg-gradient-to-r
-                          from-blue-500 to-purple-500 mx-auto rounded-full" />
+          <div className="w-24 h-1.5 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto rounded-full"></div>
         </div>
 
-        {/* Content Card */}
-        <div className="backdrop-blur-xl bg-white/80 dark:bg-gray-800/50
-                        shadow-2xl rounded-3xl p-10 border
-                        border-gray-200/70 dark:border-gray-700/60">
-          {aboutContent[language].paragraphs.map((para, index) => (
-            <p
-              key={index}
-              className="text-lg text-gray-700 dark:text-gray-300
-                         leading-relaxed tracking-wide mb-6 text-justify"
-            >
-              {para}
-            </p>
-          ))}
+        <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm shadow-2xl rounded-3xl p-8 md:p-12 border border-gray-200/50 dark:border-gray-700/50 transition-all duration-300 hover:shadow-3xl">
+          <div className="prose prose-lg dark:prose-invert max-w-none">
+            {content.paragraphs.map((para, index) => (
+              <div key={index} className="mb-6 last:mb-0">
+                <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-justify text-base md:text-lg transition-colors duration-300">
+                  {para}
+                </p>
+                {index < content.paragraphs.length - 1 && (
+                  <div className="mt-6 w-full h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-gray-600 to-transparent"></div>
+                )}
+              </div>
+            ))}
+          </div>
+
+          {/* Decorative Elements */}
+          <div className="absolute top-0 left-0 w-32 h-32 bg-blue-500/5 rounded-full blur-3xl -z-10"></div>
+          <div className="absolute bottom-0 right-0 w-32 h-32 bg-indigo-500/5 rounded-full blur-3xl -z-10"></div>
         </div>
       </div>
 
       {/* Subtle Glow Decoration */}
-      <div className="absolute inset-x-0 -bottom-20 h-40
-                      bg-gradient-to-t from-blue-500/10 to-transparent blur-3xl" />
+      <div className="absolute inset-x-0 -bottom-20 h-40 bg-gradient-to-t from-blue-500/10 to-transparent blur-3xl" />
     </section>
   );
 };

@@ -9,20 +9,22 @@ import WorkshopPhotos from "@/components/WorkshopPhotos";
 import VehicleDepartmentDocument from "@/components/VehicleDepartmentDocument";
 import PoliceDepartmentTable from "@/components/PoliceDepartmentTable";
 import VehicleTypes from "@/components/VehicleTypes";
+import FlowChart from "@/components/FlowChart"
 
 
 const OrganisationPage = () => {
   return (
     <div className="min-h-screen mt-28">
      <OrganisationStructure/>
-     <UnitDyspSp/>
-     <PuneRangeTable/>
-     <ChtrapatiSambhajiNagarRange/>
-     <NagpurRange/>
-     <KokanRangeTable/>
+     <FlowChart/>
+     {/* <UnitDyspSp/> */}
+     {/* <PuneRangeTable/> */}
+     {/* <ChtrapatiSambhajiNagarRange/> */}
+     {/* <NagpurRange/> */}
+     {/* <KokanRangeTable/> */}
      {/* <PoliceLaunchSection/> */}
-     < WorkshopPhotos/> 
-     <VehicleDepartmentDocument/>
+     {/* < WorkshopPhotos/>  */}
+     {/* <VehicleDepartmentDocument/> */}
      {/* <PoliceDepartmentTable/> */}
      {/* <VehicleTypes/> */}
 

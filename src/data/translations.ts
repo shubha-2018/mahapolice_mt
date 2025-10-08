@@ -15,21 +15,22 @@ export const translations: Translation = {
       english: 'Leadership'
     },
     services: {
-      marathi: 'सेवा',
-      english: 'Services'
-    },
-    organization: {
       marathi: 'संघटना',
       english: 'Organization'
     },
+    organization: {
+      marathi: 'संरचना',
+      english: ' Organaization Structure'
+    },
     employee: {
-      marathi: 'कर्मचारी विभाग',
-      english: 'Employee Corner'
+      marathi: 'फ्लॅश ',
+      english: 'Flash'
     },
-    citizen: {
-      marathi: 'नागरिक विभाग',
-      english: 'Citizen Corner'
-    },
+     sss: {
+       english: "SSS",
+        marathi: "SSS"
+       }, 
+
     contact: {
       marathi: 'संपर्क',
       english: 'Contact'
@@ -61,13 +62,13 @@ export const translations: Translation = {
       english: 'Email'
     },
     copyright: {
-      marathi: '© २०२५ महाराष्ट्र पोलीस मोटर परिवहन विभाग सर्व हक्क राखीव.',
+      marathi: '© २०२५ महाराष्ट्र पोलीस मोटार  परिवहन विभाग सर्व हक्क राखीव.',
       english: '© 2025 Maharashtra Police Motor Transport Department. All rights reserved.'
     }
   },
   home: {
     title: {
-      marathi: 'मोटर ट्रान्सपोर्ट विभाग, महाराष्ट्र पोलीस',
+      marathi: 'मोटार  ट्रान्सपोर्ट विभाग, महाराष्ट्र पोलीस',
       english: 'Motor Transport Department, Maharashtra Police'
     },
     subtitle: {
@@ -75,7 +76,7 @@ export const translations: Translation = {
       english: 'Service, Security and Reliability'
     },
     heroMessage: {
-      marathi: 'महाराष्ट्र पोलीसांच्या मोटर ट्रान्सपोर्ट विभागामध्ये आपले स्वागत आहे',
+      marathi: 'महाराष्ट्र पोलीसांच्या मोटार  ट्रान्सपोर्ट विभागामध्ये आपले स्वागत आहे',
       english: 'Welcome to Maharashtra Police Motor Transport Department'
     },
     impactTitle: {
@@ -91,7 +92,7 @@ export const translations: Translation = {
       english: "Special IGP's Message"
     },
     aboutTitle: {
-      marathi: 'मोटर ट्रान्सपोर्ट बद्दल',
+      marathi: 'मोटार  ट्रान्सपोर्ट बद्दल',
       english: 'About Motor Transport'
     },
     whatsNewTitle: {
@@ -106,5 +107,8 @@ export const translations: Translation = {
       marathi: 'ताज्या अपडेट्स',
       english: 'Latest Updates'
     }
+
+
+    
   }
 };

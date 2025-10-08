@@ -43,7 +43,7 @@ const VehicleTypes = () => {
     },
     { 
       id: 4, 
-      title: { marathi: "मोटर सायकल", english: "MOTOR CYCLE" }, 
+      title: { marathi: "मोटार  सायकल", english: "MOTOR CYCLE" }, 
       images: [bike1, bike2, bike3] 
     },
     { 

@@ -27,7 +27,7 @@ const PoliceLaunchSection: React.FC = () => {
             <thead>
               <tr className="bg-blue-700 text-white">
                 <th className="px-6 py-3 border-r border-white font-semibold">
-                  {language === "marathi" ? "क्र.सं." : "Sr.No."}
+                  {language === "marathi" ? "अ.क्र" : "Sr.No."}
                 </th>
                 <th className="px-6 py-3 border-r border-white font-semibold">
                   {language === "marathi" ? "कमिशनरेट" : "Commissionerate"}

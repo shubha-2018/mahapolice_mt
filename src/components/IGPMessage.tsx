@@ -2,6 +2,10 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Quote } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
 import { useState } from 'react';
+import { Description } from '@radix-ui/react-toast';
+import AshokMoraleImg from '../assets/images/morale_sir12.jpg'; 
+// 👆 adjust the path according to your project structure
+
 
 const IGPMessage = () => {
   const { language } = useLanguage();
@@ -9,18 +13,24 @@ const IGPMessage = () => {
 
   const messageContent = {
     marathi: { 
-      title: 'मा.विशेष पोलिस महानिरीक्षक यांचा संदेश',
+      title: 'विशेष पोलीस महानिरीक्षक यांचा संदेश',
       message:
-        'महाराष्ट्र पोलीस मोटर परिवहन विभाग राज्यभरातील पोलीस बलांचा मेरुदंड आहे. आमचे आधुनिक वाहन संच आणि तांत्रिक सुविधा पोलीस कार्यक्षमता वाढवण्यात महत्त्वपूर्ण भूमिका बजावतात. पर्यावरण संरक्षणासाठी इलेक्ट्रिक वाहनांचा वापर वाढवून आम्ही भविष्याच्या दिशेने वाटचाल करत आहोत. आमच्या कुशल ड्रायव्हर्स आणि तांत्रिक कर्मचार्‍यांचे योगदान अतुलनीय आहे.',
-      signature: 'श्री. अशोक मोराळे (IPS)',
-      designation: 'विशेष पोलिस महानिरीक्षक,मोटर परिवहन विभाग,महाराष्ट्र राज्य ',
+        'महाराष्ट्र राज्य मोटार परिवहन विभागात पोलीस वाहनांची देखभाल व वाहन ताफा व्यवस्थापन, तांत्रिक व चालक मनुष्यबळ यांच्या योग्य समन्वयातून कायदा व सुव्यवस्था राखणेकरिता व नागरिकांच्या तत्पर सेवेकरिता वाहने पुरविण्याचे कामकाज या विभागामार्फत करण्यात येते.मुख राज्यातील सर्व पोलीस घटकांकरिता मोटार परिवहन विभागात पोलीस उप-अधीक्षक/ सहा पोलीस आयुक्त तसेच पोलीस निरीक्षक दर्जाचे मोटार परिवहन अधिकारी आहेत. वाहनांचे व्यवस्थापन व देखभाल दुरुस्तीचे कामकाज तांत्रिक मनुष्यबळाच्या आधारे केले जाते.राज्याच्या सागरी जिल्ह्यांच्या सागरी सुरक्षेच्या दृष्टीने गस्तीकरिता हाय स्पीड पोलीस नौका उपलब्ध आहेत. सदर नौकांची देखभाल व दुरुस्ती पोलीस नौका कर्मशाळा, ठाणे यांचे मार्फतीने केली जाते.कायदा व सुव्यवस्था राखणे करिता मोटार परिवहन विभागाच्या ताफ्यामधुन अत्याधुनिक वाहने पुरविणे व राज्याच्या ७२० कि.मी लांबीच्या सागरी किनारा गस्तीकरिता नौका सुस्थित ठेवणे, मनुष्यबळ पुरविणे याकरिता मोटार परिवहन विभाग निरंतर प्रयत्नशील राहिल.तत्पर सेवेत कार्यरत असलेल्या मोटार परिवहन विभागाचे नेतृत्व करण्याची ही गौरवाची बाब असुन याचा मला सार्थ अभिमान आहे.',
+     signature: (
+  <>
+    श्री. अशोक मोराळे.
+    <span className="text-sm"> भा पो से</span>
+  </>
+),
+
+      designation: 'विशेष  पोलीस महानिरीक्षक,मोटार  परिवहन विभाग,महाराष्ट्र राज्य ',
     },
     english: {
       title: "Special IGP's Message",
       message:
-        'The Maharashtra Police Motor Transport Department serves as the backbone of police forces across the state. Our modern fleet and technical facilities play a crucial role in enhancing police efficiency. We are moving towards the future by increasing the use of electric vehicles for environmental protection. The contribution of our skilled drivers and technical staff is invaluable.',
+        'The Maharashtra State Motor Transport Department is responsible for providing vehicles to maintain law and order and deliver prompt service to citizens through proper maintenance of police vehicles, fleet management, and coordination of technical and driving personnel. The department is headed by Police Deputy Superintendents / Assistant Police Commissioners as well as Motor Transport Officers of Inspector rank for all police units across the state. Vehicle management and maintenance work are carried out based on technical manpower.For maritime security in the coastal districts of the state, high-speed police boats are available for patrolling. The maintenance and repair of these boats are carried out through police boat workshops and stations.To maintain law and order, the Motor Transport Department continually strives to provide modern vehicles, keep boats in good condition for patrolling the state’s 720 km coastline, and supply manpower. Leading a department that is always ready to serve is a matter of pride and I am deeply honored to do so',
       signature: 'Shri. Ashok Morale (IPS)',
-      designation: 'Special IGP (Motor Transport)',
+      designation: 'Special Inspector General of Police, Motor Transport Department, Maharashtra State',
     },
   };
 
@@ -35,12 +45,13 @@ const IGPMessage = () => {
                 <div className="flex-shrink-0 mx-auto lg:mx-0">
                   <div className="relative w-48 h-56 rounded-xl overflow-hidden bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center shadow-xl">
                     {!imgError ? (
-                      <img
-                        src="https://rhtechnology.in/MT1/images/leaders/ashok-morale.jpg" // <-- Replace with actual image path
-                        alt="Special IGP Shri. Ashok Morale (IPS)"
-                        className="w-40 h-48 rounded-lg object-cover"
-                        onError={() => setImgError(true)}
-                      />
+                     <img
+  src={AshokMoraleImg}   // 👈 use imported image instead of URL
+  alt="Special IGP Shri. Ashok Morale (IPS)"
+  className="w-40 h-48 rounded-lg object-cover"
+  onError={() => setImgError(true)}
+/>
+
                     ) : (
                       <div className="w-40 h-48 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center">
                         <span className="text-4xl text-white">👨‍💼</span>
