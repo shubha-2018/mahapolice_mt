@@ -25,7 +25,7 @@ import UnitDyspSp from "./components/UnitDyspSp";
 import PhotoGallery from "./pages/PhotoGellary";
 import UndertakingGallery from "./pages/UndertakingGellary";
 import Training from "./pages/Training";
-import SocialMediaFloatButton from "./components/SocialMediaFloatButton";
+// import SocialMediaFloatButton from "./components/SocialMediaFloatButton";
 import GovermentLinks from "./components/GovermentLinks";
 
 const queryClient = new QueryClient();
@@ -63,7 +63,7 @@ const App = () => (
 
             <GovermentLinks />
             <Footer />
-            <SocialMediaFloatButton />
+            {/* <SocialMediaFloatButton /> */}
           </BrowserRouter>
         </TooltipProvider>
       </LanguageProvider>

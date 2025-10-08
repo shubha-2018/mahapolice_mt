@@ -102,3 +102,14 @@
 - Rendered `BackButton` globally below `Header`, hidden on the home route.
 
 **Purpose:** Provide a consistent back navigation on all pages.
+
+### 2025-10-06 - Mechanical animated background for HeroSlider
+
+**File Updated:**
+- `src/components/HeroSlider.tsx`
+
+**Changes Made:**
+- Added subtle rotating SVG gear overlays (different sizes, counter-rotating) positioned over the slide image, under the text overlay.
+- Kept performance-friendly with simple SVG and CSS animations.
+
+**Purpose:** Add a mechanical theme animation to the hero section background without distracting content.

@@ -90,9 +90,9 @@ const EmployeeCorner: React.FC<EmployeeCornerProps> = ({ open, onOpenChange }) =
                   <p className="text-gray-800 dark:text-gray-200 text-base md:text-lg leading-relaxed mb-6 font-medium">
                     {t({
                       marathi:
-                        "महाराष्ट्र पोलीस मोटार परिवहन विभाग राज्यभरातील पोलीस बलांचा मेरुदंड आहे. आमचे आधुनिक वाहन संच आणि तांत्रिक सुविधा पोलीस कार्यक्षमता वाढवण्यात महत्त्वपूर्ण भूमिका बजावतात. पर्यावरण संरक्षणासाठी इलेक्ट्रिक वाहनांचा वापर वाढवून आम्ही भविष्याच्या दिशेने वाटचाल करत आहोत. आमच्या कुशल ड्रायव्हर्स आणि तांत्रिक कर्मचार्‍यांचे योगदान अतुलनीय आहे.",
+                        "महाराष्ट्र राज्य मोटार परिवहन विभागात पोलीस वाहनांची देखभाल व वाहन ताफा व्यवस्थापन, तांत्रिक व चालक मनुष्यबळ यांच्या योग्य समन्वयातून कायदा व सुव्यवस्था राखणेकरिता व नागरिकांच्या तत्पर सेवेकरिता वाहने पुरविण्याचे कामकाज या विभागामार्फत करण्यात येते.मुख राज्यातील सर्व पोलीस घटकांकरिता मोटार परिवहन विभागात पोलीस उप-अधीक्षक/ सहा पोलीस आयुक्त तसेच पोलीस निरीक्षक दर्जाचे मोटार परिवहन अधिकारी आहेत.",
                       english:
-                        "The Maharashtra Police Motor Transport Department is the backbone of police forces across the state. Our modern fleet and technical facilities enhance police efficiency. By increasing the use of electric vehicles, we move toward a sustainable future. The contribution of our skilled drivers and technical staff is invaluable.",
+                        "The Maharashtra State Motor Transport Department is responsible for providing vehicles to maintain law and order and deliver prompt service to citizens through proper maintenance of police vehicles, fleet management, and coordination of technical and driving personnel.",
                     })}
                   </p>
 

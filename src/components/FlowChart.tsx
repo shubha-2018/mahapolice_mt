@@ -124,7 +124,7 @@ const OrganizationalChart: React.FC = () => {
       <div className="bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-900 py-14 text-center relative">
         <p className="text-3xl sm:text-4xl md:text-5xl text-blue-200 dark:text-blue-300 font-semibold">
           {language === "marathi"
-            ? "पोलीस मोटार परिवहन विभागाची संघटन रचना"
+            ? "पोलीस मोटार परिवहन विभागाची  रचना"
             : "Organizational Structure of State Police Motor Transport Department"}
         </p>
       </div>

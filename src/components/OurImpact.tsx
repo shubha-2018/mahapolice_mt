@@ -247,7 +247,7 @@ const impactStats: ImpactStat[] = [
   {
     id: 3,
     icon: <Clock className="w-8 h-8" />,
-    value: 1978,
+    value: 1948,
     suffix: '',
     label: { marathi: 'पासून सेवेत कार्यरत ', english: 'In service since 1948s' },
     color: 'text-primary',
@@ -274,7 +274,7 @@ const impactStats: ImpactStat[] = [
    {
     id: 6,
     icon: <Users className="w-8 h-8" />,
-    value: 3000,
+    value: 2650,
     suffix: '+',
     label: { marathi: 'कर्मचारी', english: 'Personnel' },
     color: 'text-primary',
