@@ -1,6 +1,7 @@
 import { useLanguage } from '@/hooks/useLanguage';
 import { translations } from '@/data/translations';
 import { Mail, Phone, MapPin, ExternalLink } from 'lucide-react';
+import motorlogo from "@/assets/images/MT_logo.jpg"
 
 const Footer = () => {
   const { language } = useLanguage();
@@ -65,9 +66,14 @@ const Footer = () => {
           {/* Logo and Description */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center">
-                <span className="text-primary font-bold text-sm">MT</span>
-              </div>
+           <div className="w-12 h-12 rounded-full flex items-center justify-center overflow-hidden bg-white">
+  <img
+    src={motorlogo}
+    alt="MT Logo"
+    className="w-10 h-10 object-contain"
+  />
+</div>
+
               <div>
                 <h3 className={`font-bold text-lg ${
                   language === 'marathi' ? 'marathi-text' : 'english-text'

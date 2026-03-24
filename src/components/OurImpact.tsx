@@ -249,7 +249,7 @@ const impactStats: ImpactStat[] = [
     icon: <Clock className="w-8 h-8" />,
     value: 1948,
     suffix: '',
-    label: { marathi: 'पासून सेवेत कार्यरत ', english: 'In service since 1948s' },
+    label: { marathi: 'पासून सेवेत कार्यरत ', english: 'In service since 1948' },
     color: 'text-primary',
     bgImage: cardBg3,
   },
