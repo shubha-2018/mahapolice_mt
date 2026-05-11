@@ -186,8 +186,8 @@ const leaders: Leader[] = [
   {
     id: 7,
     name: {
-      marathi: 'श्रीमती रश्मि शुक्‍ला',
-      english: 'Smt. Rashmi Shukla (IPS)'
+      marathi: 'श्री. सदानंद दाते (भापोसे)',
+      english: 'Shri. Sadanand Date (IPS)'
     },
     designation: {
       marathi: 
@@ -206,8 +206,8 @@ const leaders: Leader[] = [
         </>
       ),
     },
-    imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOLHMd2RGzu8JG_V1EMov6fZx8iF3quGlVpQ&s',
-    imagePlaceholder: 'Official portrait of Smt. Rashmi Shukla, Director General of Police'
+    imageUrl: 'https://www.thanepolice.gov.in/_next/image?url=%2F8.jpeg&w=256&q=75',
+    imagePlaceholder: 'Official portrait of Shri Sadanand Date, Director General of Police'
   },
    {
     id: 8,
