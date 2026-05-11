@@ -148,8 +148,11 @@
 // };
 
 // export default ContactPage;
+
+
 import React, { useEffect } from 'react';
-import { MapPin, Phone, Mail, ExternalLink, Clock, Navigation } from 'lucide-react';
+import { MapPin, Phone, Mail, ExternalLink } from 'lucide-react';
+import { useLanguage } from '@/hooks/useLanguage';
 
 const Gear = ({ size, teeth, x, y, speed, reverse, opacity = 0.15 }) => {
   const radius = size / 2;
@@ -189,12 +192,10 @@ const Gear = ({ size, teeth, x, y, speed, reverse, opacity = 0.15 }) => {
 };
 
 const ContactPage = () => {
-  const [language, setLanguage] = React.useState('marathi');
+  const { language: lang, setLanguage } = useLanguage(); // use same hook as header
 
   useEffect(() => {
-    setTimeout(() => {
-      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
-    }, 0);
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
   }, []);
 
   const contacts = [
@@ -210,11 +211,15 @@ const ContactPage = () => {
       phone: '02025880718',
       email: 'ig.mt.pune@mahapolice.gov.in',
       hours: {
-        marathi: 'सोमवार - शुक्रवार: 10:00 AM - 5:30 PM',
-        english: 'Monday - Friday: 10:00 AM - 5:30 PM'
-      }
-    }
+        marathi: '',
+        english: '',
+      },
+    },
   ];
+
+  const toggleLanguage = () => {
+    setLanguage(lang === 'marathi' ? 'english' : 'marathi');
+  };
 
   return (
     <>
@@ -222,7 +227,6 @@ const ContactPage = () => {
         @keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
         @keyframes rotateReverse { from { transform: rotate(360deg); } to { transform: rotate(0deg); } }
         @keyframes float { 0%,100%{ transform: translateY(0px);} 50%{ transform: translateY(-20px); } }
-        @keyframes pulse { 0%,100%{ opacity:0.5; } 50%{ opacity:0.8; } }
         @keyframes slideInUp { from{ transform:translateY(20px); opacity:0;} to{ transform:translateY(0); opacity:1;} }
         @keyframes fadeIn { from{opacity:0;} to{opacity:1;} }
         .animate-slide-up{ animation: slideInUp 0.8s ease-out forwards; }
@@ -231,80 +235,33 @@ const ContactPage = () => {
 
       <div className="relative w-screen min-h-screen overflow-x-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 dark:from-gray-950 dark:via-blue-950 dark:to-indigo-950 transition-all duration-500">
 
-        {/* Animated Gears - Fixed position for scrolling */}
+        {/* Animated Gears */}
         <svg className="fixed inset-0 w-full h-full pointer-events-none z-0">
-          <defs>
-            <linearGradient id="gearGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#60a5fa" stopOpacity="0.4" />
-              <stop offset="50%" stopColor="#818cf8" stopOpacity="0.35" />
-              <stop offset="100%" stopColor="#a78bfa" stopOpacity="0.4" />
-            </linearGradient>
-            <filter id="gearGlow">
-              <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
-              <feMerge>
-                <feMergeNode in="coloredBlur"/>
-                <feMergeNode in="SourceGraphic"/>
-              </feMerge>
-            </filter>
-          </defs>
-          <g fill="url(#gearGradient)" filter="url(#gearGlow)">
-            {/* Center large gear */}
+          <g fill="url(#gearGradient)">
             <Gear size={320} teeth={24} x="50%" y="50%" speed={30} reverse={false} opacity={0.25} />
-            
-            {/* Surrounding gears in circle pattern */}
             <Gear size={220} teeth={18} x="50%" y="25%" speed={22} reverse={true} opacity={0.3} />
             <Gear size={200} teeth={16} x="70%" y="35%" speed={20} reverse={false} opacity={0.28} />
             <Gear size={190} teeth={15} x="75%" y="55%" speed={19} reverse={true} opacity={0.27} />
-            <Gear size={210} teeth={17} x="65%" y="72%" speed={21} reverse={false} opacity={0.29} />
-            <Gear size={200} teeth={16} x="45%" y="75%" speed={20} reverse={true} opacity={0.28} />
-            <Gear size={190} teeth={15} x="28%" y="68%" speed={19} reverse={false} opacity={0.27} />
-            <Gear size={200} teeth={16} x="22%" y="48%" speed={20} reverse={true} opacity={0.28} />
-            <Gear size={210} teeth={17} x="30%" y="30%" speed={21} reverse={false} opacity={0.29} />
-            
-            {/* Additional corner gears */}
-            <Gear size={160} teeth={13} x="15%" y="15%" speed={17} reverse={true} opacity={0.25} />
-            <Gear size={150} teeth={12} x="85%" y="15%" speed={16} reverse={false} opacity={0.24} />
-            <Gear size={155} teeth={13} x="15%" y="85%" speed={17} reverse={false} opacity={0.25} />
-            <Gear size={160} teeth={13} x="85%" y="85%" speed={17} reverse={true} opacity={0.25} />
           </g>
         </svg>
 
-        {/* Floating Particles - Fixed position */}
-        <div className="fixed inset-0 pointer-events-none z-0">
-          {[...Array(40)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute rounded-full bg-blue-400 shadow-lg shadow-blue-500/50"
-              style={{
-                width: `${Math.random() * 6 + 3}px`,
-                height: `${Math.random() * 6 + 3}px`,
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animation: `float ${Math.random() * 8 + 5}s ease-in-out infinite`,
-                animationDelay: `${Math.random() * 4}s`,
-                opacity: 0.5
-              }}
-            />
-          ))}
+        {/* Language Toggle button */}
+        <div className="absolute top-6 right-6">
+          <button
+            onClick={toggleLanguage}
+            className="px-4 py-2 bg-white/20 backdrop-blur-md rounded-lg hover:bg-white/30 transition font-semibold"
+          >
+            {lang === 'marathi' ? 'English' : 'मराठी'}
+          </button>
         </div>
 
-        {/* Main Content */}
+        {/* Page Content */}
         <div className="relative z-10 flex flex-col justify-center items-center w-full min-h-screen px-6 py-20 text-center text-white">
-          {/* Language Toggle */}
-          <div className="absolute top-6 right-6">
-            <button
-              onClick={() => setLanguage(language === 'marathi' ? 'english' : 'marathi')}
-              className="px-4 py-2 bg-white/20 backdrop-blur-md rounded-lg hover:bg-white/30 transition font-semibold"
-            >
-              {language === 'marathi' ? 'English' : 'मराठी'}
-            </button>
-          </div>
-
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 drop-shadow-lg animate-fade-in">
-            {language === 'marathi' ? 'आमच्याशी संपर्क साधा' : 'Get In Touch'}
+            {lang === 'marathi' ? 'आमच्याशी संपर्क साधा' : 'Get In Touch'}
           </h1>
           <p className="text-lg md:text-xl lg:text-2xl max-w-2xl mb-10 animate-fade-in">
-            {language === 'marathi'
+            {lang === 'marathi'
               ? 'कोणत्याही सहाय्यासाठी किंवा चौकशीसाठी आमच्याशी संपर्क साधा'
               : 'Reach out for any assistance, inquiries, or support'}
           </p>
@@ -312,22 +269,23 @@ const ContactPage = () => {
           {contacts.map((contact, index) => (
             <div key={index} className="animate-slide-up max-w-4xl w-full bg-white/10 backdrop-blur-md rounded-3xl p-6 md:p-10">
               <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white drop-shadow">
-                {contact.title[language]}
+                {contact.title[lang]}
               </h2>
-              <p className="mb-2 text-white/80 text-sm md:text-base">{contact.address[language]}</p>
+              <p className="mb-2 text-white/80 text-sm md:text-base">{contact.address[lang]}</p>
               <p className="mb-2 text-white/80 text-sm md:text-base">
-                {language === 'marathi' ? 'फोन:' : 'Phone:'} {contact.phone}
+                {lang === 'marathi' ? 'फोन:' : 'Phone:'} {contact.phone}
               </p>
               <p className="mb-2 text-white/80 text-sm md:text-base">
-                {language === 'marathi' ? 'ईमेल:' : 'Email:'} {contact.email}
+                {lang === 'marathi' ? 'ईमेल:' : 'Email:'} {contact.email}
               </p>
+             
 
               <div className="flex flex-col md:flex-row justify-center gap-4 mt-4">
                 <a
                   href={`tel:${contact.phone}`}
                   className="px-4 py-2 rounded-lg bg-green-500 hover:bg-green-600 text-white font-semibold text-sm md:text-base transition"
                 >
-                  {language === 'marathi' ? 'थेट कॉल करा' : 'Call'}
+                  {lang === 'marathi' ? 'थेट कॉल करा' : 'Call'}
                 </a>
                 <a
                   href="https://www.google.com/maps?q=18.562883246780896,73.81327144433503"
@@ -335,13 +293,12 @@ const ContactPage = () => {
                   rel="noopener noreferrer"
                   className="px-4 py-2 rounded-lg bg-blue-500 hover:bg-blue-600 text-white font-semibold text-sm md:text-base transition"
                 >
-                  {language === 'marathi' ? 'नकाशावर पहा' : 'View on Maps'}
+                  {lang === 'marathi' ? 'नकाशावर पहा' : 'View on Maps'}
                 </a>
               </div>
             </div>
           ))}
         </div>
-
       </div>
     </>
   );

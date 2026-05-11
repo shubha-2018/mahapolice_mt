@@ -52,6 +52,7 @@ const Header = () => {
     { key: 'contact', href: '/contact' },
   ];
 
+<<<<<<< HEAD
   const sssServices = [
     'वाहनांची दुरुस्ती व देखभाल सेवा',
     'वाहन ताफा व्यवस्थापन सेवा',
@@ -60,6 +61,27 @@ const Header = () => {
     'RTI',
     'SSS',
   ];
+=======
+  // sssServices with Marathi and English
+  const sssServices = {
+    marathi: [
+      'वाहनांची दुरुस्ती व देखभाल सेवा',
+      'वाहन ताफा व्यवस्थापन सेवा',
+      'चालक व तांत्रिक प्रशिक्षण सेवा',
+      'सागरी किनारा पेट्रोलिंग सेवा',
+      'RTI',
+      'SSS'
+    ],
+    english: [
+      'Vehicle Repair & Maintenance Service',
+      'Fleet Management Service',
+      'Driver & Technical Training Service',
+      'Marine Coastal Patrolling Service',
+      'RTI',
+      'SSS'
+    ]
+  };
+>>>>>>> 9a1195e (Contact Page Updated)
 
   const getNavLabel = (key: string) => {
     if (key === 'sss') {
@@ -103,6 +125,7 @@ const Header = () => {
             </div>
 
             <div className="text-left max-w-[220px] sm:max-w-none">
+<<<<<<< HEAD
 
               <h1
                 className={`text-sm sm:text-lg md:text-xl lg:text-2xl font-bold leading-tight ${
@@ -129,6 +152,14 @@ const Header = () => {
                     : 'english-text'
                 }`}
               >
+=======
+              <h1 className={`text-sm sm:text-lg md:text-xl lg:text-2xl font-bold leading-tight ${lang === 'marathi' ? 'marathi-text' : 'english-text'}`}>
+                {lang === 'marathi'
+                  ? 'मोटार परिवहन विभाग, महाराष्ट्र राज्य पुणे'
+                  : <>Motor Transport Department<br />Maharashtra State, Pune</>}
+              </h1>
+              <p className={`text-xs sm:text-sm text-muted-foreground ${lang === 'marathi' ? 'marathi-text' : 'english-text'}`}>
+>>>>>>> 9a1195e (Contact Page Updated)
                 {lang === 'marathi'
                   ? 'महाराष्ट्र पोलीस अधिकृत संकेतस्थळ'
                   : 'Official website of Maharashtra Police'}
@@ -147,11 +178,15 @@ const Header = () => {
                   <div key={item.key} className="relative">
                     <button
                       onClick={() => setEmployeeOpen(true)}
+<<<<<<< HEAD
                       className={`police-nav-link flex items-center gap-1 ${
                         lang === 'marathi'
                           ? 'marathi-text'
                           : 'english-text'
                       }`}
+=======
+                      className={`police-nav-link flex items-center gap-1 ${lang === 'marathi' ? 'marathi-text' : 'english-text'}`}
+>>>>>>> 9a1195e (Contact Page Updated)
                     >
                       {getNavLabel(item.key)}
 
@@ -167,6 +202,7 @@ const Header = () => {
                   <div key={item.key} className="relative">
 
                     <button
+<<<<<<< HEAD
                       onClick={() =>
                         setSssDropdownOpen(!sssDropdownOpen)
                       }
@@ -175,6 +211,10 @@ const Header = () => {
                           ? 'marathi-text'
                           : 'english-text'
                       }`}
+=======
+                      onClick={() => setSssDropdownOpen(!sssDropdownOpen)}
+                      className={`police-nav-link flex items-center gap-1 ${lang === 'marathi' ? 'marathi-text' : 'english-text'}`}
+>>>>>>> 9a1195e (Contact Page Updated)
                     >
                       {getNavLabel(item.key)}
 
@@ -182,6 +222,7 @@ const Header = () => {
                     </button>
 
                     {sssDropdownOpen && (
+<<<<<<< HEAD
                       <div className="absolute top-full left-0 mt-2 w-64 bg-white border border-gray-200 rounded-lg shadow-lg z-50 animate-slide-down">
 
                         <div className="px-4 py-2 font-bold text-gray-700 border-b">
@@ -189,6 +230,11 @@ const Header = () => {
                         </div>
 
                         {sssServices.map((service, index) =>
+=======
+                      <div className="absolute top-full left-0 mt-2 min-w-[16rem] sm:min-w-[20rem] bg-white border border-gray-200 rounded-lg shadow-lg z-50 animate-slide-down">
+                        <div className="px-4 py-2 font-bold text-gray-700 border-b">{getNavLabel(item.key)}</div>
+                        {sssServices[lang].map((service, index) =>
+>>>>>>> 9a1195e (Contact Page Updated)
                           service === "SSS" ? (
                             <a
                               key={index}
@@ -204,7 +250,11 @@ const Header = () => {
                           ) : (
                             <div
                               key={index}
+<<<<<<< HEAD
                               className="block px-4 py-2 text-gray-500 cursor-default"
+=======
+                              className="block px-4 py-2 text-gray-500 flex items-start justify-between cursor-default"
+>>>>>>> 9a1195e (Contact Page Updated)
                             >
                               {service}
                             </div>
@@ -224,11 +274,15 @@ const Header = () => {
                     href={item.href}
                     target="_blank"
                     rel="noopener noreferrer"
+<<<<<<< HEAD
                     className={`police-nav-link flex items-center gap-1 ${
                       lang === 'marathi'
                         ? 'marathi-text'
                         : 'english-text'
                     }`}
+=======
+                    className={`police-nav-link flex items-center gap-1 ${lang === 'marathi' ? 'marathi-text' : 'english-text'}`}
+>>>>>>> 9a1195e (Contact Page Updated)
                   >
                     {getNavLabel(item.key)}
 
@@ -242,11 +296,15 @@ const Header = () => {
                 <Link
                   key={item.key}
                   to={item.href}
+<<<<<<< HEAD
                   className={`police-nav-link ${
                     lang === 'marathi'
                       ? 'marathi-text'
                       : 'english-text'
                   }`}
+=======
+                  className={`police-nav-link ${lang === 'marathi' ? 'marathi-text' : 'english-text'}`}
+>>>>>>> 9a1195e (Contact Page Updated)
                 >
                   {getNavLabel(item.key)}
                 </Link>
@@ -308,10 +366,14 @@ const Header = () => {
                       return (
                         <button
                           key={item.key}
+<<<<<<< HEAD
                           onClick={() => {
                             setIsOpen(false);
                             setEmployeeOpen(true);
                           }}
+=======
+                          onClick={() => setEmployeeOpen(true)}
+>>>>>>> 9a1195e (Contact Page Updated)
                           className="police-nav-link text-base py-2 text-left"
                         >
                           {getNavLabel(item.key)}
@@ -328,9 +390,13 @@ const Header = () => {
                         >
 
                           <button
+<<<<<<< HEAD
                             onClick={() =>
                               setMobileSssOpen(!mobileSssOpen)
                             }
+=======
+                            onClick={() => setMobileSssOpen(!mobileSssOpen)}
+>>>>>>> 9a1195e (Contact Page Updated)
                             className="flex items-center justify-between px-4 py-2 font-semibold text-gray-600 border-b"
                           >
                             {getNavLabel(item.key)}
@@ -346,8 +412,12 @@ const Header = () => {
 
                           {mobileSssOpen && (
                             <div className="flex flex-col mt-1">
+<<<<<<< HEAD
 
                               {sssServices.map((service, idx) =>
+=======
+                              {sssServices[lang].map((service, idx) =>
+>>>>>>> 9a1195e (Contact Page Updated)
                                 service === "SSS" ? (
                                   <a
                                     key={idx}
@@ -363,7 +433,11 @@ const Header = () => {
                                 ) : (
                                   <div
                                     key={idx}
+<<<<<<< HEAD
                                     className="police-nav-link text-base py-2 ml-4 text-gray-500 cursor-default"
+=======
+                                    className="police-nav-link text-base py-2 flex items-start justify-between ml-4 text-gray-500 cursor-default"
+>>>>>>> 9a1195e (Contact Page Updated)
                                   >
                                     {service}
                                   </div>
