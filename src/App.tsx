@@ -24,7 +24,7 @@ import Organisationtable1 from "./components/Organizationtable1";
 import UnitDyspSp from "./components/UnitDyspSp";
 import PhotoGallery from "./pages/PhotoGellary";
 import UndertakingGallery from "./pages/UndertakingGellary";
-import Training from "./pages/Training";
+// import Training from "./pages/Training";
 // import SocialMediaFloatButton from "./components/SocialMediaFloatButton";
 import GovermentLinks from "./components/GovermentLinks";
 
@@ -54,7 +54,7 @@ const App = () => (
               <Route path="/unit-dysp" element={<UnitDyspSp />} />
               <Route path="/photo-gallery" element={<PhotoGallery />} />
               <Route path="/undertaking-gallery" element={<UndertakingGallery />} />
-              <Route path="/training" element={<Training />} />
+              {/* <Route path="/training" element={<Training />} /> */}
               <Route path="/transfer-orders" element={<TransferOrders />} />
 
               {/* 404 Not Found */}
