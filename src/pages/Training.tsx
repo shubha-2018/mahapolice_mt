@@ -9,11 +9,11 @@ import img3 from "../assets/images/ss2.jpg";
 import img4 from "../assets/images/ss3.jpg";
 import img5 from "../assets/images/ss4.jpg";
 
-import img6 from "../assets/images/pp1.jpg";   
-import img7 from "../assets/images/pp2.jpg";   
-import img8 from "../assets/images/pp3.jpg";   
-import img9 from "../assets/images/pp4.jpg";   
-import img10 from "../assets/images/pp5.jpg";
+// import img6 from "../assets/images/
+// import img7 from "../assets/images/pp2.jpg";   
+// import img8 from "../assets/images/pp3.jpg";   
+// import img9 from "../assets/images/pp4.jpg";   
+// import img10 from "../assets/images/pp5.jpg";
 
 import img11 from "../assets/images/pp6.jpg";   
 import img12 from "../assets/images/pp7.jpg";   
@@ -46,13 +46,13 @@ export default function PhotoGallery() {
       { id: 4, url: img4, title: { marathi: '', english: '' } },
       { id: 5, url: img5, title: { marathi: '', english: '' } }
     ],
-    second: [
-      { id: 6, url: img6, title: { marathi: '', english: '' } },
-      { id: 7, url: img7, title: { marathi: '', english: '' } },
-      { id: 8, url: img8, title: { marathi: '', english: '' } },
-      { id: 9, url: img9, title: { marathi: '', english: '' } },
-      { id: 10, url: img10, title: { marathi: '', english: '' } }
-    ],
+    // second: [
+    //   { id: 6, url: img6, title: { marathi: '', english: '' } },
+    //   { id: 7, url: img7, title: { marathi: '', english: '' } },
+    //   { id: 8, url: img8, title: { marathi: '', english: '' } },
+    //   { id: 9, url: img9, title: { marathi: '', english: '' } },
+    //   { id: 10, url: img10, title: { marathi: '', english: '' } }
+    // ],
     third: [
       { id: 11, url: img11, title: { marathi: '', english: '' } },
       { id: 12, url: img12, title: { marathi: '', english: '' } },
@@ -154,7 +154,7 @@ export default function PhotoGallery() {
       </div>
 
       {/* Second row */}
-      {renderRow(galleryData.second, 'secondTitle')}
+      {/* {renderRow(galleryData.second, 'secondTitle')} */}
 
       {/* Third row with description */}
       {renderRow(galleryData.third)}
