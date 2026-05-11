@@ -265,7 +265,7 @@ const impactStats: ImpactStat[] = [
    {
     id: 5,
     icon: <Building className="w-8 h-8" />,
-    value: 91,
+    value: 89,
     suffix: '',
     label: { marathi: 'मोटार परिवहन विभाग', english: 'Motor Transport Departments' },
     color: 'text-accent',
@@ -285,7 +285,7 @@ const impactStats: ImpactStat[] = [
 
     id: 1,
     icon: <Car className="w-8 h-8" />,
-    value: 24000,
+    value: 19159,
     suffix: '+',
     label: { marathi: 'वाहने', english: 'Vehicles' },
     color: 'text-primary',

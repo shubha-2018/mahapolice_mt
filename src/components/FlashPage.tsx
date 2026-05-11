@@ -17,7 +17,7 @@ const PoliceFlashSystem = () => {
       items: [
         { 
           id: 1, 
-          title: 'मुंबई पोलिस स्टेशन - तातडी गस्त', 
+          title: 'मुंबई पोलीस स्टेशन - तातडी गस्त', 
           description: '5 पेट्रोल वाहनं दादर-माटुंगा क्षेत्रासाठी',
           time: '10:30 AM', 
           priority: 'high',
@@ -47,7 +47,7 @@ const PoliceFlashSystem = () => {
         { 
           id: 3, 
           title: '10 नवीन स्कॉर्पिओ वाटप', 
-          description: 'यूनिट-A (चेंबूर पोलिस स्टेशन)',
+          description: 'यूनिट-A (चेंबूर पोलीस स्टेशन)',
           time: '09:45 AM', 
           priority: 'medium',
           location: 'चेंबूर',
@@ -181,7 +181,7 @@ const PoliceFlashSystem = () => {
                   <Shield className="h-10 w-10 text-white" />
                 </div>
                 <div>
-                  <h1 className="text-2xl font-bold text-gray-900">महाराष्ट्र पोलिस</h1>
+                  <h1 className="text-2xl font-bold text-gray-900">महाराष्ट्र पोलीस</h1>
                   <p className="text-sm text-gray-600">MAHARASHTRA POLICE</p>
                 </div>
               </div>

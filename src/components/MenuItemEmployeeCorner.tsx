@@ -20,9 +20,10 @@ const EmployeeCorner: React.FC<EmployeeCornerProps> = ({ open, onOpenChange }) =
   // Navigation Links
   const navItems = [
     { label: t({ marathi: "बदली आदेश / पदस्थापना", english: "Transfer Orders" }), path: "/transfer-orders" },
+    { label: t({ marathi: "पदोन्नत्ती आदेश", english: "Promotion Order" }), path: "#" } ,
     { label: t({ marathi: "सेवा ज्येष्ठता यादी", english: "Seniority List" }), path: "/seniority-list" },
     { label: t({ marathi: "कार्यालयीन आदेश व परिपत्रक", english: "DGP Orders" }), path: "/dgp-orders" },
-    { label: t({ marathi: "प्रशिक्षण", english: "Training" }), path: "/training" },
+    { label: t({ marathi: "RTI", english: "" }), path: "#" },
     { label: t({ marathi: "फोटो गॅलरी", english: "Photo Gallery" }), path: "/photo-gallery" },
     { label: t({ marathi: "उपक्रम", english: "Undertaking Gallery" }), path: "/undertaking-gallery" },
   ];

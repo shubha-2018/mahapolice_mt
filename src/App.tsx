@@ -27,6 +27,8 @@ import UndertakingGallery from "./pages/UndertakingGellary";
 // import Training from "./pages/Training";
 // import SocialMediaFloatButton from "./components/SocialMediaFloatButton";
 import GovermentLinks from "./components/GovermentLinks";
+// import OrganisationStructure from "@/components/OrganisationStructure"
+
 
 const queryClient = new QueryClient();
 
@@ -56,11 +58,13 @@ const App = () => (
               <Route path="/undertaking-gallery" element={<UndertakingGallery />} />
               {/* <Route path="/training" element={<Training />} /> */}
               <Route path="/transfer-orders" element={<TransferOrders />} />
+                {/* <Route path="/organisational-structure" element={<OrganisationStructure />} /> */}
+              {/* <Route path="/transfer-orders" element={<SeniorOfficers />} /> */}
+
 
               {/* 404 Not Found */}
               <Route path="*" element={<NotFound />} />
             </Routes>
-
             <GovermentLinks />
             <Footer />
             {/* <SocialMediaFloatButton /> */}

@@ -151,7 +151,6 @@
 
 
 import React, { useEffect } from 'react';
-import { MapPin, Phone, Mail, ExternalLink } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
 
 const Gear = ({ size, teeth, x, y, speed, reverse, opacity = 0.15 }) => {
@@ -192,7 +191,7 @@ const Gear = ({ size, teeth, x, y, speed, reverse, opacity = 0.15 }) => {
 };
 
 const ContactPage = () => {
-  const { language: lang, setLanguage } = useLanguage(); // use same hook as header
+  const { language: lang, setLanguage } = useLanguage();
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
@@ -210,10 +209,20 @@ const ContactPage = () => {
       },
       phone: '02025880718',
       email: 'ig.mt.pune@mahapolice.gov.in',
-      hours: {
-        marathi: '',
-        english: '',
+      mapLink: 'https://www.google.com/maps?q=18.562883246780896,73.81327144433503',
+    },
+    {
+      title: {
+        marathi: 'कार्यालयाचा पत्ता',
+        english: 'Office Address',
       },
+      address: {
+        marathi: 'पोलीस दळणवळण व माहिती तंत्रज्ञान विभाग महाराष्ट्र राज्य, पुणे डॉ. होमी भाभा रोड, चव्हाणनगर पुणे – ४११००८, महाराष्ट्र, भारत',
+        english: 'Police Communication and Information Technology Department, Maharashtra State Pune, Dr. Homi Bhabha Road, Vadtalnagar, Pune – 411008, Maharashtra, India',
+      },
+      phone: '020-25652505',
+      email: 'dir.polwireless.pune@mahapolice.gov.in',
+      mapLink: 'https://www.google.com/maps?q=18.5299,73.8567',
     },
   ];
 
@@ -256,48 +265,54 @@ const ContactPage = () => {
         </div>
 
         {/* Page Content */}
-        <div className="relative z-10 flex flex-col justify-center items-center w-full min-h-screen px-6 py-20 text-center text-white">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 drop-shadow-lg animate-fade-in">
+        <div className="relative z-10 flex flex-col justify-center items-center w-full min-h-screen px-6 py-20 text-center">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 drop-shadow-lg animate-fade-in text-white">
             {lang === 'marathi' ? 'आमच्याशी संपर्क साधा' : 'Get In Touch'}
           </h1>
-          <p className="text-lg md:text-xl lg:text-2xl max-w-2xl mb-10 animate-fade-in">
+          <p className="text-lg md:text-xl lg:text-2xl max-w-2xl mb-10 animate-fade-in text-white">
             {lang === 'marathi'
               ? 'कोणत्याही सहाय्यासाठी किंवा चौकशीसाठी आमच्याशी संपर्क साधा'
               : 'Reach out for any assistance, inquiries, or support'}
           </p>
 
-          {contacts.map((contact, index) => (
-            <div key={index} className="animate-slide-up max-w-4xl w-full bg-white/10 backdrop-blur-md rounded-3xl p-6 md:p-10">
-              <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white drop-shadow">
-                {contact.title[lang]}
-              </h2>
-              <p className="mb-2 text-white/80 text-sm md:text-base">{contact.address[lang]}</p>
-              <p className="mb-2 text-white/80 text-sm md:text-base">
-                {lang === 'marathi' ? 'फोन:' : 'Phone:'} {contact.phone}
-              </p>
-              <p className="mb-2 text-white/80 text-sm md:text-base">
-                {lang === 'marathi' ? 'ईमेल:' : 'Email:'} {contact.email}
-              </p>
-             
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-7xl w-full">
+            {contacts.map((contact, index) => (
+              <div
+                key={index}
+                className={`animate-slide-up bg-white rounded-3xl p-6 md:p-10 shadow-lg ${
+                  index === 0 ? 'lg:order-2' : 'lg:order-1'
+                }`}
+              >
+                <h2 className="text-2xl md:text-3xl font-bold mb-4 text-black">
+                  {contact.title[lang]}
+                </h2>
+                <p className="mb-2 text-black text-sm md:text-base">{contact.address[lang]}</p>
+                <p className="mb-2 text-black text-sm md:text-base">
+                  {lang === 'marathi' ? 'फोन:' : 'Phone:'} {contact.phone}
+                </p>
+                <p className="mb-2 text-black text-sm md:text-base">
+                  {lang === 'marathi' ? 'ईमेल:' : 'Email:'} {contact.email}
+                </p>
 
-              <div className="flex flex-col md:flex-row justify-center gap-4 mt-4">
-                <a
-                  href={`tel:${contact.phone}`}
-                  className="px-4 py-2 rounded-lg bg-green-500 hover:bg-green-600 text-white font-semibold text-sm md:text-base transition"
-                >
-                  {lang === 'marathi' ? 'थेट कॉल करा' : 'Call'}
-                </a>
-                <a
-                  href="https://www.google.com/maps?q=18.562883246780896,73.81327144433503"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-4 py-2 rounded-lg bg-blue-500 hover:bg-blue-600 text-white font-semibold text-sm md:text-base transition"
-                >
-                  {lang === 'marathi' ? 'नकाशावर पहा' : 'View on Maps'}
-                </a>
+                <div className="flex flex-col md:flex-row justify-center gap-4 mt-4">
+                  <a
+                    href={`tel:${contact.phone}`}
+                    className="px-4 py-2 rounded-lg bg-green-500 hover:bg-green-600 text-white font-semibold text-sm md:text-base transition"
+                  >
+                    {lang === 'marathi' ? 'थेट कॉल करा' : 'Call'}
+                  </a>
+                  <a
+                    href={contact.mapLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 rounded-lg bg-blue-500 hover:bg-blue-600 text-white font-semibold text-sm md:text-base transition"
+                  >
+                    {lang === 'marathi' ? 'नकाशावर पहा' : 'View on Maps'}
+                  </a>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </>

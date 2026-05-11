@@ -10,6 +10,8 @@ import LatestUpdates from '@/components/LatestUpdates';
 import DirectorsDesk from  '@/components/IPSMessage';
 import { Link } from "react-router-dom";
 import SocialMediaFloatButton from '@/components/SocialMediaFloatButton';
+import SeniorOfficers  from "../components/SeniorOfficials";
+
 
 
 import Footer from '@/components/Footer';
@@ -35,6 +37,9 @@ const Index = () => {
 
       {/* Special IGP's Message */}
       <IGPMessage />
+      {/*Senior officers*/}
+     <SeniorOfficers />
+
 
       {/* About Motor Transport & What's New */}
       {/* <AboutSection /> */}
