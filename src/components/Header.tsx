@@ -1536,6 +1536,7 @@
 
 // export default Header;
 
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 
@@ -1575,22 +1576,39 @@ declare global {
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [employeeOpen, setEmployeeOpen] = useState(false);
-  const [sssDropdownOpen, setSssDropdownOpen] = useState(false);
-  const [mobileSssOpen, setMobileSssOpen] = useState(false);
+
+  const [employeeOpen, setEmployeeOpen] =
+    useState(false);
+
+  const [sssDropdownOpen, setSssDropdownOpen] =
+    useState(false);
+
+  const [mobileSssOpen, setMobileSssOpen] =
+    useState(false);
 
   const { language: lang } = useLanguage();
 
   const navItems = [
     { key: "home", href: "/" },
+
     { key: "about", href: "/aboutpage" },
-    { key: "organization", href: "/organizationpage" },
-    { key: "employee", href: "#employeecorner" },
+
+    {
+      key: "organization",
+      href: "/organizationpage",
+    },
+
+    {
+      key: "employee",
+      href: "#employeecorner",
+    },
+
     {
       key: "sss",
       href: "https://117.222.38.165/SSS",
       external: true,
     },
+
     { key: "contact", href: "/contact" },
   ];
 
@@ -1605,43 +1623,46 @@ const Header = () => {
 
   const getNavLabel = (key: string) => {
     if (key === "sss") {
-      return lang === "marathi" ? "सेवा विभाग" : "Services";
+      return lang === "marathi"
+        ? "सेवा विभाग"
+        : "Services";
     }
 
     const item =
-      translations.nav[key as keyof typeof translations.nav];
+      translations.nav[
+        key as keyof typeof translations.nav
+      ];
 
     return item?.[lang] || key.toUpperCase();
   };
 
   return (
     <>
-      {/* HEADER */}
       <header className="fixed top-0 left-0 w-full z-50 bg-background shadow-md border-b">
 
-        {/* ✅ FIX: 90% SCREEN WIDTH */}
-        <div className="w-[90%] mx-auto px-3 sm:px-4 lg:px-6">
+        <div className="container mx-auto px-3 sm:px-4 lg:px-6">
 
-          <div className="flex items-center justify-between py-4 gap-4">
+          <div className="flex items-center justify-between h-[72px] sm:h-[80px] gap-4">
 
-            {/* LEFT SECTION */}
+            {/* LEFT */}
             <div className="flex items-center gap-2 sm:gap-4 flex-shrink-0">
 
               <img
                 src={Emblem}
                 alt="Government Emblem"
-                className="w-12 h-12 sm:w-16 sm:h-16 object-contain"
+                className="w-10 h-10 sm:w-14 sm:h-14 object-contain"
               />
 
               <img
                 src={policelogo}
                 alt="Maharashtra Police Logo"
-                className="w-14 h-14 sm:w-20 sm:h-20 object-contain"
+                className="w-12 h-12 sm:w-16 sm:h-16 object-contain"
               />
 
               <div className="leading-tight">
+
                 <h1
-                  className={`font-extrabold text-sm sm:text-2xl lg:text-3xl ${
+                  className={`font-bold text-xs sm:text-lg lg:text-xl leading-snug ${
                     lang === "marathi"
                       ? "marathi-text"
                       : "english-text"
@@ -1659,7 +1680,7 @@ const Header = () => {
                 </h1>
 
                 <p
-                  className={`text-xs sm:text-sm text-muted-foreground ${
+                  className={`text-[10px] sm:text-xs text-muted-foreground ${
                     lang === "marathi"
                       ? "marathi-text"
                       : "english-text"
@@ -1669,10 +1690,11 @@ const Header = () => {
                     ? "महाराष्ट्र पोलीस अधिकृत संकेतस्थळ"
                     : "Official website of Maharashtra Police"}
                 </p>
+
               </div>
             </div>
 
-            {/* DESKTOP NAVIGATION */}
+            {/* DESKTOP MENU */}
             <nav className="hidden lg:flex items-center gap-6">
 
               {navItems.map((item) => {
@@ -1681,10 +1703,13 @@ const Header = () => {
                   return (
                     <button
                       key={item.key}
-                      onClick={() => setEmployeeOpen(true)}
+                      onClick={() =>
+                        setEmployeeOpen(true)
+                      }
                       className="flex items-center gap-1 font-medium hover:text-blue-600 transition-colors"
                     >
                       {getNavLabel(item.key)}
+
                       <ChevronDown className="w-4 h-4" />
                     </button>
                   );
@@ -1695,29 +1720,38 @@ const Header = () => {
                     <div
                       key={item.key}
                       className="relative"
-                      onMouseEnter={() => setSssDropdownOpen(true)}
-                      onMouseLeave={() => setSssDropdownOpen(false)}
+                      onMouseEnter={() =>
+                        setSssDropdownOpen(true)
+                      }
+                      onMouseLeave={() =>
+                        setSssDropdownOpen(false)
+                      }
                     >
+
                       <button className="flex items-center gap-1 font-medium hover:text-blue-600 transition-colors">
                         {getNavLabel(item.key)}
+
                         <ChevronDown className="w-4 h-4" />
                       </button>
 
                       {sssDropdownOpen && (
-                        <div className="absolute top-full left-0 mt-2 w-80 bg-white border rounded-lg shadow-xl z-50 overflow-hidden">
+
+                        <div className="absolute top-full left-0 mt-1 w-80 bg-white border rounded-lg shadow-xl z-50 overflow-hidden">
 
                           <div className="px-4 py-3 bg-blue-50 font-bold border-b text-gray-700">
                             {getNavLabel(item.key)}
                           </div>
 
-                          {sssServices.map((service, index) => (
-                            <div
-                              key={index}
-                              className="px-4 py-3 text-gray-700 hover:bg-blue-50 transition-colors cursor-pointer border-b last:border-b-0"
-                            >
-                              {service}
-                            </div>
-                          ))}
+                          {sssServices.map(
+                            (service, index) => (
+                              <div
+                                key={index}
+                                className="px-4 py-3 text-gray-700 hover:bg-blue-50 transition-colors cursor-pointer border-b last:border-b-0"
+                              >
+                                {service}
+                              </div>
+                            )
+                          )}
 
                         </div>
                       )}
@@ -1735,6 +1769,7 @@ const Header = () => {
                       className="flex items-center gap-1 font-medium hover:text-blue-600 transition-colors"
                     >
                       {getNavLabel(item.key)}
+
                       <ExternalLink className="w-4 h-4" />
                     </a>
                   );
@@ -1750,9 +1785,10 @@ const Header = () => {
                   </Link>
                 );
               })}
+
             </nav>
 
-            {/* RIGHT SECTION */}
+            {/* RIGHT */}
             <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
 
               <Button
@@ -1766,41 +1802,138 @@ const Header = () => {
               </Button>
 
               <ThemeToggle />
+
               <LanguageToggle />
 
-              {/* MOBILE MENU */}
-              <Sheet open={isOpen} onOpenChange={setIsOpen}>
-                <SheetTrigger asChild className="lg:hidden">
-                  <Button variant="ghost" size="icon">
+              <Sheet
+                open={isOpen}
+                onOpenChange={setIsOpen}
+              >
+
+                <SheetTrigger
+                  asChild
+                  className="lg:hidden"
+                >
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                  >
                     <Menu className="w-6 h-6" />
                   </Button>
                 </SheetTrigger>
 
-                <SheetContent side="right" className="w-[300px]">
+                <SheetContent
+                  side="right"
+                  className="w-[300px]"
+                >
 
                   <nav className="flex flex-col gap-4 mt-10">
 
-                    {navItems.map((item) => (
-                      <Link
-                        key={item.key}
-                        to={item.href}
-                        onClick={() => setIsOpen(false)}
-                        className="py-2 border-b font-medium"
-                      >
-                        {getNavLabel(item.key)}
-                      </Link>
-                    ))}
+                    {navItems.map((item) => {
+
+                      if (item.key === "employee") {
+                        return (
+                          <button
+                            key={item.key}
+                            onClick={() => {
+                              setEmployeeOpen(true);
+                              setIsOpen(false);
+                            }}
+                            className="text-left font-medium py-2 border-b"
+                          >
+                            {getNavLabel(item.key)}
+                          </button>
+                        );
+                      }
+
+                      if (item.key === "sss") {
+                        return (
+                          <div key={item.key}>
+
+                            <button
+                              onClick={() =>
+                                setMobileSssOpen(
+                                  !mobileSssOpen
+                                )
+                              }
+                              className="flex items-center justify-between w-full py-2 border-b font-medium"
+                            >
+                              {getNavLabel(item.key)}
+
+                              <ChevronDown
+                                className={`w-4 h-4 transition-transform ${
+                                  mobileSssOpen
+                                    ? "rotate-180"
+                                    : ""
+                                }`}
+                              />
+                            </button>
+
+                            {mobileSssOpen && (
+                              <div className="ml-3 mt-2 flex flex-col">
+
+                                {sssServices.map(
+                                  (service, i) => (
+                                    <div
+                                      key={i}
+                                      className="py-2 text-sm text-gray-700 border-b"
+                                    >
+                                      {service}
+                                    </div>
+                                  )
+                                )}
+
+                              </div>
+                            )}
+
+                          </div>
+                        );
+                      }
+
+                      if (item.external) {
+                        return (
+                          <a
+                            key={item.key}
+                            href={item.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 py-2 border-b font-medium"
+                          >
+                            {getNavLabel(item.key)}
+
+                            <ExternalLink className="w-4 h-4" />
+                          </a>
+                        );
+                      }
+
+                      return (
+                        <Link
+                          key={item.key}
+                          to={item.href}
+                          onClick={() =>
+                            setIsOpen(false)
+                          }
+                          className="py-2 border-b font-medium"
+                        >
+                          {getNavLabel(item.key)}
+                        </Link>
+                      );
+                    })}
 
                   </nav>
 
                 </SheetContent>
               </Sheet>
 
-              <img
-                src={motorlogo}
-                alt="Motor Transport Logo"
-                className="hidden sm:block w-14 h-14 sm:w-16 sm:h-16 object-contain"
-              />
+              <div className="hidden sm:flex items-center justify-center">
+
+                <img
+                  src={motorlogo}
+                  alt="Motor Transport Logo"
+                  className="w-14 h-14 sm:w-16 sm:h-16 object-contain"
+                />
+
+              </div>
 
             </div>
           </div>
