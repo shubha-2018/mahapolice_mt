@@ -12,9 +12,9 @@ const PuneRangeTable: React.FC = () => {
     {
       sr: 1,
       commissionerate: { marathi: "पोलीस मध्यवर्ती मोटार परिवहन कर्मशाळा, पुणे", english: "Police Central Motor Transport Workshop, Pune" },
-      officerName: { marathi: "अनंत माळी (अतिरिक्त कार्यभार)", english: "Anant Mali (Additional Charge)" },
+      officerName: { marathi: "", english: "" },
       designation: { marathi: "पोलीस उप-अधीक्षक", english: "Deputy Superintendent of Police" },
-      contact: "8378979474",
+      contact: "",
     },
     {
       sr: 2,
@@ -26,9 +26,9 @@ const PuneRangeTable: React.FC = () => {
     {
       sr: 3,
       commissionerate: { marathi: "दक्षिण परिमंडळ, पुणे", english: "South Division, Pune" },
-      officerName: { marathi: "रवींद्र हिंगणेकर", english: "Ravindra Hingnekar" },
+      officerName: { marathi: "", english: "" },
       designation: { marathi: "पोलीस उप-अधीक्षक", english: "Deputy Superintendent of Police" },
-      contact: "8275304090",
+      contact: "",
     },
     {
       sr: 4,
@@ -89,9 +89,9 @@ const PuneRangeTable: React.FC = () => {
     {
       sr: 12,
       commissionerate: { marathi: "एसआरपीएफ ग्रुप 1, पुणे", english: "SRPF Group 1, Pune" },
-      officerName: { marathi: "स्नेहलराज पाटील", english: "Snehlraj Patil" },
+      officerName: { marathi: "", english: "" },
       designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" },
-      contact: "9923107626",
+      contact: "",
     },
     {
       sr: 13,

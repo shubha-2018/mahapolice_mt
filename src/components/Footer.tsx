@@ -225,7 +225,7 @@
 import { useLanguage } from '@/hooks/useLanguage';
 import { translations } from '@/data/translations';
 import { Mail, Phone, MapPin, ExternalLink } from 'lucide-react';
-import motorlogo from "@/assets/images/MT_logo.jpg";
+import motorlogo from "@/assets/images/mt-logo.jpeg";
 
 // Utility function to convert text to Title Case, except "RTI"
 const toTitleCase = (text: string) => {

@@ -125,7 +125,7 @@ export default function PhotoGallery() {
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
             {galleryData.featured.map((photo) => <PhotoCard key={photo.id} photo={photo} />)}
           </div>
-          <h1 className='mt-4 text-gray-700 text-sm md:text-base'>{language === 'marathi' ? 'मा . अप्पर पोलीस महासंचालक श्री दीपक  पाण्डेय्  सर यांची टाटा मोटर येथे भेट सोबत टाटा मोटर चे अधिकारी' : 'Hon. ADGP Mr. Deepak Pandey visiting Tata Motors with their officials'}</h1>
+          <h1 className='mt-4 text-gray-700 text-sm md:text-base'>{language === 'marathi' ? 'मा . अप्पर पोलीस महासंचालक श्री दीपक  पाण्डेय्  सर यांची टाटा मोटर येथे भेट सोबत टाटा मोटर चे अधिकारी' : 'Hon. ADGP PCIT. Shri Deepak Pandey Sir visiting Tata Motors with officials'}</h1>
         </div>
 
         {/* Police Section 1 */}
@@ -134,7 +134,7 @@ export default function PhotoGallery() {
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
             {galleryData.policeSection1.map((photo) => <PhotoCard key={photo.id} photo={photo} />)}
           </div>
-          <h1 className='mt-4 text-gray-700 text-sm md:text-base'>{language === 'marathi' ? 'मा . अप्पर पोलीस महासंचालक श्री दीपक पाण्डेय् सर यांची महिंद्रा कंपनी येथे भेट सोबत महिंद्रा कंपनी चे अधिकारी ' : 'Hon. Director General of Police Shri Deepak Pandey visited Mahindra Company. During the meeting, officials from Mahindra Company were present, and discussions on relevant matters took place.'}</h1>
+          <h1 className='mt-4 text-gray-700 text-sm md:text-base'>{language === 'marathi' ? 'मा . अप्पर पोलीस महासंचालक श्री दीपक पाण्डेय् सर यांची महिंद्रा कंपनी येथे भेट सोबत महिंद्रा कंपनी चे अधिकारी ' : 'Hon. ADGP PCIT. Shri Deepak Pandey Sir visited Mahindra Company. During the meeting, officials from Mahindra Company were present, and discussions on relevant matters took place.'}</h1>
         </div>
 
         {/* Police Section 2 */}

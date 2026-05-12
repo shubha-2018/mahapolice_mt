@@ -25,8 +25,8 @@ const UnitDyspSp: React.FC = () => {
         marathi: "पोलीस उप-अधीक्षक",
         english: "Deputy Superintendent of Police",
       },
-      name: { marathi: "श्री. अनंत माळी", english: "Mr. Anant Mali" },
-      contact: "8378979474",
+      name: { marathi: "-", english: "-" },
+      contact: "",
     },
     {
       sr: 3,
@@ -36,19 +36,19 @@ const UnitDyspSp: React.FC = () => {
         english: "Deputy Superintendent of Police",
       },
       name: {
-        marathi: "श्री. रवींद्र हिंगणेकर (अतिरिक्त कार्यभार)",
-        english: "Mr. Ravindra Hingnekar (Additional Charge)",
+        marathi: "-",
+        english: "-",
       },
-      contact: "8108000062",
+      contact: "",
     },
     {
       sr: 4,
-      unit: { marathi: "साठा बांधणी विभाग", english: "Stock Construction Division" },
+      unit: { marathi: "साठा बांधणी विभाग", english: "Body Building Section " },
       designation: {
         marathi: "पोलीस निरीक्षक",
         english: "Police Inspector",
       },
-      name: { marathi: "ये. यन. सय्यद", english: "Y. N. Sayyed" },
+      name: { marathi: "ये. यन. सय्यद", english: "A. N. Sayyed" },
       contact: "9823186786",
     },
   ];

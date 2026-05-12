@@ -10,23 +10,23 @@ const ChtrapatiSambhajiNagarRange: React.FC = () => {
     { sr: 2, commissionerate: { marathi: "मोटार परिवहन विभाग, छत्रपती संभाजीनगर ग्रामीण", english: "Chhatrapati Sambhajinagar Rural" }, officerName: { marathi: "संतोष वयचाळ", english: "Santosh Waychal" }, designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" }, contact: "8888287111" },
     { sr: 3, commissionerate: { marathi: "मोटार परिवहन विभाग, जालना", english: "Jalna" }, officerName: { marathi: "महेंद्र मोहळ", english: "Mahendra Mohol" }, designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" }, contact: "8830901611" },
     { sr: 4, commissionerate: { marathi: "मोटार परिवहन विभाग, बीड", english: "Beed" }, officerName: { marathi: "सादिक पठाण", english: "Sadik Pathan" }, designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" }, contact: "8082467867" },
-    { sr: 5, commissionerate: { marathi: "मोटार परिवहन विभाग, धाराशिव", english: "Osmanabad" }, officerName: { marathi: "", english: "" }, designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" }, contact: "" },
+    { sr: 5, commissionerate: { marathi: "मोटार परिवहन विभाग, धाराशिव", english: "Osmanabad" }, officerName: { marathi: "-", english: "-" }, designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" }, contact: "" },
     { sr: 6, commissionerate: { marathi: "मोटार परिवहन विभाग, बुलढाणा", english: "Buldhana" }, officerName: { marathi: "गजानन वानखेडे", english: "Gajanan Wankhede" }, designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" }, contact: "8380093712" },
     { sr: 7, commissionerate: { marathi: "मोटार परिवहन विभाग, जळगाव", english: "Jalgaon" }, officerName: { marathi: "तायडे", english: "Tayde" }, designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" }, contact: "9664919990" },
-    { sr: 8, commissionerate: { marathi: "मोटार परिवहन विभाग, हिंगोली", english: "Hingoli" }, officerName: { marathi: "", english: "" }, designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" }, contact: "" },
+    { sr: 8, commissionerate: { marathi: "मोटार परिवहन विभाग, हिंगोली", english: "Hingoli" }, officerName: { marathi: "-", english: "-" }, designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" }, contact: "" },
     { sr: 9, commissionerate: { marathi: "मोटार परिवहन विभाग, लातूर", english: "Latur" }, officerName: { marathi: "रामकांत बनसोडे", english: "Ramakant Bansode" }, designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" }, contact: "9823089144" },
     { sr: 10, commissionerate: { marathi: "मोटार परिवहन विभाग, नांदेड", english: "Nanded" }, officerName: { marathi: "दिलीप चोपडे", english: "Dilip Chopade" }, designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" }, contact: "9158061990" },
-    { sr: 11, commissionerate: { marathi: "मोटार परिवहन विभाग, परभणी", english: "Parbhani" }, officerName: { marathi: "", english: "" }, designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" }, contact: "" },
-    { sr: 12, commissionerate: { marathi: "मोटार परिवहन विभाग, धुळे", english: "Dhule" }, officerName: { marathi: "", english: "" }, designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" }, contact: "" },
-    { sr: 13, commissionerate: { marathi: "मोटार परिवहन विभाग, नंदुरबार", english: "Nandurbar" }, officerName: { marathi: "", english: "" }, designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" }, contact: "" },
-    { sr: 14, commissionerate: { marathi: "एसआरपीएफ ग्रुप 3, जालना", english: "SRPF Group 3, Jalna" }, officerName: { marathi: "", english: "" }, designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" }, contact: "" },
-    { sr: 15, commissionerate: { marathi: "एसआरपीएफ ग्रुप 6, धुळे", english: "SRPF Group 6, Dhule" }, officerName: { marathi: "", english: "" }, designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" }, contact: "" },
-    { sr: 16, commissionerate: { marathi: "एसआरपीएफ ग्रुप 12, हिंगोली", english: "SRPF Group 12, Hingoli" }, officerName: { marathi: "", english: "" }, designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" }, contact: "" },
+    { sr: 11, commissionerate: { marathi: "मोटार परिवहन विभाग, परभणी", english: "Parbhani" }, officerName: { marathi: "-", english: "-" }, designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" }, contact: "" },
+    { sr: 12, commissionerate: { marathi: "मोटार परिवहन विभाग, धुळे", english: "Dhule" }, officerName: { marathi: "-", english: "-" }, designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" }, contact: "" },
+    { sr: 13, commissionerate: { marathi: "मोटार परिवहन विभाग, नंदुरबार", english: "Nandurbar" }, officerName: { marathi: "-", english: "-" }, designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" }, contact: "" },
+    { sr: 14, commissionerate: { marathi: "एसआरपीएफ ग्रुप 3, जालना", english: "SRPF Group 3, Jalna" }, officerName: { marathi: "-", english: "-" }, designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" }, contact: "" },
+    { sr: 15, commissionerate: { marathi: "एसआरपीएफ ग्रुप 6, धुळे", english: "SRPF Group 6, Dhule" }, officerName: { marathi: "-", english: "-" }, designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" }, contact: "" },
+    { sr: 16, commissionerate: { marathi: "एसआरपीएफ ग्रुप 12, हिंगोली", english: "SRPF Group 12, Hingoli" }, officerName: { marathi: "-", english: "-" }, designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" }, contact: "" },
     { sr: 17, commissionerate: { marathi: "एसआरपीएफ ग्रुप 14, छत्रपती संभाजीनगर", english: "SRPF Group 14, Chhatrapati Sambhajinagar" }, officerName: { marathi: "", english: "" }, designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" }, contact: "" },
-    { sr: 18, commissionerate: { marathi: "SDRF महाराष्ट्र कॅम्प ऑफिस, धुळे", english: "SDRF Maharashtra Camp Office, Dhule" }, officerName: { marathi: "", english: "" }, designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" }, contact: "" },
-    { sr: 19, commissionerate: { marathi: "पोलीस प्रशिक्षण केंद्र, जालना", english: "Police Training Centre, Jalna" }, officerName: { marathi: "", english: "" }, designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" }, contact: "" },
-    { sr: 20, commissionerate: { marathi: "पोलीस प्रशिक्षण केंद्र, लातूर", english: "Police Training Centre, Latur" }, officerName: { marathi: "", english: "" }, designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" }, contact: "" },
-    { sr: 21, commissionerate: { marathi: "पोलीस प्रशिक्षण केंद्र, धुळे", english: "Police Training Centre, Dhule" }, officerName: { marathi: "", english: "" }, designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" }, contact: "" },
+    { sr: 18, commissionerate: { marathi: "SDRF महाराष्ट्र कॅम्प ऑफिस, धुळे", english: "SDRF Maharashtra Camp Office, Dhule" }, officerName: { marathi: "-", english: "-" }, designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" }, contact: "" },
+    { sr: 19, commissionerate: { marathi: "पोलीस प्रशिक्षण केंद्र, जालना", english: "Police Training Centre, Jalna" }, officerName: { marathi: "-", english: "-" }, designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" }, contact: "" },
+    { sr: 20, commissionerate: { marathi: "पोलीस प्रशिक्षण केंद्र, लातूर", english: "Police Training Centre, Latur" }, officerName: { marathi: "-", english: "-" }, designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" }, contact: "" },
+    { sr: 21, commissionerate: { marathi: "पोलीस प्रशिक्षण केंद्र, धुळे", english: "Police Training Centre, Dhule" }, officerName: { marathi: "-", english: "-" }, designation: { marathi: "पोलीस निरीक्षक", english: "Police Inspector" }, contact: "" },
   ];
 
   return (
@@ -86,7 +86,7 @@ const ChtrapatiSambhajiNagarRange: React.FC = () => {
                         : row.officerName.english
                     ) : (
                       <span className="text-red-600 font-medium bg-red-100 px-2 py-1 rounded">
-                        {language === "marathi" ? "रिक्त" : "Vacant"}
+                        {language === "marathi" ? "-" : "Vacant"}
                       </span>
                     )}
                   </td>

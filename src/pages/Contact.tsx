@@ -204,12 +204,12 @@ const ContactPage = () => {
         english: 'Motor Transport Department, Maharashtra State Pune',
       },
       address: {
-        marathi: 'विशेष पोलीस निरीक्षक, मोटार परिवहन, महाराष्ट्र राज्य, औंध, पुणे. 411067',
-        english: 'Special Inspector General of Police, Motor Transport, Maharashtra State, Aundh, Pune. 411067',
+        marathi: 'विशेष पोलीस महानिरीक्षक मोटार परिवहन महाराष्ट्र राज्य यांचे कार्यालय धनकुडे वस्ती पॅन कार्ड क्लब रोड बाणेर पुणे – ४११००८, महाराष्ट्र, भारत',
+        english: 'Office of the Special Inspector General of Police, Motor Transport, Maharashtra State, Dhankude Vasti, Pancard Club Road, Baner, Pune, Maharashtra, India',
       },
       phone: '02025880718',
       email: 'ig.mt.pune@mahapolice.gov.in',
-      mapLink: 'https://www.google.com/maps?q=18.562883246780896,73.81327144433503',
+      mapLink: 'https://maps.app.goo.gl/nM6fha66qFuW84C18?g_st=aw',
     },
     {
       title: {
